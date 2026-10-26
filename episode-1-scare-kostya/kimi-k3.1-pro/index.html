@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050707">
+  <title>СМЕНА</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050707'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23a9c5ad'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game" aria-label="СМЕНА — игра">
+    <div id="scene" class="scene office">
+      <div id="sceneImage" class="scene-image"></div>
+      <div class="scene-shade"></div>
+      <div id="hotspots" class="hotspots"></div>
+    </div>
+
+    <div id="cameraUi" class="camera-ui hidden">
+      <div class="cam-meta"><span id="camLabel">КАМЕРА 01</span><span id="camTime">03:13:07</span></div>
+      <div class="cam-rec"><i></i> ЗАПИСЬ</div>
+      <div class="cam-grid"></div>
+      <div id="camControls" class="cam-controls"></div>
+    </div>
+
+    <canvas id="grain" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div id="fade" class="fade"></div>
+    <div id="impact" class="impact hidden"><div class="impact-image"></div></div>
+
+    <section id="hud" class="hud hidden" aria-live="polite">
+      <div class="topbar">
+        <div class="shift"><span class="tiny">ОБЪЕКТ 14 · СЕКТОР B</span><strong id="clock">03:13</strong></div>
+        <div class="status"><i></i> НОЧНАЯ СМЕНА</div>
+      </div>
+      <div id="objective" class="objective"></div>
+      <div id="prompt" class="prompt"></div>
+      <div id="subtitle" class="subtitle"></div>
+      <div id="holdUi" class="hold-ui hidden">
+        <span>НЕ ДВИГАЙСЯ</span>
+        <div class="breath-line"><b id="holdFill"></b></div>
+        <small>ЗАЖМИ ПРОБЕЛ ИЛИ КНОПКУ МЫШИ</small>
+      </div>
+    </section>
+
+    <div id="toast" class="toast"></div>
+    <video id="localVideo" playsinline muted autoplay class="hidden"></video>
+    <div id="localShadow" class="local-shadow hidden" aria-hidden="true"></div>
+
+    <section id="titleScreen" class="screen title-screen">
+      <div class="title-content">
+        <p class="eyebrow">ИНТЕРАКТИВНАЯ ЗАПИСЬ · 14/10/1998</p>
+        <h1>СМЕНА</h1>
+        <p class="tagline">До утра никто не придёт.</p>
+        <button id="startBtn" class="primary">НАЧАТЬ СМЕНУ <span>→</span></button>
+        <div class="start-info"><span>НАУШНИКИ РЕКОМЕНДУЮТСЯ</span><span>3–6 МИНУТ</span></div>
+        <p class="privacy">Камера необязательна. Изображение остаётся только на этом компьютере.</p>
+      </div>
+      <div class="title-footer">ОБЪЕКТ 14 <span>АРХИВ СЛУЖБЫ БЕЗОПАСНОСТИ</span> ЗАПИСЬ № 0313</div>
+    </section>
+
+    <section id="pauseScreen" class="screen pause-screen hidden">
+      <div><p class="eyebrow">ЗАПИСЬ ПРИОСТАНОВЛЕНА</p><h2>ПАУЗА</h2><button id="resumeBtn" class="primary">ПРОДОЛЖИТЬ</button><button id="restartPauseBtn" class="text-btn">НАЧАТЬ ЗАНОВО</button></div>
+    </section>
+
+    <section id="endScreen" class="screen end-screen hidden">
+      <div class="end-content"><p id="endEyebrow" class="eyebrow">06:00 · СМЕНА ЗАВЕРШЕНА</p><h2 id="endTitle">ТЫ ДОЖДАЛСЯ<br>УТРА.</h2><div id="evidence" class="evidence hidden"><img id="evidenceImage" alt="Локальная запись"><span>ЛОКАЛЬНАЯ ЗАПИСЬ · 03:58</span></div><p id="endText">Запись сохранена.</p><button id="restartBtn" class="text-btn">ПРОЙТИ СМЕНУ ЕЩЁ РАЗ</button></div>
+    </section>
+
+    <div class="utility">
+      <button id="muteBtn" aria-label="Выключить звук" title="Звук [M]">ЗВУК: ВКЛ</button>
+      <button id="fullBtn" aria-label="Полный экран" title="Полный экран [F]">[ ]</button>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

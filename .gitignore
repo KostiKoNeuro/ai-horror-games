@@ -1,0 +1,6 @@
+.env
+*.env
+.budget.json
+__pycache__/
+*.pyc
+.playwright-mcp/

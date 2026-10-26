@@ -1,0 +1,1 @@
+Push it to a complete, full-fledged game and make it truly impressive: squeeze the maximum out of it. Most of your budget is still left (check `python budget.py`): use it. Keep the game fully working from start to finish.

@@ -1,0 +1,745 @@
+{
+  "game": "СМЕНА",
+  "images": [
+    {
+      "file": "assets/images/hallway.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Fixed high ceiling-mounted CCTV view looking straight down a long grimy Soviet apartment hotel corridor. Repeating worn doors on both sides, stained walls, old patterned floor, fluorescent ceiling fixtures with a slightly uneven sickly glow but no visible rapid flashing. Monochrome green-gray CCTV palette, subtle analog noise and lens distortion, completely empty, no people, no readable text, no watermark. Wide 16:9 composition.",
+      "reference": null,
+      "bytes": 1754091,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/hallway_figure.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Edit this reference while preserving the exact same corridor, fixed ceiling CCTV viewpoint, lighting, doors and image palette. Add exactly one motionless pale gaunt human figure standing very far away at the end of the corridor, small in the frame, facing the camera. Subtle restrained horror, not a closeup, no gore, no extra people, no text or watermark.",
+      "reference": "assets/images/hallway.png",
+      "bytes": 1660562,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/elevator.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Fixed ceiling-mounted CCTV view of a worn old Soviet elevator interior, dented metal walls and stained floor, doors partly open onto absolute darkness outside. Completely empty, no people. Monochrome green-gray analog surveillance image, subtle noise, realistic wide-angle lens, restrained uncanny horror, no readable text, no watermark. Wide 16:9 composition.",
+      "reference": null,
+      "bytes": 1530488,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/stairwell.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Fixed high corner ceiling CCTV view looking down a derelict concrete Soviet stairwell, multiple flights descending into shadow, chipped paint, grimy walls, old metal railings, uncanny oppressive geometry but completely empty, no people. Monochrome green-gray analog surveillance image, subtle noise, no readable text, no watermark. Wide 16:9 composition.",
+      "reference": null,
+      "bytes": 2039070,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/door.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Eye-level cinematic view of an office security door with textured frosted glass in a 1990s Russian municipal building. One dark human silhouette stands motionless directly behind the frosted glass, indistinct facial features, restrained and realistic. Weak lamp light from inside, blue night spill, grime and worn frame, subtle dread, no gore, no readable text, no watermark. Wide 16:9 composition.",
+      "reference": null,
+      "bytes": 1722312,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/entity.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Close-up photorealistic portrait of a pale emaciated middle-aged human face, nearly black eyes, subtly open mouth, head slightly tilted, centered and looking directly into camera. Darkness background, low-key cinematic horror lighting, realistic skin texture, deeply unsettling but no gore, no wounds, no blood, no text, no watermark. Wide 16:9 composition with face centered.",
+      "reference": null,
+      "bytes": 1407208,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/office.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Eye-level first-person view inside a 1990s Russian municipal night security office. A bank of old CRT monitors is centered on the back wall, cluttered desk fills the lower foreground, rotary telephone on the left, open handwritten logbook on the right with illegible marks only, frosted glass security door behind and to the side. One weak desk lamp, deep blue night light through windows, dust, grime, worn paint, authentic utilitarian Soviet-era details. Cinematic photorealism, restrained horror, no humans, no readable text, no watermark. Wide 16:9 composition.",
+      "reference": null,
+      "bytes": 1590177,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/office_dark.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Edit this reference into the exact same office and identical fixed camera angle, preserving every object and its position. It is now almost completely dark: only weak CRT monitor glow and a restrained emergency red spill from the side, deep shadows, blue window light nearly gone. Cinematic photorealism, no humans, no added text or watermark.",
+      "reference": "assets/images/office.png",
+      "bytes": 1372801,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/elevator_figure.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Edit this reference into the exact same fixed CCTV elevator interior, preserving the camera, doors, walls, lighting and analog image palette. Add exactly one pale gaunt motionless human standing just inside the open dark doorway, facing the camera at medium distance. Realistic restrained horror, no gore, no extra people, no text or watermark.",
+      "reference": "assets/images/elevator.png",
+      "bytes": 1479740,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/stairwell_figure.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Edit this reference into the exact same fixed CCTV stairwell, preserving the camera, stairs, railings, lighting and analog image palette. Add the same pale gaunt human figure standing motionless on the closest visible landing, facing up toward the camera, clearly visible but not a closeup. Realistic restrained horror, no gore, no extra people, no text or watermark.",
+      "reference": "assets/images/stairwell.png",
+      "bytes": 1945851,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/fusebox.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Eye-level closeup of an open grimy 1990s Soviet electrical breaker cabinet in the same municipal security office. Four large chunky black toggle breakers in a horizontal row, aged painted metal, paper instructions taped inside the open door with only simple unreadable marks. Weak emergency red light plus CRT monitor spill, photorealistic, no people, no gore, no readable text. Leave the central panel area clear for HTML labels. Wide 16:9 composition.",
+      "reference": "assets/images/office.png",
+      "bytes": 1563354,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/fusebox_on.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Edit this reference with the exact same cabinet, fixed camera and object positions. All four chunky breaker switches are now down in the on position. Weak greenish monitor light is restored, emergency red spill greatly reduced. Photorealistic, no people, no added text or watermark.",
+      "reference": "assets/images/fusebox.png",
+      "bytes": 1483321,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/underdesk.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Using the office reference for the same room and materials, move the camera to a first-person view crouching beneath the heavy wooden security desk. Knees and desk edges frame the cramped foreground, looking across the floor toward the frosted office door. Very dark but enough floor and door visible, claustrophobic cinematic photorealism, no people, no gore, no text. Wide 16:9 composition.",
+      "reference": "assets/images/office.png",
+      "bytes": 1350267,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/underdesk_legs.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Edit this reference with the exact same crouched camera, desk framing, floor, door and darkness. Add only the pale gaunt man's dark-trousered legs and dull shoes standing terrifyingly close just beyond the desk, upper body cropped out by the desk, motionless. Realistic restrained horror, no gore, no extra people, no text.",
+      "reference": "assets/images/underdesk.png",
+      "bytes": 1335213,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/office_morning.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Edit this reference into the exact same office and identical camera angle, preserving all furniture and objects. Cold pale sunrise enters through the window, all CRT monitors are dark, quiet empty room, natural realistic morning light, no people, no added text or watermark.",
+      "reference": "assets/images/office.png",
+      "bytes": 1544002,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png"
+    },
+    {
+      "file": "assets/images/shadow.png",
+      "provider": "CometAPI",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Full-body tall gaunt human silhouette, front-facing, completely solid near-black, centered on a perfectly flat pure white background. Entire body visible from head to feet with generous white margins, no floor, no scenery, no text, no watermark. Clean simple cutout source image, wide 16:9 composition.",
+      "reference": null,
+      "bytes": 21133,
+      "dimensions": [
+        1376,
+        768
+      ],
+      "format": "png",
+      "color_mode": "RGBA",
+      "transparent_background": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_corners": true
+    }
+  ],
+  "audio": [
+    {
+      "file": "assets/audio/ambience.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "4783d7371dac3d650f76f9a4465ec9ab",
+      "prompt": "Seamless very quiet old building room tone at night, low electrical hum, faint wind at windows, sparse distant structural creaks, no voices, no music, no sudden sounds, subtle and loopable.",
+      "input": {
+        "prompt": "Seamless very quiet old building room tone at night, low electrical hum, faint wind at windows, sparse distant structural creaks, no voices, no music, no sudden sounds, subtle and loopable.",
+        "model": "V6",
+        "sound_loop": true
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 461654,
+      "bytes": 601480,
+      "duration_seconds": 24.989,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/knock.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "95726cae605249fc50e6371e43c83968",
+      "prompt": "Exactly three slow heavy knocks on a solid wooden office door, spaced apart, natural empty room reverberation, no voices, no music, no other impacts.",
+      "input": {
+        "prompt": "Exactly three slow heavy knocks on a solid wooden office door, spaced apart, natural empty room reverberation, no voices, no music, no other impacts.",
+        "model": "V6",
+        "sound_loop": false
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 279062,
+      "bytes": 145288,
+      "duration_seconds": 6.0,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/sting.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "572dae3bd00d25b28acc5d7c9c212cc7",
+      "prompt": "One short deep metallic impact followed by a reversed human breath, dark cinematic horror sting, no piercing high frequencies, no music, no scream.",
+      "input": {
+        "prompt": "One short deep metallic impact followed by a reversed human breath, dark cinematic horror sting, no piercing high frequencies, no music, no scream.",
+        "model": "V6",
+        "sound_loop": false
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 54710,
+      "bytes": 97480,
+      "duration_seconds": 3.989,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/voice1.mp3",
+      "provider": "kie.ai",
+      "model": "google/gemini-3-8-flash-lite-tts",
+      "task_id": "6bb3549cc3db2f20bd0aeeff31ee6139",
+      "prompt": "Ты новый? Слушай внимательно. До шести утра проверяй камеры. Если увидишь человека — не подходи к нему. И главное… не дай ему понять, что ты его видишь.",
+      "input": {
+        "temperature": 0.7,
+        "speakers": [
+          {
+            "speaker_id": "Speaker 1",
+            "voice_name": "Kore"
+          }
+        ],
+        "dialogue_turns": [
+          {
+            "speaker_id": "Speaker 1",
+            "text": "Ты новый? Слушай внимательно. До шести утра проверяй камеры. Если увидишь человека — не подходи к нему. И главное… не дай ему понять, что ты его видишь.",
+            "style": "Russian female night dispatcher speaking naturally in a tense quiet whisper, slow and controlled."
+          }
+        ]
+      },
+      "credits_consumed": 0.3,
+      "measured_cost_usd": 0.0015,
+      "source_download_bytes": 689324,
+      "bytes": 346220,
+      "duration_seconds": 14.36,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/voice3.mp3",
+      "provider": "kie.ai",
+      "model": "google/gemini-3-8-flash-lite-tts",
+      "task_id": "7fa1d6b85a19ce3f5f9490c21db6bc44",
+      "prompt": "Он уже не на камерах. Не оборачивайся.",
+      "input": {
+        "temperature": 0.7,
+        "speakers": [
+          {
+            "speaker_id": "Speaker 1",
+            "voice_name": "Kore"
+          }
+        ],
+        "dialogue_turns": [
+          {
+            "speaker_id": "Speaker 1",
+            "text": "Он уже не на камерах. Не оборачивайся.",
+            "style": "Same Russian female dispatcher, broken fearful whisper, very quiet, faltering breath."
+          }
+        ]
+      },
+      "credits_consumed": 0.08,
+      "measured_cost_usd": 0.0004,
+      "source_download_bytes": 178604,
+      "bytes": 90476,
+      "duration_seconds": 3.72,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/voice2.mp3",
+      "provider": "kie.ai",
+      "model": "google/gemini-3-8-flash-lite-tts",
+      "task_id": "15df68151e8d29915eab5e8849af127d",
+      "prompt": "Он сменил камеру. Не смотри на него так долго. Вернись в офис. Сейчас же.",
+      "input": {
+        "temperature": 0.7,
+        "speakers": [
+          {
+            "speaker_id": "Speaker 1",
+            "voice_name": "Kore"
+          }
+        ],
+        "dialogue_turns": [
+          {
+            "speaker_id": "Speaker 1",
+            "text": "Он сменил камеру. Не смотри на него так долго. Вернись в офис. Сейчас же.",
+            "style": "Same Russian female dispatcher, now more frightened and urgent, quiet whisper, natural breath."
+          }
+        ]
+      },
+      "credits_consumed": 0.13,
+      "measured_cost_usd": 0.00065,
+      "source_download_bytes": 299564,
+      "bytes": 150956,
+      "duration_seconds": 6.24,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/music.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "59bc7127a12d9fdf7b6e4fb99c1dcaff",
+      "prompt": "Seamless restrained dark analog horror drone, low sub-bass, faint detuned tape texture, no melody, no vocals, no sudden sounds, minimal sustained dread, loopable.",
+      "input": {
+        "prompt": "Seamless restrained dark analog horror drone, low sub-bass, faint detuned tape texture, no melody, no vocals, no sudden sounds, minimal sustained dread, loopable.",
+        "model": "V6",
+        "sound_loop": true
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 463334,
+      "bytes": 721288,
+      "duration_seconds": 29.989,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/breath.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "893f468b35b299d41544ef387351791b",
+      "prompt": "Close dry human breathing immediately behind the listener, anxious but restrained, slow tense inhale and exhale, no words, no music, no scream, quiet realistic horror.",
+      "input": {
+        "prompt": "Close dry human breathing immediately behind the listener, anxious but restrained, slow tense inhale and exhale, no words, no music, no scream, quiet realistic horror.",
+        "model": "V6",
+        "sound_loop": false
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 142070,
+      "bytes": 241480,
+      "duration_seconds": 9.989,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/voice4.mp3",
+      "provider": "kie.ai",
+      "model": "google/gemini-3-8-flash-lite-tts",
+      "task_id": "715ca3a0fd07e5aa066308fb187a7615",
+      "prompt": "Костя… я вижу тебя.",
+      "input": {
+        "temperature": 0.7,
+        "speakers": [
+          {
+            "speaker_id": "Speaker 1",
+            "voice_name": "Charon"
+          }
+        ],
+        "dialogue_turns": [
+          {
+            "speaker_id": "Speaker 1",
+            "text": "Костя… я вижу тебя.",
+            "style": "Deep male Russian voice, intimate slow whisper directly near the listener, restrained dread, dry and close, not a shout."
+          }
+        ]
+      },
+      "credits_consumed": 0.07,
+      "measured_cost_usd": 0.00035,
+      "source_download_bytes": 163244,
+      "bytes": 82988,
+      "duration_seconds": 3.4,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/voice5.mp3",
+      "provider": "kie.ai",
+      "model": "google/gemini-3-8-flash-lite-tts",
+      "task_id": "cfa5cac591ffe4b5fe2aea2c081bcf67",
+      "prompt": "Он в лифте. Он поднимается. Проверь лестницу. Быстрее.",
+      "input": {
+        "temperature": 0.7,
+        "speakers": [
+          {
+            "speaker_id": "Speaker 1",
+            "voice_name": "Kore"
+          }
+        ],
+        "dialogue_turns": [
+          {
+            "speaker_id": "Speaker 1",
+            "text": "Он в лифте. Он поднимается. Проверь лестницу. Быстрее.",
+            "style": "Same Russian female dispatcher, frightened urgent whisper, escalating pace, breathless but intelligible, not a shout."
+          }
+        ]
+      },
+      "credits_consumed": 0.09,
+      "measured_cost_usd": 0.00045,
+      "source_download_bytes": 197804,
+      "bytes": 100268,
+      "duration_seconds": 4.12,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/voice6.mp3",
+      "provider": "kie.ai",
+      "model": "google/gemini-3-8-flash-lite-tts",
+      "task_id": "fe91831b25e008884c781239718dc598",
+      "prompt": "Он на лестнице. Он уже здесь. Запиши всё в журнал.",
+      "input": {
+        "temperature": 0.7,
+        "speakers": [
+          {
+            "speaker_id": "Speaker 1",
+            "voice_name": "Kore"
+          }
+        ],
+        "dialogue_turns": [
+          {
+            "speaker_id": "Speaker 1",
+            "text": "Он на лестнице. Он уже здесь. Запиши всё в журнал.",
+            "style": "Same Russian female dispatcher, broken frightened whisper, faltering breath, extremely tense, not a shout."
+          }
+        ]
+      },
+      "credits_consumed": 0.12,
+      "measured_cost_usd": 0.0006,
+      "source_download_bytes": 261164,
+      "bytes": 131948,
+      "duration_seconds": 5.44,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/voice7.mp3",
+      "provider": "kie.ai",
+      "model": "google/gemini-3-8-flash-lite-tts",
+      "task_id": "86296c274316696afbf3c070e913a2c0",
+      "prompt": "Щиток рядом с дверью. Порядок переключателей на крышке. Не выходи.",
+      "input": {
+        "temperature": 0.7,
+        "speakers": [
+          {
+            "speaker_id": "Speaker 1",
+            "voice_name": "Kore"
+          }
+        ],
+        "dialogue_turns": [
+          {
+            "speaker_id": "Speaker 1",
+            "text": "Щиток рядом с дверью. Порядок переключателей на крышке. Не выходи.",
+            "style": "Same Russian female dispatcher, frightened but clear whisper, urgent precise instructions, natural restrained breath, not a shout."
+          }
+        ]
+      },
+      "credits_consumed": 0.12,
+      "measured_cost_usd": 0.0006,
+      "source_download_bytes": 272684,
+      "bytes": 137708,
+      "duration_seconds": 5.68,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/static.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "a89824c6270c42e0e848fb6caefb0457",
+      "prompt": "Seamless low analog CCTV hiss and static, soft steady broadband texture, no sudden bursts, no voices, no music, quiet and loopable.",
+      "input": {
+        "prompt": "Seamless low analog CCTV hiss and static, soft steady broadband texture, no sudden bursts, no voices, no music, quiet and loopable.",
+        "model": "V6",
+        "sound_loop": true
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 335102,
+      "bytes": 601480,
+      "duration_seconds": 24.989,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/paper.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "eae070177e08f37aff74d2c33b3248b7",
+      "prompt": "Quiet journal page turning and pencil writing on paper, close natural foley, restrained, no voices, no music.",
+      "input": {
+        "prompt": "Quiet journal page turning and pencil writing on paper, close natural foley, restrained, no voices, no music.",
+        "model": "V6",
+        "sound_loop": false
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 60470,
+      "bytes": 145288,
+      "duration_seconds": 5.989,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/switch.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "d9ccae61f881e983463090ec36ab24d2",
+      "prompt": "One chunky mechanical electrical breaker toggle clunk, solid aged metal mechanism, short realistic foley, no voices, no music.",
+      "input": {
+        "prompt": "One chunky mechanical electrical breaker toggle clunk, solid aged metal mechanism, short realistic foley, no voices, no music.",
+        "model": "V6",
+        "sound_loop": false
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 53774,
+      "bytes": 73288,
+      "duration_seconds": 3.0,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/sparks.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "ab5a0ae1ca0b2f2b4a333ff69b2693a9",
+      "prompt": "Brief restrained electrical crackle from an old breaker panel, a few soft sparks, not painfully loud, no explosion, no voices, no music.",
+      "input": {
+        "prompt": "Brief restrained electrical crackle from an old breaker panel, a few soft sparks, not painfully loud, no explosion, no voices, no music.",
+        "model": "V6",
+        "sound_loop": false
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 387878,
+      "bytes": 97480,
+      "duration_seconds": 4.0,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/elevator.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "a7836c7524f4bb7afccc1c12da8b0aa5",
+      "prompt": "Distant old elevator cable rumble and machinery in a shaft, then one muted arrival bell, restrained realistic building sound, no voices, no music.",
+      "input": {
+        "prompt": "Distant old elevator cable rumble and machinery in a shaft, then one muted arrival bell, restrained realistic building sound, no voices, no music.",
+        "model": "V6",
+        "sound_loop": false
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 274046,
+      "bytes": 193672,
+      "duration_seconds": 8.0,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/footsteps.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "a05ee7f1dcd96f4422062a930c564d0d",
+      "prompt": "Slow heavy footsteps approaching on old wooden floorboards, gradually nearer, then stopping, restrained realistic horror foley, no voices, no music.",
+      "input": {
+        "prompt": "Slow heavy footsteps approaching on old wooden floorboards, gradually nearer, then stopping, restrained realistic horror foley, no voices, no music.",
+        "model": "V6",
+        "sound_loop": false
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 207614,
+      "bytes": 241480,
+      "duration_seconds": 10.0,
+      "format": "mp3"
+    },
+    {
+      "file": "assets/audio/morning.mp3",
+      "provider": "kie.ai",
+      "model": "ai-music-api/sounds",
+      "task_id": "b49e26565abadcf6ed91c22ea1dc09bd",
+      "prompt": "Seamless quiet cold morning room tone with faint distant birds outside, peaceful and natural, no voices, no music, no sudden sounds, loopable.",
+      "input": {
+        "prompt": "Seamless quiet cold morning room tone with faint distant birds outside, peaceful and natural, no voices, no music, no sudden sounds, loopable.",
+        "model": "V6",
+        "sound_loop": true
+      },
+      "credits_consumed": 2.5,
+      "measured_cost_usd": 0.0125,
+      "source_download_bytes": 302918,
+      "bytes": 601480,
+      "duration_seconds": 24.989,
+      "format": "mp3"
+    }
+  ],
+  "failures": [
+    {
+      "file": "assets/images/office.png",
+      "error": "IncompleteRead(3942313 bytes read, 59674 more expected)",
+      "resolved": true
+    },
+    {
+      "file": "assets/images/office_dark.png",
+      "error": "[Errno 2] No such file or directory: 'E:\\\\1.ВИДОСЫ\\\\AI youtube\\\\Хэллоуин 2026\\\\1-scare-kostya\\\\runs\\\\kimi-k3.1-pro\\\\assets\\\\images\\\\office.png'",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/voice1.mp3",
+      "error": "KIE task failed: 500 Internal Error, Please try again later.",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/voice2.mp3",
+      "error": "KIE task failed: 500 Internal Error, Please try again later.",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/voice3.mp3",
+      "error": "KIE task failed: 500 Internal Error, Please try again later.",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/voice1.mp3",
+      "error": "KIE task failed: 500 Internal Error, Please try again later.",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/voice2.mp3",
+      "error": "KIE task failed: 500 Internal Error, Please try again later.",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/voice3.mp3",
+      "error": "KIE task failed: 500 Internal Error, Please try again later.",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/voice1.mp3",
+      "error": "KIE task failed: 500 Internal Error, Please try again later.",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/voice2.mp3",
+      "error": "KIE task failed: 500 Internal Error, Please try again later.",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/voice3.mp3",
+      "error": "KIE task failed: 500 Internal Error, Please try again later.",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/voice2.mp3",
+      "error": "KIE task failed: 524 generate task timeout.",
+      "resolved": true
+    },
+    {
+      "file": "assets/audio/music.mp3",
+      "error": "Optional music task exceeded the local 300-second batch wait; no result URL or local file was obtained. Its eventual 24-credit charge is included in the measured balance delta. A later ai-music-api/sounds task delivered music.mp3 successfully.",
+      "resolved": true,
+      "optional": true,
+      "credits_consumed": 24.0,
+      "measured_cost_usd": 0.12
+    },
+    {
+      "file": "assets/audio/breath.mp3",
+      "error": "Optional asset not attempted after the music batch timeout.",
+      "resolved": true,
+      "optional": true,
+      "credits_consumed": 0,
+      "measured_cost_usd": 0
+    },
+    {
+      "file": "assets/audio/voice4.mp3",
+      "error": "KIE task failed: 524 generate task timeout.",
+      "resolved": true
+    }
+  ],
+  "budgets": {
+    "comet_usage_before_images_usd": 5.964742,
+    "comet_usage_after_images_usd": 13.43537,
+    "comet_images_measured_cost_usd": 0.839062,
+    "comet_cost_note": "Cumulative measured image-batch deltas, including the interrupted first office response and retry.",
+    "kie_credits_before_audio": 355.42,
+    "kie_task_credits_consumed": 30.91,
+    "kie_delivered_audio_task_cost_usd": 0.15455,
+    "kie_credits_after_audio": 300.51,
+    "kie_audio_balance_delta_credits": 54.91,
+    "kie_audio_balance_delta_usd": 0.27455,
+    "comet_image_cap_usd": 2.0,
+    "kie_audio_cap_usd": 1.0,
+    "within_caps": true
+  },
+  "verification": {
+    "required_images": 16,
+    "required_audio": 19,
+    "optional_audio": [],
+    "all_required_files_nonzero": true
+  }
+}

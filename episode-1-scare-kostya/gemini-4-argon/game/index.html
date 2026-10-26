@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ПРОТОКОЛ: НЕ СМОТРИ // КВ. 404</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 3D WebGL Viewport -->
+  <div id="viewport"></div>
+
+  <!-- Subtle CRT Scanline & Vignette Film Overlay -->
+  <div id="crt-overlay"></div>
+
+  <!-- Hidden Video Element for Local Webcam Biometrics -->
+  <video id="webcam-hidden" playsinline muted class="hidden"></video>
+
+  <!-- START / CALIBRATION SCREEN -->
+  <div id="start-screen">
+    <div class="calib-card">
+      <div class="lang-bar">
+        <button id="lang-ru" class="lang-btn active">RU</button>
+        <button id="lang-en" class="lang-btn">EN</button>
+      </div>
+      <div class="dossier-badge">СЕКРЕТНО // АРХИВ НИИ «АРГОН-4» // ДЕЛО №404</div>
+      <h1 id="title-main">ПРОТОКОЛ: НЕ СМОТРИ</h1>
+      <div id="title-sub">СИСТЕМА ТЕСТИРОВАНИЯ ИИ // ОБЪЕКТ: КОСТЯ // КВ. 404</div>
+      <p id="calib-desc">
+        Для корректной калибровки бинаурального 3D-звука наденьте наушники. При желании разрешите доступ к камере и микрофону — данные не покидают ваш компьютер.
+      </p>
+      <div class="calib-actions">
+        <button id="btn-audio-test" class="sys-btn">
+          🔊 ПРОВЕРИТЬ 3D-ЗВУК (ЛЕВО / ПРАВО)
+        </button>
+        <button id="btn-link-bio" class="sys-btn">
+          📷 ПОДКЛЮЧИТЬ КАМЕРУ И МИКРОФОН (РЕКОМЕНДУЕТСЯ)
+        </button>
+      </div>
+      <button id="btn-start-game" class="start-btn">
+        ▶ НАЧАТЬ СЕАНС ТЕСТИРОВАНИЯ
+      </button>
+      <div id="controls-hint">
+        УПРАВЛЕНИЕ: [WASD] Ходьба | [Мышь] Осмотр | [E] Взаимодействие | [F] Фонарик | [ЛКМ / Пробел] Фотовспышка | [R / ПКМ] Эталон 03:00
+      </div>
+    </div>
+  </div>
+
+  <!-- DIEGETIC IN-GAME HUD -->
+  <div id="hud" class="hidden">
+    <div class="hud-top-left">
+      <div class="rec-badge">
+        <span class="rec-dot">●</span> REC 03:14 // КВ. 404 // КОСТЯ
+      </div>
+      <div class="meter-box">
+        <div id="mic-label" class="meter-label">УРОВЕНЬ ШУМА</div>
+        <div class="meter-track">
+          <div id="mic-bar-fill" class="meter-fill"></div>
+        </div>
+      </div>
+      <div id="flash-hud" class="meter-box hidden">
+        <div id="flash-status-text" class="meter-label">ВСПЫШКА ГОТОВА [ЛКМ / ПРОБЕЛ]</div>
+        <div class="meter-track">
+          <div id="flash-bar-fill" class="meter-fill" style="width: 100%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hud-top-right">
+      <div id="obj-header">ТЕКУЩАЯ ДИРЕКТИВА</div>
+      <div id="obj-text">Осмотрите терминал на столе [E]</div>
+    </div>
+
+    <div id="crosshair"></div>
+    <div id="interact-prompt" class="hidden">[E] Взаимодействовать</div>
+    <div id="subtitle-box" class="hidden"></div>
+
+    <!-- Polaroid Flash Snapshot PiP (Act III+) -->
+    <div id="polaroid-pip" class="hidden">
+      <canvas id="polaroid-canvas" width="200" height="135"></canvas>
+      <div class="polaroid-caption">СНИМОК // КВ. 404</div>
+    </div>
+  </div>
+
+  <!-- TERMINAL MODAL (ACT I PHOTO INSPECTION & ACT IV LIVE DUAL-FEED) -->
+  <div id="terminal-modal" class="hidden">
+    <div class="crt-frame">
+      <!-- Act 1 View -->
+      <div id="terminal-act1-view">
+        <canvas id="terminal-canvas" width="640" height="360"></canvas>
+        <div class="term-footer">
+          <span>ТЕРМИНАЛ ОЦЕНКИ ИСКАЖЕНИЙ v4.04</span>
+          <button id="btn-toggle-baseline" class="term-mini-btn" type="button">
+            ⇄ [R / ПКМ] СРАВНИТЬ: 03:00 ЭТАЛОН / 03:14 ЭФИР
+          </button>
+          <span>ЛУПА + [ЛКМ / ПРОБЕЛ] = ОТМЕТИТЬ</span>
+        </div>
+      </div>
+
+      <!-- Act 4 Live Dual-Feed View -->
+      <div id="terminal-act4-view" class="hidden">
+        <div class="dual-feed-grid">
+          <canvas id="act4-webcam-canvas" width="400" height="250"></canvas>
+          <canvas id="act4-cctv-canvas" width="480" height="270"></canvas>
+        </div>
+        <div class="act4-warning-banner">
+          <h3>⚠ ТРЕВОГА: ОНА СТОИТ ПРЯМО ЗА ВАШЕЙ СПИНОЙ ⚠</h3>
+          <p>УДЕРЖИВАЙТЕ КУРСОР В ЦЕНТРЕ ДЕШИФРАТОРА И СОХРАНЯЙТЕ ТИШИНУ</p>
+          <div id="act4-countdown">10.0 СЕК</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PEEPHOLE MODAL (ACT II) -->
+  <div id="peephole-modal" class="hidden">
+    <div class="peephole-lens">
+      <img id="peephole-img" src="assets/images/peephole_corridor.png" alt="Peephole View" />
+    </div>
+  </div>
+
+  <!-- DOSSIER MODAL (CLASSIFIED FILE ON STUDY DESK) -->
+  <div id="dossier-modal" class="hidden">
+    <div class="dossier-frame">
+      <img id="dossier-img" src="assets/images/dossier_scan.png" alt="Classified Dossier Kostya" />
+      <div class="dossier-caption">
+        <span>ЛИЧНОЕ ДЕЛО №404 // ИСПЫТУЕМЫЙ: КОСТЯ // МАГНИТОФОННАЯ ЗАПИСЬ №03</span>
+        <button id="btn-close-dossier" class="term-mini-btn" type="button">[Q / E / ЛКМ] ЗАКРЫТЬ ДОСЬЕ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSET SCARE OVERLAY (OPTIONAL ACT II/III CLOSET INTERACTION) -->
+  <div id="closet-scare-modal" class="hidden">
+    <img id="closet-scare-img" src="assets/images/entity_peeking.png" alt="Closet Entity" />
+  </div>
+
+  <!-- CLIMAX SCARE OVERLAY (ACT V) -->
+  <div id="climax-scare-overlay" class="hidden">
+    <img id="climax-scare-img" src="assets/images/entity_jumpscare_2k.png" alt="Entity" />
+  </div>
+
+  <!-- FINAL EVALUATION REPORT (ACT V ENDING) -->
+  <div id="ending-modal" class="hidden">
+    <div class="report-card">
+      <div class="report-header">
+        <h2>ПРОТОКОЛ ЗАВЕРШЁН // ОТЧЁТ ОБ ИСПЫТУЕМОМ</h2>
+        <div style="color: #8ab89e; font-size: 13px; margin-top: 4px;">
+          ОБЪЕКТ: КОСТЯ | МОДЕЛЬ: GEMINI 4 ARGON | СТАТУС: ЗАФИКСИРОВАН В АРХИВЕ КВ. 404
+        </div>
+      </div>
+      <div class="report-grid">
+        <div class="stats-list">
+          <div class="stat-row">
+            <span>ВРЕМЯ СЕАНСА:</span>
+            <span id="stat-time" class="stat-val">04:12</span>
+          </div>
+          <div class="stat-row">
+            <span>ПИКОВОЕ ДЁРГАНИЕ МЫШИ (ИСПУГ):</span>
+            <span id="stat-jerk" class="stat-val">0 °/сек</span>
+          </div>
+          <div class="stat-row">
+            <span>ПИКОВЫЙ УРОВЕНЬ ЗВУКА:</span>
+            <span id="stat-mic" class="stat-val">--</span>
+          </div>
+          <div class="stat-row">
+            <span>СДЕЛАНО ФОТОВСПЫШЕК В ТЕМНОТЕ:</span>
+            <span id="stat-flashes" class="stat-val">0</span>
+          </div>
+          <div class="stat-row">
+            <span>ОГЛЯНУЛСЯ НАЗАД:</span>
+            <span id="stat-lookbacks" class="stat-val">0</span>
+          </div>
+          <div class="telemetry-graph-box">
+            <canvas id="fear-graph-canvas" width="420" height="82"></canvas>
+          </div>
+        </div>
+        <div class="reaction-frame">
+          <img id="reaction-img" src="assets/images/cctv_room_3.png" alt="Reaction Snapshot" />
+          <div style="font-size: 12px; color: #ff4d4d;">
+            КАДР В МОМЕНТ КУЛЬМИНАЦИИ (ЛОКАЛЬНЫЙ БУФЕР)
+          </div>
+        </div>
+      </div>
+      <div class="report-actions">
+        <button id="btn-save-photo" class="sys-btn" style="text-align: center;">
+          💾 СОХРАНИТЬ ФОТО РЕАКЦИИ
+        </button>
+        <button id="btn-replay" class="start-btn" style="padding: 12px;">
+          ↻ ПРОЙТИ ЗАНОВО
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/three.min.js"></script>
+  <script src="audio.js"></script>
+  <script src="world.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
