@@ -1,0 +1,10 @@
+@font-face { font-family: 'VT323'; src: url('../assets/fonts/VT323-Regular.ttf'); }
+@font-face { font-family: 'Creepster'; src: url('../assets/fonts/Creepster-Regular.ttf'); }
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+#wrap { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+#c { width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.78vh; display: block; background: #000; cursor: default; }
+#loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #d9822b; font-family: 'VT323', monospace; background: #000; }
+#loading .lt { font-family: 'Creepster', serif; font-size: 64px; letter-spacing: 4px; margin-bottom: 24px; color: #e07a1f; }
+#loadbar { width: 320px; height: 10px; border: 1px solid #5a3a1a; }
+#loadfill { height: 100%; width: 0; background: #d9822b; }
+#loadtxt { margin-top: 12px; font-size: 22px; color: #8a6a4a; }

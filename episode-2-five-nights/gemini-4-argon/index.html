@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Night Shift at Pumpkin Pete's — Survival Horror</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app-shell">
+    <!-- CRT Scanline & Vignette Global Overlay -->
+    <div class="crt-scanlines" aria-hidden="true"></div>
+    <div class="crt-vignette" aria-hidden="true"></div>
+
+    <!-- ==================== 1. TITLE SCREEN ==================== -->
+    <section id="title-screen" class="screen active" aria-label="Main Menu">
+      <canvas id="title-canvas" width="1376" height="768"></canvas>
+
+      <div class="title-ui">
+        <div class="title-header">
+          <div class="eyebrow-row">
+            <p class="eyebrow">PUMPKIN PETE'S ENTERTAINMENT INC. // EST. 1987</p>
+            <div class="completion-stars" id="title-stars-banner" title="Completion Badges">
+              <span class="star-badge" id="star-night1" title="Survived Night 1">&#9733; SHIFT 1</span>
+              <span class="star-badge" id="star-night5" title="Completed Night 5 Campaign">&#9733; NIGHT 5</span>
+              <span class="star-badge" id="star-overtime" title="Conquered Overtime / 20-20-20-20">&#9733; OVERTIME</span>
+            </div>
+          </div>
+          <h1 class="game-title">NIGHT SHIFT<br /><span>AT PUMPKIN PETE'S</span></h1>
+          <p class="title-tagline">
+            One guard. Eight cameras. Five haunted mascots &amp; Sub-Basement Salvage.<br />
+            Survive Nights 1–5 from 12:00 AM to 6:00 AM before the generator dies.
+          </p>
+        </div>
+
+        <!-- 5-Night Selector Bar -->
+        <div class="night-selector-bar" id="night-selector-bar" role="group" aria-label="Select Campaign Night">
+          <span class="night-sel-label">SELECT SHIFT:</span>
+          <button type="button" class="night-pill active" data-night="1">NIGHT 1</button>
+          <button type="button" class="night-pill" data-night="2">NIGHT 2</button>
+          <button type="button" class="night-pill" data-night="3">NIGHT 3</button>
+          <button type="button" class="night-pill" data-night="4">NIGHT 4</button>
+          <button type="button" class="night-pill" data-night="5">NIGHT 5</button>
+        </div>
+
+        <nav class="menu-actions" aria-label="Game Modes">
+          <button id="btn-start-night" class="menu-btn primary" type="button">
+            <span class="btn-indicator">&#9656;</span>
+            <span class="btn-label" id="start-night-btn-text">Start Night 1 Shift</span>
+            <span class="btn-meta" id="start-night-btn-meta">12 AM – 6 AM</span>
+          </button>
+
+          <button id="btn-open-salvage" class="menu-btn salvage-highlight" type="button">
+            <span class="btn-indicator">&#9889;</span>
+            <span class="btn-label">Sub-Basement Salvage &amp; Perks</span>
+            <span class="btn-meta">Repair Units &amp; Unlock Upgrades</span>
+          </button>
+
+          <button id="btn-nightmare-mode" class="menu-btn" type="button">
+            <span class="btn-indicator">&#9656;</span>
+            <span class="btn-label">Night 6: Halloween Overtime</span>
+            <span class="btn-meta">5 Mascots + Vent Stalker</span>
+          </button>
+
+          <button id="btn-custom-night" class="menu-btn" type="button">
+            <span class="btn-indicator">&#9656;</span>
+            <span class="btn-label">Custom Shift (5 Mascots)</span>
+            <span class="btn-meta">Tune AI 0–20</span>
+          </button>
+
+          <button id="btn-open-extras" class="menu-btn" type="button">
+            <span class="btn-indicator">&#9656;</span>
+            <span class="btn-label">Extras &amp; Blueprints Vault</span>
+            <span class="btn-meta">5 Schematics, Tapes &amp; Epilogue</span>
+          </button>
+
+          <button id="btn-open-manual" class="menu-btn" type="button">
+            <span class="btn-indicator">&#9656;</span>
+            <span class="btn-label">Security Guard Manual</span>
+            <span class="btn-meta">5 Mascots, Vents &amp; Controls</span>
+          </button>
+        </nav>
+
+        <!-- Custom Night Panel (5 Animatronics + Challenge Presets) -->
+        <div id="custom-night-panel" class="modal-panel hidden" role="dialog" aria-label="Custom Night Configuration">
+          <div class="modal-header">
+            <h2>Custom Shift AI Levels (0 – 20)</h2>
+            <button id="btn-close-custom" class="close-btn" type="button" aria-label="Close">✕</button>
+          </div>
+          <p class="modal-desc">Adjust the aggression level (0 = Offline, 20 = Relentless) of all five mascots before clocking in.</p>
+          <div class="custom-grid five-cols">
+            <div class="custom-card">
+              <img src="assets/images/sprite_pete.png" alt="Pumpkin Pete" class="custom-portrait" />
+              <h3>Pumpkin Pete</h3>
+              <p class="role-tag">East Route / Right Door</p>
+              <div class="level-stepper">
+                <button type="button" class="step-btn" data-char="pete" data-delta="-1">−</button>
+                <span id="lvl-pete" class="lvl-val">10</span>
+                <button type="button" class="step-btn" data-char="pete" data-delta="1">+</button>
+              </div>
+            </div>
+
+            <div class="custom-card">
+              <img src="assets/images/sprite_stitch.png" alt="Barnaby Stitch" class="custom-portrait" />
+              <h3>Barnaby Stitch</h3>
+              <p class="role-tag">West Route / Left Door</p>
+              <div class="level-stepper">
+                <button type="button" class="step-btn" data-char="stitch" data-delta="-1">−</button>
+                <span id="lvl-stitch" class="lvl-val">10</span>
+                <button type="button" class="step-btn" data-char="stitch" data-delta="1">+</button>
+              </div>
+            </div>
+
+            <div class="custom-card">
+              <img src="assets/images/sprite_hexa.png" alt="Madame Hexa" class="custom-portrait" />
+              <h3>Madame Hexa</h3>
+              <p class="role-tag">CAM 03 Carillon / West Sprint</p>
+              <div class="level-stepper">
+                <button type="button" class="step-btn" data-char="hexa" data-delta="-1">−</button>
+                <span id="lvl-hexa" class="lvl-val">10</span>
+                <button type="button" class="step-btn" data-char="hexa" data-delta="1">+</button>
+              </div>
+            </div>
+
+            <div class="custom-card">
+              <img src="assets/images/sprite_grimshaw.png" alt="Grimshaw the Plague Crow" class="custom-portrait" />
+              <h3>Grimshaw Crow</h3>
+              <p class="role-tag">CAM 05 Roost / East Sprint</p>
+              <div class="level-stepper">
+                <button type="button" class="step-btn" data-char="grimshaw" data-delta="-1">−</button>
+                <span id="lvl-grimshaw" class="lvl-val">10</span>
+                <button type="button" class="step-btn" data-char="grimshaw" data-delta="1">+</button>
+              </div>
+            </div>
+
+            <div class="custom-card">
+              <img src="assets/images/sprite_silas.png" alt="Withered Silas" class="custom-portrait" />
+              <h3>Withered Silas</h3>
+              <p class="role-tag">CAM 07 Boiler / Ceiling Vent</p>
+              <div class="level-stepper">
+                <button type="button" class="step-btn" data-char="silas" data-delta="-1">−</button>
+                <span id="lvl-silas" class="lvl-val">10</span>
+                <button type="button" class="step-btn" data-char="silas" data-delta="1">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="custom-presets-row">
+            <span class="preset-lbl">CHALLENGE PRESETS:</span>
+            <button type="button" class="preset-pill" data-preset="10,10,10,10,10">Harvest Fever (10×5)</button>
+            <button type="button" class="preset-pill" data-preset="0,0,18,18,15">Sprinters &amp; Vent (0/0/18/18/15)</button>
+            <button type="button" class="preset-pill" data-preset="16,16,0,0,18">Clockmaker's Trap (16/16/0/0/18)</button>
+            <button type="button" class="preset-pill danger" data-preset="20,20,20,20,20">20/20/20/20/20 GOLDEN HARVEST</button>
+          </div>
+
+          <div class="modal-footer">
+            <button id="btn-launch-custom" class="menu-btn primary" type="button">
+              <span class="btn-indicator">&#9656;</span>
+              <span class="btn-label">Launch Custom Shift</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Extras & Blueprints Vault Modal -->
+        <div id="extras-panel" class="modal-panel extras-modal hidden" role="dialog" aria-label="Extras and Blueprints Vault">
+          <div class="modal-header">
+            <h2>PUMPKIN PETE'S ARCHIVE // BLUEPRINTS, TAPES &amp; LORE</h2>
+            <button id="btn-close-extras" class="close-btn" type="button" aria-label="Close">✕</button>
+          </div>
+
+          <div class="extras-tabs">
+            <button type="button" class="extras-tab active" data-tab="blueprints">1. Engineering Blueprints</button>
+            <button type="button" class="extras-tab" data-tab="tapes">2. Security Tape Logs (1–6)</button>
+            <button type="button" class="extras-tab" data-tab="lore">3. 1987 Newspaper Clipping</button>
+            <button type="button" class="extras-tab" data-tab="epilogue">4. Story Epilogue (1993)</button>
+            <button type="button" class="extras-tab" data-tab="vhs">5. 1987 VHS Evidence Deck</button>
+          </div>
+
+          <!-- Tab 1: Engineering Blueprints -->
+          <div class="extras-tab-body active" id="extras-tab-blueprints">
+            <div class="blueprint-selector">
+              <button type="button" class="bp-char-btn active" data-bp="pete">MODEL 01: Pumpkin Pete</button>
+              <button type="button" class="bp-char-btn" data-bp="stitch">MODEL 02: Barnaby Stitch</button>
+              <button type="button" class="bp-char-btn" data-bp="hexa">MODEL 03: Madame Hexa</button>
+              <button type="button" class="bp-char-btn" data-bp="grimshaw">MODEL 04: Grimshaw Crow</button>
+              <button type="button" class="bp-char-btn" data-bp="silas">PROJECT 00: Withered Silas</button>
+            </div>
+            <div class="blueprint-viewer">
+              <div class="blueprint-img-wrap">
+                <img id="blueprint-img" src="assets/images/blueprint_pete.png" alt="Animatronic Blueprint" />
+              </div>
+              <div class="blueprint-meta">
+                <h3 id="bp-title">MODEL 01 // PUMPKIN PETE (1987)</h3>
+                <p class="bp-specs" id="bp-specs">HEIGHT: 7'2" // WEIGHT: 480 LBS // ROUTE: EAST CORRIDOR</p>
+                <p class="bp-lore" id="bp-lore">
+                  Lead vocalist and culinary mascot of Pumpkin Pete's Family Pizzeria. Built around a heavy cast-iron oven chassis, his optical sensors freeze when hit by direct infrared CCTV beams—until he reaches the East Corridor blind spot.
+                </p>
+                <div class="bp-actions">
+                  <button type="button" id="btn-bp-voice" class="hud-action-btn">&#9654; Play Voice Transmission</button>
+                  <button type="button" id="btn-bp-jumpscare" class="hud-action-btn danger">&#9888; Test Jumpscare Sequence</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Security Tape Archive -->
+          <div class="extras-tab-body hidden" id="extras-tab-tapes">
+            <p class="modal-desc">Listen to the five cassette recordings left behind in the security desk drawer.</p>
+            <div class="tape-archive-list">
+              <div class="tape-row">
+                <div>
+                  <h4>📼 Tape 01 — Night 1 Orientation (Oct 27, 1993)</h4>
+                  <p>"Welcome to your night shift at Pumpkin Pete's Autumn Jamboree! Listen closely, because the old generator wiring drains battery fast..."</p>
+                </div>
+                <button type="button" class="hud-action-btn tape-play-btn" data-tape="phone_guy_night1">&#9654; Play Tape 1</button>
+              </div>
+              <div class="tape-row">
+                <div>
+                  <h4>📼 Tape 02 — Night 2: The Arcade Roost (Oct 28, 1993)</h4>
+                  <p>"Grimshaw the Plague Crow back in Camera Five, the Arcade Alley, has started waking up. Keep an eye on his curtain in Cam Five..."</p>
+                </div>
+                <button type="button" class="hud-action-btn tape-play-btn" data-tape="phone_guy_night2">&#9654; Play Tape 2</button>
+              </div>
+              <div class="tape-row">
+                <div>
+                  <h4>📼 Tape 03 — Night 3: Signal Interference (Oct 29, 1993)</h4>
+                  <p>"All four mascots are active now, and when they get close to a camera lens, their servos emit electromagnetic surges..."</p>
+                </div>
+                <button type="button" class="hud-action-btn tape-play-btn" data-tape="phone_guy_night3">&#9654; Play Tape 3</button>
+              </div>
+              <div class="tape-row">
+                <div>
+                  <h4>📼 Tape 04 — Night 4: Final Recording (Oct 30, 1993)</h4>
+                  <p>"They're coordinating now—Stitch jammed my left door while Grimshaw sprinted down the East Hall... wait, someone's outside the window—"</p>
+                </div>
+                <button type="button" class="hud-action-btn tape-play-btn" data-tape="phone_guy_night4">&#9654; Play Tape 4</button>
+              </div>
+              <div class="tape-row">
+                <div>
+                  <h4>📼 Tape 05 — Night 5: Halloween Broadcast (Oct 31, 1993)</h4>
+                  <p>"Welcome to Halloween Night, little watchman. No more recordings to help you now. The harvest is ready..."</p>
+                </div>
+                <button type="button" class="hud-action-btn tape-play-btn" data-tape="phone_guy_night5">&#9654; Play Tape 5</button>
+              </div>
+              <div class="tape-row">
+                <div>
+                  <h4>📼 Tape 06 — Night 6 Overtime: Sub-Basement Seal Broken (Nov 1, 1993)</h4>
+                  <p>"The boiler room seal in Camera Seven broke! Silas Vane's original clockwork prototype is crawling through the overhead air ducts in Camera Eight!"</p>
+                </div>
+                <button type="button" class="hud-action-btn tape-play-btn" data-tape="phone_guy_night6">&#9654; Play Tape 6</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: 1987 Incident Investigation -->
+          <div class="extras-tab-body hidden" id="extras-tab-lore">
+            <div class="lore-layout">
+              <img src="assets/images/lore_newspaper_1987.png" alt="1987 Newspaper Clipping" class="lore-clipping-img" />
+              <div class="lore-text">
+                <h3>THE AUTUMN GAZETTE // NOV 1, 1987</h3>
+                <h4>"FOUNDER SILAS VANE VANISHES IN WORKSHOP"</h4>
+                <p>
+                  Following the sudden disappearance of master clockmaker and animatronic designer <strong>Silas Vane</strong> on Halloween Eve 1987, patrons reported the four flagship mascots staring toward the security corridor after hours and leaking black machine oil.
+                </p>
+                <p>
+                  Although municipal inspectors ordered the building condemned by November 1993, insurance clauses require an overnight watchman inside the security office from <strong>12:00 AM to 6:00 AM</strong> to prevent vandalism prior to demolition.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Story Epilogue Cutscene (Nov 1, 1993) -->
+          <div class="extras-tab-body hidden" id="extras-tab-epilogue">
+            <div class="blueprint-selector">
+              <button type="button" class="epilogue-ch-btn bp-char-btn active" data-ep="1">CH 01: Demolition Eve</button>
+              <button type="button" class="epilogue-ch-btn bp-char-btn" data-ep="2">CH 02: Sub-Basement</button>
+              <button type="button" class="epilogue-ch-btn bp-char-btn" data-ep="3">CH 03: Silas's Ledger</button>
+              <button type="button" class="epilogue-ch-btn bp-char-btn" data-ep="4">CH 04: 6:00 AM Escape</button>
+            </div>
+            <div class="blueprint-viewer">
+              <div class="blueprint-img-wrap">
+                <img id="epilogue-img" src="assets/images/epilogue_1_demolition.png" alt="Story Epilogue Cutscene" />
+              </div>
+              <div class="blueprint-meta">
+                <h3 id="epilogue-title">CHAPTER 01 // DEMOLITION EVE (NOV 1, 1993)</h3>
+                <p class="bp-specs" id="epilogue-subtitle">TIMESTAMP: 06:04 AM // EXTERIOR PARKING LOT</p>
+                <p class="bp-lore" id="epilogue-text">
+                  November first, nineteen ninety-three. As the six A.M. sunrise broke over the condemned roof of Pumpkin Pete's Pizzeria, the heavy municipal wrecking cranes rolled into the parking lot.
+                </p>
+                <div class="bp-actions">
+                  <button type="button" id="btn-play-epilogue" class="hud-action-btn">&#9654; Play Voice Narration</button>
+                  <button type="button" id="btn-next-epilogue" class="hud-action-btn">Next Chapter &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 5: Interactive 1987 VHS Evidence Deck (Found-Footage Investigation) -->
+          <div class="extras-tab-body hidden" id="extras-tab-vhs">
+            <div class="blueprint-selector">
+              <button type="button" class="vhs-tape-btn bp-char-btn active" data-vhs="1">TAPE 01: Show Stage</button>
+              <button type="button" class="vhs-tape-btn bp-char-btn" data-vhs="2">TAPE 02: Backstage</button>
+              <button type="button" class="vhs-tape-btn bp-char-btn" data-vhs="3">TAPE 03: Boiler Room</button>
+              <button type="button" class="vhs-tape-btn bp-char-btn" data-vhs="4">TAPE 04: Carillon</button>
+              <button type="button" class="vhs-tape-btn bp-char-btn" data-vhs="5">TAPE 05: Ritual</button>
+              <button type="button" class="vhs-tape-btn bp-char-btn" data-vhs="6">TAPE 06: 12:01 AM</button>
+            </div>
+            <div class="blueprint-viewer">
+              <div class="blueprint-img-wrap">
+                <img id="vhs-deck-img" src="assets/images/vhs_1987_1_stage.png" alt="1987 VHS Evidence Frame" />
+              </div>
+              <div class="blueprint-meta">
+                <h3 id="vhs-deck-title">EVIDENCE TAPE 01 // THE MAIN SHOW STAGE</h3>
+                <p class="bp-specs" id="vhs-deck-stamp">OCT 31, 1987 — 08:15 PM // CAM 01 ARCHIVE</p>
+                <p class="bp-lore" id="vhs-deck-desc">
+                  Notice how Pumpkin Pete's jaw servos lock mid-song leaking black oil while founder Silas Vane watches from the backstage curtain.
+                </p>
+                <p class="bp-specs" id="vhs-cipher-status">DECODED ANOMALIES: 0 / 6 // CIPHER: [ ? - ? - ? - ? - ? - ? ]</p>
+                <div class="bp-actions">
+                  <button type="button" id="btn-vhs-voice" class="hud-action-btn">&#9654; Play Investigator Log</button>
+                  <button type="button" id="btn-vhs-decode" class="hud-action-btn danger">&#128269; Scan &amp; Decode Anomaly</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security Field Manual Modal -->
+        <div id="manual-panel" class="modal-panel hidden" role="dialog" aria-label="Security Guard Manual">
+          <div class="modal-header">
+            <h2>Employee Security Binder — Night Watch Protocol</h2>
+            <button id="btn-close-manual" class="close-btn" type="button" aria-label="Close">✕</button>
+          </div>
+          <div class="manual-body">
+            <div class="manual-mascots">
+              <article class="mascot-dossier">
+                <img src="assets/images/sprite_pete.png" alt="Pumpkin Pete" />
+                <div>
+                  <h3>1. Pumpkin Pete <span class="badge-route">East Route &rarr; Right Door</span></h3>
+                  <p>
+                    Advances from <strong>CAM 01 &rarr; CAM 02 &rarr; CAM 05 &rarr; CAM 06 (East Hall)</strong>.
+                    Watching him on camera slows his advance—until he reaches CAM 06. When he steps to the door with a hollow laugh,
+                    check your <strong>Right Light [E]</strong> and shut the <strong>Right Door [D]</strong>!
+                  </p>
+                </div>
+              </article>
+
+              <article class="mascot-dossier">
+                <img src="assets/images/sprite_stitch.png" alt="Barnaby Stitch" />
+                <div>
+                  <h3>2. Barnaby Stitch <span class="badge-route">West Route &rarr; Left Door</span></h3>
+                  <p>
+                    Creeps along <strong>CAM 01 &rarr; CAM 02 &rarr; CAM 03 &rarr; CAM 04 (West Hall)</strong>.
+                    <strong>Cameras do NOT slow him down</strong>—staring at your monitor too long makes him faster!
+                    Listen for scraping claws on the left, check <strong>Left Light [Q]</strong>, and shut <strong>Left Door [A]</strong>.
+                  </p>
+                </div>
+              </article>
+
+              <article class="mascot-dossier">
+                <img src="assets/images/sprite_hexa.png" alt="Madame Hexa" />
+                <div>
+                  <h3>3. Madame Hexa <span class="badge-route">CAM 03 Music Box &rarr; West Sprint</span></h3>
+                  <p>
+                    Lurks in <strong>CAM 03 (Marionette Alcove)</strong>. Switch to CAM 03 and hold
+                    <strong>WIND CARILLON [W]</strong>. If the box hits 0%, she sprints down West Hall (CAM 04)—slam the
+                    <strong>Left Door [A]</strong> within 4 seconds!
+                  </p>
+                </div>
+              </article>
+
+              <article class="mascot-dossier">
+                <img src="assets/images/sprite_grimshaw.png" alt="Grimshaw the Plague Crow" />
+                <div>
+                  <h3>4. Grimshaw the Plague Crow <span class="badge-route">CAM 05 Roost &rarr; East Sprint</span></h3>
+                  <p>
+                    Roosts behind the curtain in <strong>CAM 05 (Arcade Alley)</strong>. Check CAM 05 periodically to keep him calm!
+                    If neglected, he emerges in 3 stages and bolts down <strong>CAM 06 (East Hall)</strong>—slam the
+                    <strong>Right Door [D]</strong> before his iron talons reach you!
+                  </p>
+                </div>
+              </article>
+
+              <article class="mascot-dossier">
+                <img src="assets/images/sprite_silas.png" alt="Withered Silas" />
+                <div>
+                  <h3>5. Withered Silas ("The Clockmaker") <span class="badge-route">CAM 07 Boiler &rarr; CAM 08 Air Vent &rarr; Ceiling</span></h3>
+                  <p>
+                    Awakens in <strong>CAM 07 (Sub-Basement Boiler)</strong> and crawls through <strong>CAM 08 (Overhead Vent Duct)</strong>.
+                    When you hear metallic crawling overhead, shut the <strong>Ceiling Vent Shutter [V]</strong> or fire your
+                    <strong>Flash Beacon [X]</strong> before he drops onto your desk!
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="manual-controls">
+              <h3>Controls, Vent Shutter, Flash Beacon &amp; Sub-Basement Salvage</h3>
+              <ul>
+                <li><strong>[A] / [D]</strong>: Left / Right Blast Doors &nbsp;|&nbsp; <strong>[Q] / [E]</strong>: Left / Right Hall Lights &nbsp;|&nbsp; <strong>[V]</strong>: Overhead Ceiling Vent Shutter</li>
+                <li><strong>[X] Flash Beacon</strong>: High-voltage strobe capacitor (repels Silas from ceiling vent, un-jams doors &amp; lowers Panic BPM)</li>
+                <li><strong>[SPACE]</strong>: Flip CCTV Monitor &nbsp;|&nbsp; <strong>[1]–[8]</strong>: Select Camera (CAM 01–08) &nbsp;|&nbsp; <strong>[W]</strong>: Wind Carillon (CAM 03)</li>
+                <li><strong>[C] Audio Decoy (CCTV)</strong>: Sound lure in viewed room (-2% battery) &nbsp;|&nbsp; <strong>[R] Reboot Feed</strong>: Clear signal jamming</li>
+                <li><strong>[F] Desk Fan</strong>: Toggle Fan ON/OFF (OFF saves battery but raises Temp!) &nbsp;|&nbsp; <strong>Sub-Basement Salvage</strong>: Repair units to unlock perks!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <footer class="title-footer">
+          <span>SYS-BIOS v3.10 // 5-NIGHT CAMPAIGN + ARCHIVE</span>
+          <span>PRESS [SPACE] OR CLICK TO BEGIN</span>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ==================== 2. SHIFT INTRO / NEWSPAPER BRIEFING ==================== -->
+    <section id="intro-screen" class="screen" aria-label="Night Shift Briefing">
+      <div class="newspaper-card">
+        <div class="paper-masthead">THE AUTUMN GAZETTE — OCTOBER 31, 1993</div>
+        <h2 class="paper-headline" id="intro-paper-headline">HELP WANTED: NIGHT SECURITY GUARD</h2>
+        <div class="paper-columns" id="intro-paper-body">
+          <p>
+            <strong>PUMPKIN PETE'S FAMILY PIZZERIA</strong> is seeking a licensed night watchman to work the
+            <strong>12:00 AM to 6:00 AM</strong> graveyard shift prior to building demolition.
+          </p>
+          <p>
+            Monitor six CCTV security feeds, conserve auxiliary generator battery power, and ensure the four vintage
+            autumn animatronic mascots remain out of the security office.
+          </p>
+          <p class="paper-disclaimer">
+            <em>* $115.50 / week ($120.00 Halloween bonus). Pumpkin Pete's Entertainment Inc. is not responsible for mechanical malfunction or involuntary mascot enclosure.</em>
+          </p>
+        </div>
+        <div class="shift-clock-announce">
+          <div class="shift-title" id="intro-shift-label">12:00 AM — NIGHT 1</div>
+          <button id="btn-skip-intro" class="hud-action-btn" type="button">ENTER OFFICE [SPACE]</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. MAIN GAMEPLAY SCREEN ==================== -->
+    <section id="game-screen" class="screen" aria-label="Security Office">
+      <!-- Main Panoramic Office + Jumpscare Canvas -->
+      <canvas id="office-canvas" width="1376" height="768"></canvas>
+
+      <!-- Thermal Overheat Vignette Overlay -->
+      <div id="overheat-overlay" class="overheat-overlay hidden" aria-hidden="true"></div>
+
+      <!-- Top Left: Power, Usage & Cassette Player -->
+      <div class="hud-top-left">
+        <div id="cassette-widget" class="cassette-player">
+          <div class="cassette-icon" aria-hidden="true">📼</div>
+          <div class="cassette-info">
+            <span class="cassette-label" id="cassette-tape-label">TAPE LOG // NIGHT 1</span>
+            <div class="cassette-wave" id="cassette-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <button id="btn-mute-call" class="mute-call-btn" type="button" title="Mute Call (M)">MUTE [M]</button>
+        </div>
+      </div>
+
+      <!-- Top Right: In-Game Clock (12 AM -> 6 AM) -->
+      <div class="hud-top-right">
+        <div class="clock-readout" id="hud-clock">12 AM</div>
+        <div class="night-sub" id="hud-night-label">NIGHT 1 // SHIFT PROGRESS</div>
+        <div class="hour-progress-track" title="Progress toward 6:00 AM">
+          <div class="hour-progress-fill" id="hud-shift-progress"></div>
+        </div>
+      </div>
+
+      <!-- Top-Center Overhead Ceiling Vent Shutter & Strobe Flash Beacon Bar -->
+      <div class="vent-control-bar" id="vent-control-bar">
+        <button id="btn-vent-seal" class="vent-action-btn" type="button" title="Toggle Overhead Ceiling Vent Shutter [V] (+1 Power Usage)">
+          <span class="led" id="vent-led"></span>
+          <span>CEILING VENT [V]: <strong id="vent-state-lbl">OPEN</strong></span>
+        </button>
+        <button id="btn-flash-beacon" class="vent-action-btn flash-btn" type="button" title="Discharge High-Voltage Strobe Flash Beacon [X] (Repels Ceiling Vent / Un-jams Doors)">
+          <span>&#9889; FLASH BEACON [X]: <strong id="flash-charges-lbl">3</strong></span>
+        </button>
+        <button id="btn-answer-ghost" class="vent-action-btn flash-btn hidden" type="button" title="Answer / Silence Haunted Rotary Desk Phone [P]">
+          <span>&#9742; GHOST CALL [P]</span>
+        </button>
+        <span class="vent-audio-tag" id="vent-audio-indicator">VENT: CLEAR</span>
+      </div>
+
+      <!-- Left & Right Edge Quick-Access Door & Light Panels -->
+      <div class="door-panel left-panel" id="left-control-panel">
+        <div class="panel-header">WEST DOOR</div>
+        <button id="btn-left-door" class="ctrl-btn door-btn" type="button">
+          <span class="led"></span>
+          <span class="lbl">DOOR</span>
+          <kbd>A</kbd>
+        </button>
+        <button id="btn-left-light" class="ctrl-btn light-btn" type="button">
+          <span class="led"></span>
+          <span class="lbl">LIGHT</span>
+          <kbd>Q</kbd>
+        </button>
+        <div class="panel-threat-hint" id="left-audio-indicator">AUDIO: QUIET</div>
+      </div>
+
+      <div class="door-panel right-panel" id="right-control-panel">
+        <div class="panel-header">EAST DOOR</div>
+        <button id="btn-right-door" class="ctrl-btn door-btn" type="button">
+          <span class="led"></span>
+          <span class="lbl">DOOR</span>
+          <kbd>D</kbd>
+        </button>
+        <button id="btn-right-light" class="ctrl-btn light-btn" type="button">
+          <span class="led"></span>
+          <span class="lbl">LIGHT</span>
+          <kbd>E</kbd>
+        </button>
+        <div class="panel-threat-hint" id="right-audio-indicator">AUDIO: QUIET</div>
+      </div>
+
+      <!-- Subtitle Bar for Phone Guy & Audio Cues -->
+      <div id="subtitle-bar" class="subtitle-bar hidden" aria-live="polite"></div>
+
+      <!-- ==================== CCTV CAMERA TABLET OVERLAY ==================== -->
+      <div id="camera-tablet" class="camera-tablet hidden" aria-label="CCTV Security Monitor">
+        <div class="cctv-frame">
+          <canvas id="cctv-canvas" width="1376" height="768"></canvas>
+
+          <!-- CCTV HUD Header -->
+          <div class="cctv-header">
+            <div class="cctv-rec">
+              <span class="rec-dot"></span>
+              <span id="cctv-cam-title">CAM 01 — HARVEST SHOW STAGE</span>
+            </div>
+            <div class="cctv-motion-tag" id="cctv-motion-tag">
+              MOTION SENSOR: SCANNING...
+            </div>
+          </div>
+
+          <!-- CCTV Tactical Utility Bar (Audio Decoy & Feed Reboot) -->
+          <div class="cctv-utility-bar">
+            <button id="btn-audio-decoy" class="cctv-tool-btn" type="button" title="Play sound lure in current camera room (-2% Battery)">
+              <span>&#128266; AUDIO DECOY [C]</span>
+              <span class="tool-sub" id="decoy-status-text">READY (-2% PWR)</span>
+            </button>
+            <button id="btn-reboot-cam" class="cctv-tool-btn" type="button" title="Clear electromagnetic camera jamming">
+              <span>&#9889; REBOOT FEED [R]</span>
+              <span class="tool-sub" id="reboot-status-text">SIGNAL OK</span>
+            </button>
+          </div>
+
+          <!-- CAM 03 Special Carillon Music Box Control -->
+          <div id="cam03-box-panel" class="cam03-box-panel hidden">
+            <div class="box-title">ANTIQUE CARILLON MUSIC BOX</div>
+            <div class="box-desc">Keep wound to prevent Madame Hexa from sprinting!</div>
+            <div class="box-meter-wrap">
+              <div class="box-meter-bar" id="cam03-meter-bar"></div>
+              <span class="box-meter-text" id="cam03-meter-text">100%</span>
+            </div>
+            <button id="btn-wind-box" class="wind-box-btn" type="button">
+              &#9881; HOLD TO WIND CARILLON [W]
+            </button>
+          </div>
+
+          <!-- CAM 05 Grimshaw Roost Status Panel -->
+          <div id="cam05-roost-panel" class="cam03-box-panel cam05-roost-panel hidden">
+            <div class="box-title">CROW'S ROOST CURTAIN (GRIMSHAW)</div>
+            <div class="box-desc">Viewing CAM 05 calms Grimshaw! If he sprints down CAM 06, shut Right Door [D]!</div>
+            <div class="box-meter-wrap">
+              <div class="box-meter-bar roost-bar" id="cam05-meter-bar"></div>
+              <span class="box-meter-text" id="cam05-meter-text">CALM (100%)</span>
+            </div>
+          </div>
+
+          <!-- Interactive Pizzeria Floorplan Map (Bottom Right) -->
+          <div class="cctv-map-container" aria-label="Pizzeria Camera Map">
+            <div class="map-header">
+              <span>CCTV MAP</span>
+              <div class="map-alerts">
+                <span id="global-box-alert" class="box-alert-pill">BOX: 100%</span>
+                <span id="global-roost-alert" class="box-alert-pill roost-pill">ROOST: 100%</span>
+              </div>
+            </div>
+
+            <div class="map-blueprint">
+              <!-- SVG Connector Lines showing Animatronic Routes -->
+              <svg class="map-lines" viewBox="0 0 320 230" aria-hidden="true">
+                <!-- Rooms outlines -->
+                <rect x="95" y="8" width="130" height="36" class="map-room-rect" />
+                <rect x="85" y="54" width="150" height="46" class="map-room-rect" />
+                <rect x="14" y="62" width="60" height="48" class="map-room-rect" />
+                <rect x="246" y="62" width="60" height="58" class="map-room-rect" />
+                <rect x="30" y="122" width="52" height="72" class="map-room-rect" />
+                <rect x="238" y="130" width="52" height="64" class="map-room-rect" />
+                <rect x="242" y="8" width="66" height="42" class="map-room-rect" />
+                <rect x="122" y="112" width="76" height="42" class="map-room-rect" />
+                <!-- Security Office Box -->
+                <rect x="115" y="166" width="90" height="52" class="map-office-rect" />
+
+                <!-- Route Connectors -->
+                <line x1="160" y1="44" x2="160" y2="54" class="map-route-line" />
+                <line x1="85" y1="78" x2="74" y2="78" class="map-route-line" />
+                <line x1="235" y1="82" x2="246" y2="82" class="map-route-line" />
+                <line x1="48" y1="110" x2="54" y2="122" class="map-route-line" />
+                <line x1="95" y1="100" x2="64" y2="122" class="map-route-line" />
+                <line x1="274" y1="120" x2="266" y2="130" class="map-route-line" />
+                <line x1="252" y1="50" x2="188" y2="112" class="map-route-line danger" />
+                <line x1="160" y1="154" x2="160" y2="166" class="map-route-line danger" />
+                <line x1="82" y1="184" x2="115" y2="188" class="map-route-line danger" />
+                <line x1="238" y1="184" x2="205" y2="188" class="map-route-line danger" />
+              </svg>
+
+              <!-- Camera Buttons Positioned over Floorplan -->
+              <button type="button" class="cam-node active" data-cam="cam01" style="left: 102px; top: 10px;">
+                <span class="cam-id">CAM 01</span>
+                <span class="cam-name">Show Stage</span>
+              </button>
+
+              <button type="button" class="cam-node" data-cam="cam07" style="left: 232px; top: 10px;">
+                <span class="cam-id">CAM 07</span>
+                <span class="cam-name">Boiler Room</span>
+                <span class="cam-warn-dot" id="cam07-warn-dot"></span>
+              </button>
+
+              <button type="button" class="cam-node" data-cam="cam02" style="left: 102px; top: 60px;">
+                <span class="cam-id">CAM 02</span>
+                <span class="cam-name">Dining Hall</span>
+              </button>
+
+              <button type="button" class="cam-node" data-cam="cam03" style="left: 12px; top: 68px;">
+                <span class="cam-id">CAM 03</span>
+                <span class="cam-name">Marionette</span>
+                <span class="cam-warn-dot" id="cam03-warn-dot"></span>
+              </button>
+
+              <button type="button" class="cam-node" data-cam="cam05" style="left: 232px; top: 72px;">
+                <span class="cam-id">CAM 05</span>
+                <span class="cam-name">Arcade Alley</span>
+                <span class="cam-warn-dot" id="cam05-warn-dot"></span>
+              </button>
+
+              <button type="button" class="cam-node" data-cam="cam08" style="left: 112px; top: 114px;">
+                <span class="cam-id">CAM 08</span>
+                <span class="cam-name">Overhead Vent</span>
+                <span class="cam-warn-dot" id="cam08-warn-dot"></span>
+              </button>
+
+              <button type="button" class="cam-node" data-cam="cam04" style="left: 18px; top: 140px;">
+                <span class="cam-id">CAM 04</span>
+                <span class="cam-name">West Hall</span>
+              </button>
+
+              <button type="button" class="cam-node" data-cam="cam06" style="left: 226px; top: 140px;">
+                <span class="cam-id">CAM 06</span>
+                <span class="cam-name">East Hall</span>
+              </button>
+
+              <div class="office-marker" style="left: 123px; top: 174px;">
+                <span class="you-dot"></span>
+                <span>YOU (OFFICE)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom HUD: Power Meter + Thermal Fan Control + Camera Monitor Flip Bar -->
+      <div class="hud-bottom">
+        <div class="power-thermal-group">
+          <div class="power-cluster">
+            <div class="power-line">
+              <span class="power-lbl">BATTERY</span>
+              <span class="power-val" id="hud-power">100%</span>
+            </div>
+            <div class="usage-line">
+              <span class="usage-lbl">USAGE:</span>
+              <div class="usage-bars" id="hud-usage-bars">
+                <span class="u-bar active"></span>
+                <span class="u-bar"></span>
+                <span class="u-bar"></span>
+                <span class="u-bar"></span>
+                <span class="u-bar"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="thermal-cluster">
+            <div class="temp-line">
+              <span class="temp-lbl">TEMP</span>
+              <span class="temp-val" id="hud-temp">68&deg;F</span>
+            </div>
+            <button id="btn-toggle-fan" class="fan-toggle-btn active" type="button" title="Toggle Desk Fan [F] — OFF saves battery but raises Office Temp">
+              FAN [F]: <span id="fan-state-lbl">ON</span>
+            </button>
+          </div>
+
+          <div class="thermal-cluster pulse-cluster">
+            <div class="temp-line">
+              <span class="temp-lbl">PULSE</span>
+              <span class="temp-val" id="hud-bpm">72 BPM</span>
+            </div>
+            <span class="pulse-sub" id="hud-bpm-status">STEADY</span>
+          </div>
+        </div>
+
+        <button id="btn-toggle-Monitor" class="monitor-toggle-bar" type="button">
+          <span class="chevrons">&#9650;&#9650;</span>
+          <span id="monitor-btn-label">OPEN CAMERA MONITOR [SPACE]</span>
+          <span class="chevrons">&#9650;&#9650;</span>
+        </button>
+
+        <div class="office-pan-hint">
+          <span>PAN: MOUSE / &larr; &rarr;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. GAME OVER SCREEN ==================== -->
+    <section id="gameover-screen" class="screen" aria-label="Game Over">
+      <canvas id="static-canvas" width="640" height="360"></canvas>
+      <div class="end-card gameover-card">
+        <p class="end-eyebrow">SECURITY FEED TERMINATED // INCIDENT REPORT</p>
+        <h2 class="end-title danger">GAME OVER</h2>
+        <p class="end-subtitle" id="gameover-cause">Killed by Pumpkin Pete at 3:14 AM</p>
+
+        <div class="survival-tip-box">
+          <span class="tip-badge">SURVIVAL NOTE</span>
+          <p id="gameover-tip">
+            Check the hallway lights before closing doors, and listen carefully for footsteps on the left or right.
+          </p>
+        </div>
+
+        <div class="end-actions">
+          <button id="btn-retry" class="menu-btn primary" type="button">
+            <span class="btn-indicator">&#8635;</span>
+            <span class="btn-label">Instant Restart (Same Shift)</span>
+          </button>
+          <button id="btn-gameover-menu" class="menu-btn" type="button">
+            <span class="btn-indicator">&#9666;</span>
+            <span class="btn-label">Return to Main Menu</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. 6:00 AM VICTORY SCREEN ==================== -->
+    <section id="win-screen" class="screen" aria-label="Shift Complete">
+      <div class="end-card win-card">
+        <div class="clock-flip-banner">
+          <span class="six-am-digits" id="win-clock-digits">6:00 AM</span>
+          <span class="shift-survived-tag" id="win-shift-tag">SHIFT SURVIVED</span>
+        </div>
+
+        <div class="win-artwork-wrap" id="win-artwork-wrap">
+          <img id="win-artwork-img" src="assets/images/win_night5_paycheck.png" alt="6:00 AM Sunrise Victory" />
+        </div>
+
+        <div class="paycheck-voucher">
+          <div class="paycheck-top">
+            <span>PUMPKIN PETE'S ENTERTAINMENT INC.</span>
+            <span id="win-paycheck-date">DATE: NOV 01, 1993</span>
+          </div>
+          <div class="paycheck-pay-row">
+            <span>PAY TO THE ORDER OF: <strong>Night Security Guard</strong></span>
+            <span class="paycheck-amount" id="win-paycheck-amount">$115.50</span>
+          </div>
+          <div class="paycheck-memo" id="win-stats-summary">
+            MEMO: Survived until 6:00 AM // Power Remaining: 14%
+          </div>
+        </div>
+
+        <div class="end-actions">
+          <button id="btn-play-again" class="menu-btn primary" type="button">
+            <span class="btn-indicator">&#9656;</span>
+            <span class="btn-label" id="btn-next-shift-label">Advance to Next Night Shift</span>
+          </button>
+          <button id="btn-win-salvage" class="menu-btn salvage-highlight" type="button">
+            <span class="btn-indicator">&#9889;</span>
+            <span class="btn-label">Sub-Basement Salvage (Bonus &amp; Perks)</span>
+          </button>
+          <button id="btn-win-nightmare" class="menu-btn" type="button">
+            <span class="btn-indicator">&#9760;</span>
+            <span class="btn-label">Try Night 6: Halloween Overtime</span>
+          </button>
+          <button id="btn-win-epilogue" class="menu-btn" type="button">
+            <span class="btn-indicator">&#127916;</span>
+            <span class="btn-label">Watch 1993 Story Epilogue</span>
+          </button>
+          <button id="btn-win-menu" class="menu-btn" type="button">
+            <span class="btn-indicator">&#9666;</span>
+            <span class="btn-label">Return to Main Menu</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. SUB-BASEMENT WORKSHOP SALVAGE MODE ==================== -->
+    <section id="salvage-screen" class="screen" aria-label="Sub-Basement Workshop Salvage">
+      <canvas id="salvage-canvas" width="1376" height="768"></canvas>
+
+      <div class="salvage-hud">
+        <!-- Top Header -->
+        <div class="salvage-top-bar">
+          <div>
+            <p class="eyebrow">SUB-BASEMENT INSPECTION TABLE // PROTOCOL 1987-B</p>
+            <h2 class="salvage-title" id="salvage-unit-title">UNIT 01: PUMPKIN PETE — SERVO CALIBRATION</h2>
+          </div>
+          <div class="salvage-top-actions">
+            <span class="salvage-status-pill" id="salvage-posture-pill">POSTURE: DORMANT (STAGE 1)</span>
+            <button id="btn-salvage-exit" class="hud-action-btn" type="button">&#9666; Return to Menu</button>
+          </div>
+        </div>
+
+        <!-- Left Sidebar: Unit Selection & Unlockable Perks -->
+        <div class="salvage-sidebar">
+          <div class="salvage-box-title">SELECT UNIT TO SALVAGE</div>
+          <button type="button" class="salvage-unit-btn active" data-unit="pete">
+            <span>01. Pumpkin Pete</span>
+            <small id="perk-badge-pete">+15% Battery Cap</small>
+          </button>
+          <button type="button" class="salvage-unit-btn" data-unit="hexa">
+            <span>02. Madame Hexa</span>
+            <small id="perk-badge-hexa">-30% Carillon Unwind</small>
+          </button>
+          <button type="button" class="salvage-unit-btn" data-unit="grimshaw">
+            <span>03. Grimshaw Crow</span>
+            <small id="perk-badge-grimshaw">-35% Door Impact Drain</small>
+          </button>
+          <button type="button" class="salvage-unit-btn" data-unit="silas">
+            <span>04. Withered Silas</span>
+            <small id="perk-badge-silas">+2 Flash Capacitor Charges</small>
+          </button>
+          <button type="button" class="salvage-unit-btn" data-unit="stitch">
+            <span>05. Barnaby Stitch</span>
+            <small id="perk-badge-stitch">-30% Audio Decoy Cooldown</small>
+          </button>
+
+          <div class="salvage-rules-note">
+            <strong>WARNING:</strong> Holding <strong>CALIBRATE [W]</strong> repairs the unit's servos but agitates its sensors. If the unit reaches <strong>STAGE 3 (LEANING IN)</strong>, hit <strong>TASER SHOCK [SPACE]</strong> immediately before it lunges across the table!
+          </div>
+        </div>
+
+        <!-- Bottom Workbench Calibration & Taser Controls -->
+        <div class="salvage-bottom-bar">
+          <div class="salvage-progress-panel">
+            <div class="salvage-steps-row">
+              <span class="salvage-step" id="salvage-step-1">1. Optical De-Gauss</span>
+              <span class="salvage-step" id="salvage-step-2">2. Servo Fuse</span>
+              <span class="salvage-step" id="salvage-step-3">3. Spring-Lock Seal</span>
+            </div>
+            <div class="box-meter-wrap salvage-meter-wrap">
+              <div class="box-meter-bar salvage-meter-bar" id="salvage-progress-bar"></div>
+              <span class="box-meter-text" id="salvage-progress-text">CALIBRATION: 0%</span>
+            </div>
+          </div>
+
+          <div class="salvage-controls-row">
+            <button id="btn-salvage-work" class="wind-box-btn salvage-work-btn" type="button">
+              &#128295; HOLD TO CALIBRATE SERVOS [HOLD W / CLICK]
+            </button>
+            <button id="btn-salvage-shock" class="hud-action-btn danger salvage-shock-btn" type="button">
+              &#9889; CONTROLLED TASER SHOCK [SPACE] (<span id="salvage-shocks-left">3</span> LEFT)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/audio.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

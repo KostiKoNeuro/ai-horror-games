@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Horror Games</title>
-<meta name="description" content="Three AI models got $25 and 3 hours each to make a horror game that scares one person. Play them in your browser.">
+<meta name="description" content="Claude Opus 5.5, Gemini 4 Argon and Kimi K3.1 Pro got $25 and 3 hours each to make horror games: their own Five Nights at Freddy's and a game to scare one person. Play them in your browser.">
 <style>
   :root { --bg: #0a0c1a; --card: #12162e; --ink: #f7f1e1; --muted: #9aa3c7; --cyan: #4ed6f0; --line: #262c52; }
   * { box-sizing: border-box; }
@@ -26,6 +26,8 @@
   a.btn { text-decoration: none; padding: 10px 16px; border-radius: 12px; font-weight: 700; font-size: 15px; }
   a.play { background: var(--cyan); color: #06121a; }
   a.src { border: 1px solid var(--line); color: var(--ink); }
+  .ep { margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--line); }
+  h1.small { font-size: clamp(26px, 4vw, 38px); }
   .chart { margin: 40px 0 8px; width: 100%; border-radius: 16px; border: 1px solid var(--line); }
   footer { margin-top: 36px; color: var(--muted); font-size: 14px; }
   footer a { color: var(--cyan); }
@@ -33,8 +35,47 @@
 </head>
 <body>
 <main>
+  <div class="kicker">Episode 2 · Five Nights</div>
+  <h1>Three AIs made their own Five Nights at Freddy's</h1>
+  <p class="lead">One prompt for all three: a night guard in an abandoned Halloween pizzeria, cameras, two doors, a battery that runs out, and original animatronics that come for you. Survive until 6 AM. Each model had $25 and 3 hours for its own tokens, code and every generated image, voice and sound. I played all three live on camera without knowing what was inside.</p>
+  <div class="warn">🎧 Headphones on, lights off. All three games are in English and run fully offline in your browser.</div>
+
+  <div class="grid">
+    <div class="card">
+      <img src="media/ep2_argon.jpg" alt="Hexa jumpscare from Gemini 4 Argon's game">
+      <div class="body">
+        <div class="place">1st place · spent $20.41</div>
+        <h2>Night Shift at Pumpkin Pete's</h2>
+        <div class="meta">Gemini 4 Argon · Antigravity</div>
+        <div class="desc">The biggest game of the three: five animatronics, five nights plus a Halloween overtime, story tapes, a blueprint archive, a salvage workshop with perks and a custom night. Hard from the very first minute.</div>
+        <div class="btns"><a class="btn play" href="episode-2-five-nights/gemini-4-argon/">Play</a><a class="btn src" href="https://github.com/KostiKoNeuro/ai-horror-games/tree/main/episode-2-five-nights/gemini-4-argon">Source</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="media/ep2_opus.jpg" alt="Title screen of Claude Opus 5.5's game">
+      <div class="body">
+        <div class="place">2nd place · spent $22.30</div>
+        <h2>Night Shift at Pumpkin Pete's</h2>
+        <div class="meta">Claude Opus 5.5 · Claude Code</div>
+        <div class="desc">The clearest and most polished one: three animatronics with their own rules, a phone guy who explains them, doors, lights and a camera map. Feels like a standalone game. The only one I managed to beat.</div>
+        <div class="btns"><a class="btn play" href="episode-2-five-nights/claude-opus-5.5/">Play</a><a class="btn src" href="https://github.com/KostiKoNeuro/ai-horror-games/tree/main/episode-2-five-nights/claude-opus-5.5">Source</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="media/ep2_kimi.jpg" alt="Shroud jumpscare from Kimi K3.1 Pro's game">
+      <div class="body">
+        <div class="place">3rd place · spent $13.31</div>
+        <h2>Night Shift at Pumpkin Pete's</h2>
+        <div class="meta">Kimi K3.1 Pro · Kimi Code</div>
+        <div class="desc">Five mascots that each need a different answer: doors for some, the hall light for Shroud, a vent lure for Gloam. Overtime and a custom shift unlock after the first night. I never survived it.</div>
+        <div class="btns"><a class="btn play" href="episode-2-five-nights/kimi-k3.1-pro/">Play</a><a class="btn src" href="https://github.com/KostiKoNeuro/ai-horror-games/tree/main/episode-2-five-nights/kimi-k3.1-pro">Source</a></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="ep">
   <div class="kicker">Episode 1 · Scare Kostya</div>
-  <h1>Three AIs made horror games to scare one person</h1>
+  <h1 class="small">Three AIs made horror games to scare one person</h1>
   <p class="lead">Same prompt, $25 and 3 hours per model — for their own tokens, code and every generated image, voice and sound. I played each one once, live on camera, without knowing what was inside. Now you can play them too.</p>
   <div class="warn">🎧 Headphones on, lights off. Games may ask for camera / mic access — it stays in your browser, nothing is sent anywhere, and every game works if you say no.</div>
 
@@ -72,10 +113,11 @@
   </div>
 
   <img class="chart" src="media/12_spending_chart.png" alt="What each model spent of its $25 budget">
+  </section>
 
   <footer>
-    Games are in Russian (made for a Russian-speaking player); Protocol: Don't Look has an English toggle. Code and assets are exactly what the models produced.
-    <br>Full video with an English audio track: <a href="[YOUTUBE LINK]">YouTube</a> · Source: <a href="https://github.com/KostiKoNeuro/ai-horror-games">GitHub</a> · Next episode: AI-made Five Nights at Freddy's.
+    Episode 1 games are in Russian (made for a Russian-speaking player); Protocol: Don't Look has an English toggle. Episode 2 games are in English. Code and assets are exactly what the models produced.
+    <br>Full video with an English audio track: <a href="[YOUTUBE LINK]">YouTube</a> · Source: <a href="https://github.com/KostiKoNeuro/ai-horror-games">GitHub</a> · Next: episode 3, the series final.
   </footer>
 </main>
 </body>

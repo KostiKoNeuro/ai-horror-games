@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090b0b">
+  <title>Night Shift at Pumpkin Pete's</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game" aria-label="Night Shift at Pumpkin Pete's survival horror game">
+    <section id="playfield" class="hidden" aria-label="Security office">
+      <img id="sceneImage" class="scene" src="assets/images/office.png" alt="Dark security office">
+      <img id="blackoutFigure" class="blackout-figure" src="assets/images/blackout_pete.png" alt="Pumpkin Pete emerging in the dark office">
+      <div id="sceneTint" class="scene-tint"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div id="doorwayLeft" class="doorway left"><div class="hall-light"></div><img id="leftVisitor" class="visitor" alt="Animatronic at left door"></div>
+      <div id="doorwayRight" class="doorway right"><div class="hall-light"></div><img id="rightVisitor" class="visitor" alt="Animatronic at right door"></div>
+      <div id="leftDoor" class="security-door left"><div class="door-slats"></div><span>KEEP CLEAR</span></div>
+      <div id="rightDoor" class="security-door right"><div class="door-slats"></div><span>KEEP CLEAR</span></div>
+
+      <header id="hud">
+        <div class="shift-mark"><span class="pumpkin-dot"></span><div><b>PUMPKIN PETE'S</b><small id="shiftModeLabel">NIGHT SECURITY · 01</small></div></div>
+        <div class="clock"><span id="clock">12 AM</span><div class="night-track"><i id="nightProgress"></i></div><small>UNTIL 6 AM</small></div>
+        <div class="hud-actions"><button id="muteButton" class="icon-button sound-button" aria-label="Mute audio" title="Mute (M)">SOUND</button><button id="pauseButton" class="icon-button" aria-label="Pause game" title="Pause (Esc)">Ⅱ</button></div>
+      </header>
+
+      <aside id="powerPanel"><div class="power-row"><span>POWER</span><b id="powerText">100%</b></div><div class="power-track"><i id="powerBar"></i></div><div class="usage-row"><small>USAGE</small><div id="usageBars"><i></i><i></i><i></i><i></i><i></i></div></div></aside>
+      <div id="threatNotice" role="status"><small>MOTION DETECTED</small><span></span></div>
+      <div id="ventWarning" role="status"><i></i><span>WINGBEATS ABOVE · USE CAM 10</span></div>
+      <div id="subtitle" role="status"></div>
+      <div id="voiceCaption" role="status"><small>INCOMING VOICEMAIL</small><span></span></div>
+
+      <div class="office-controls left-controls">
+        <button id="leftLight" class="control light-control" aria-label="Toggle left hall light"><span class="key">Q</span><i></i><b>HALL LIGHT</b><small>LEFT</small></button>
+        <button id="leftDoorButton" class="control door-control" aria-label="Toggle left security door"><span class="key">A</span><i></i><b>DOOR</b><small>LEFT</small></button>
+      </div>
+      <div class="office-controls right-controls">
+        <button id="rightLight" class="control light-control" aria-label="Toggle right hall light"><span class="key">E</span><i></i><b>HALL LIGHT</b><small>RIGHT</small></button>
+        <button id="rightDoorButton" class="control door-control" aria-label="Toggle right security door"><span class="key">D</span><i></i><b>DOOR</b><small>RIGHT</small></button>
+      </div>
+      <button id="cameraToggle" aria-label="Raise camera tablet"><span class="camera-chevron">⌃</span><b>CAMERAS</b><small>SPACE</small></button>
+
+      <section id="tablet" aria-label="Security camera tablet">
+        <div class="tablet-frame">
+          <div class="camera-feed">
+            <img id="cameraImage" class="scene" src="assets/images/stage.png" alt="Show Stage camera feed">
+            <div id="cameraCharacters"></div><div class="camera-noise"></div><div class="scanlines"></div>
+            <div class="cam-top"><span><i class="rec-dot"></i> REC</span><span id="camId">CAM 01</span><span id="signal">SIGNAL ▰▰▰</span></div>
+            <div class="cam-caption"><small>PUMPKIN PETE'S · INTERNAL CCTV</small><h2 id="camName">SHOW STAGE</h2></div><div class="focus-corners"></div>
+            <button id="lureButton" class="lure-button" aria-label="Play audio lure on this camera"><span>PLAY LURE</span><small id="lureStatus">0.8% POWER · F</small></button>
+          </div>
+          <div class="tablet-bottom">
+            <div class="cam-help"><b id="behaviorHint">OBSERVATION FEED</b><span id="behaviorText">Select a camera. Watching some mascots changes their behavior.</span></div>
+            <div id="cameraMap" aria-label="Camera map">
+              <div class="map-label"><span>CAMERA MAP</span><small>1—0 TO SWITCH</small></div>
+              <div class="map-grid">
+                <button data-cam="parts" class="map-node parts"><small>07</small><span>PARTS</span></button>
+                <button data-cam="arcade" class="map-node arcade"><small>03</small><span>ARCADE</span></button>
+                <button data-cam="stage" class="map-node stage active"><small>01</small><span>STAGE</span></button>
+                <button data-cam="prize" class="map-node prize"><small>04</small><span>PRIZES</span></button>
+                <button data-cam="kitchen" class="map-node kitchen"><small>09</small><span>KITCHEN</span></button>
+                <button data-cam="west" class="map-node west"><small>05</small><span>W. HALL</span></button>
+                <button data-cam="dining" class="map-node dining"><small>02</small><span>DINING</span></button>
+                <button data-cam="party" class="map-node party"><small>08</small><span>PARTY</span></button>
+                <button data-cam="east" class="map-node east"><small>06</small><span>E. HALL</span></button>
+                <div class="map-office">OFFICE</div>
+                <button data-cam="vent" class="map-node vent"><small>10</small><span>VENT</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="startScreen" class="screen active">
+      <img class="screen-bg" src="assets/images/title.png" alt="The abandoned Pumpkin Pete's pizzeria at night">
+      <div class="screen-shade"></div><div class="grain"></div>
+      <div class="start-content">
+        <div class="title-block">
+          <div class="brand-icon" aria-hidden="true"><span></span></div><p class="eyebrow">A NIGHT SHIFT AT</p>
+          <h1>PUMPKIN<br><em>PETE'S</em></h1><p class="tagline">The lights are off. The mascots aren't.</p>
+          <button id="startButton" class="primary-button"><span>BEGIN NIGHT</span><small>12 AM — 6 AM</small></button>
+          <div class="mode-select" aria-label="Difficulty selection"><button id="normalMode" class="mode-option active">NIGHT 01</button><button id="overtimeMode" class="mode-option" disabled>OVERTIME · LOCKED</button><button id="customMode" class="mode-option" disabled>CUSTOM · LOCKED</button></div>
+          <p id="recordLine" class="record-line">NO COMPLETED SHIFTS ON RECORD</p><p class="headphones">◖ HEADPHONES RECOMMENDED ◗</p>
+        </div>
+        <aside class="briefing">
+          <div class="briefing-head"><span>EMPLOYEE BRIEFING</span><small>FIVE ACTIVE MASCOTS</small></div>
+          <p>Conserve power. Track movement. Every mascot demands a different response.</p>
+          <div class="threat"><b>01</b><div><strong>PETE FOLLOWS A ROUTINE</strong><span>Watching his current camera suspends his movement.</span></div></div>
+          <div class="threat"><b>02</b><div><strong>VESPER MOVES UNSEEN</strong><span>She only advances when her current camera is unwatched.</span></div></div>
+          <div class="threat"><b>03</b><div><strong>PATCH HATES THE CAMERAS</strong><span>His movement timer runs only while your tablet is raised.</span></div></div>
+          <div class="threat shroud-rule"><b>04</b><div><strong>SHROUD FEARS THE LIGHT</strong><span>Invisible on CCTV. Hold the correct hall light on its cold spot.</span></div></div>
+          <div class="threat gloam-rule"><b>05</b><div><strong>GLOAM HUNTS FROM ABOVE</strong><span>Doors and lights won't help. Select its camera and play the lure tone.</span></div></div>
+          <div class="controls-summary"><span><kbd>SPACE</kbd> CAMERAS</span><span><kbd>A</kbd><kbd>D</kbd> DOORS</span><span><kbd>Q</kbd><kbd>E</kbd> LIGHTS</span><span><kbd>F</kbd> LURE</span></div>
+        </aside>
+      </div>
+      <footer class="start-footer"><span>ABANDONED · CONDEMNED · STILL HIRING</span><span>SURVIVE OVERTIME TO UNLOCK CUSTOM SHIFT</span></footer>
+    </section>
+
+    <section id="pauseScreen" class="screen modal-screen"><div class="modal-card"><p class="eyebrow">SHIFT INTERRUPTED</p><h2>PAUSED</h2><p>The night will wait. For now.</p><button id="resumeButton" class="primary-button">RESUME SHIFT</button><button id="pauseMute" class="text-button">TOGGLE SOUND · M</button><button id="restartPause" class="text-button">RESTART NIGHT</button><div class="pause-controls">SPACE · Cameras &nbsp; A/D · Doors &nbsp; Q/E · Lights &nbsp; F · Lure &nbsp; 1–0 · Camera select</div></div></section>
+    <section id="customScreen" class="screen modal-screen"><div class="modal-card custom-card"><p class="eyebrow">YOUR SHIFT. YOUR RULES.</p><h2>CUSTOM NIGHT</h2><p>Set each mascot from 0–10. Zero removes it from the building.</p><div id="customLevels"><label data-enemy="pete"><span>PUMPKIN PETE<small>ROUTINE STALKER</small></span><input type="range" min="0" max="10" value="5"><output>5</output></label><label data-enemy="vesper"><span>VESPER<small>UNWATCHED WITCH</small></span><input type="range" min="0" max="10" value="5"><output>5</output></label><label data-enemy="patch"><span>PATCH<small>CAMERA HUNTER</small></span><input type="range" min="0" max="10" value="5"><output>5</output></label><label data-enemy="shroud"><span>SHROUD<small>LIGHT-SHY GHOST</small></span><input type="range" min="0" max="10" value="5"><output>5</output></label><label data-enemy="gloam"><span>GLOAM<small>VENT STALKER</small></span><input type="range" min="0" max="10" value="5"><output>5</output></label></div><div class="custom-summary"><span>12 AM—6 AM · 5 MINUTES</span><b id="customTotal">TOTAL AI · 25</b></div><button id="customBegin" class="primary-button">BEGIN CUSTOM SHIFT</button><button id="customBack" class="text-button">BACK TO TITLE</button></div></section>
+    <section id="jumpscare" class="screen" aria-label="Animatronic attack"><img id="scareImage" src="assets/images/pete_scare.png" alt="Animatronic jumpscare"><div class="scare-vignette"></div></section>
+    <section id="endScreen" class="screen modal-screen"><div class="end-card"><p id="endEyebrow" class="eyebrow">SHIFT TERMINATED</p><h2 id="endTitle">YOU WERE FOUND</h2><div id="endTime">2 AM</div><div id="endRank"></div><p id="endMessage">The building has gone quiet again.</p><div id="endStats"></div><button id="overtimeButton" class="primary-button">ENTER OVERTIME</button><button id="customEndButton" class="primary-button">CUSTOM SHIFT</button><button id="restartButton" class="primary-button">TRY AGAIN <small>R</small></button><button id="menuButton" class="text-button">BACK TO TITLE</button></div></section>
+    <div id="rotateNotice">For the best chance of survival,<br>turn your device sideways.</div>
+  </main>
+  <audio id="ambienceAudio" src="assets/audio/ambience.mp3" loop preload="auto"></audio>
+  <audio id="staticAudio" src="assets/audio/static.mp3" loop preload="auto"></audio>
+  <audio id="musicAudio" src="assets/audio/music.mp3" loop preload="auto"></audio>
+  <script src="game.js"></script>
+</body>
+</html>

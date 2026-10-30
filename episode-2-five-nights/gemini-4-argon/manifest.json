@@ -1,0 +1,2772 @@
+{
+  "game_title": "Night Shift at Pumpkin Pete's",
+  "generated_at": "2026-10-30T04:00:50Z",
+  "total_assets": 220,
+  "summary": {
+    "images": 139,
+    "sfx": 36,
+    "voice": 35,
+    "music": 10
+  },
+  "assets": [
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/alarm_overheat.mp3",
+      "prompt": "Low urgent industrial thermal warning buzzer beep loop in a cramped control room",
+      "task_id": "a265ea82-5c4c-4c03-ba89-0d86dd4b0009",
+      "bytes": 65244,
+      "timestamp": "2026-10-29T12:07:51Z",
+      "size_bytes": 65244
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/ambience_late_night.mp3",
+      "prompt": "Deep ominous sub-bass heartbeat drone and distant eerie metallic groaning in an abandoned building, dark survival horror tension loop",
+      "task_id": "c3f7681c-6ddc-4f1f-9f3e-f2d9d926840f",
+      "bytes": 160957,
+      "timestamp": "2026-10-29T11:04:04Z",
+      "size_bytes": 160957
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/ambience_office.mp3",
+      "prompt": "Low industrial fluorescent light hum and distant eerie ventilation drone in a dark abandoned building, seamless horror ambience",
+      "task_id": "f6b00c93-7264-4a69-93e3-ed43bcad28e4",
+      "bytes": 160957,
+      "timestamp": "2026-10-29T10:52:06Z",
+      "size_bytes": 160957
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/anomaly_decode_chime.mp3",
+      "prompt": "Vintage CRT computer terminal decoding a secret anomaly signal, resonant digital lock chime and tape click",
+      "task_id": "afee5d6a-5a67-4d95-b502-2db6ed7aa355",
+      "bytes": 48944,
+      "timestamp": "2026-10-30T04:00:15Z",
+      "size_bytes": 48944
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/audio_decoy.mp3",
+      "prompt": "Vintage 1980s pizzeria arcade token chime and eerie mechanical toy laugh echoing over a room speaker",
+      "task_id": "47ad81e6-0bd1-4f0c-a937-61ab6c0efc4f",
+      "bytes": 40585,
+      "timestamp": "2026-10-29T12:07:42Z",
+      "size_bytes": 40585
+    },
+    {
+      "type": "music",
+      "model": "cometapi-music",
+      "path": "assets/audio/bgm_credits.mp3",
+      "prompt": "Hauntingly beautiful antique Halloween music box melody with warm nostalgic analog synth pads, surviving the fifth night credits theme, instrumental",
+      "task_id": "ae291dd6-7961-4437-88f9-5d13b56e7119",
+      "bytes": 4103766,
+      "timestamp": "2026-10-29T12:17:03Z",
+      "size_bytes": 4103766
+    },
+    {
+      "type": "music",
+      "model": "cometapi-music",
+      "path": "assets/audio/bgm_custom_night.mp3",
+      "prompt": "Tense dark 1980s industrial synthwave with ticking mechanical clockwork gears and pulsing bassline, survival horror custom night challenge menu theme, instrumental",
+      "task_id": "0864dd79-be90-4b52-944a-16ab080e98e4",
+      "bytes": 4519710,
+      "timestamp": "2026-10-29T12:16:58Z",
+      "size_bytes": 4519710
+    },
+    {
+      "type": "music",
+      "model": "cometapi-music",
+      "path": "assets/audio/bgm_epilogue.mp3",
+      "prompt": "Cinematic 1990s dark synthwave and melancholic acoustic piano with distant music box chimes, mystery solved at dawn epilogue theme, instrumental",
+      "task_id": "e6dc18f1-aa45-4eb9-aab5-44bfb840378f",
+      "bytes": 5248470,
+      "timestamp": "2026-10-29T12:25:46Z",
+      "size_bytes": 5248470
+    },
+    {
+      "type": "music",
+      "model": "cometapi-music",
+      "path": "assets/audio/bgm_extras.mp3",
+      "prompt": "Dark atmospheric 1980s synth drone with subtle clockwork gears and dusty carnival organ, mysterious animatronic workshop blueprint archive theme, instrumental",
+      "task_id": "eebda81f-5cda-46a7-b49a-be7e87bc3643",
+      "bytes": 4940118,
+      "timestamp": "2026-10-29T12:07:46Z",
+      "size_bytes": 4940118
+    },
+    {
+      "type": "music",
+      "model": "cometapi-music",
+      "path": "assets/audio/bgm_menu.mp3",
+      "prompt": "Dark haunting vintage 1980s Halloween carnival organ and creepy detuned music box drone, slow tense survival horror menu theme, instrumental",
+      "task_id": "cbe435f6-f98b-4c9d-a395-2c91acec789a",
+      "bytes": 3911670,
+      "timestamp": "2026-10-29T10:52:42Z",
+      "size_bytes": 3911670
+    },
+    {
+      "type": "music",
+      "model": "cometapi-music",
+      "path": "assets/audio/bgm_night5_boss.mp3",
+      "prompt": "Intense dark industrial horror drone with deep sub-bass pulse, distant church bell tolls, and eerie mechanical gear grinding, final Halloween night shift ambience, instrumental",
+      "task_id": "9a29c044-402b-4768-97e6-b07c5a18daa2",
+      "bytes": 4654182,
+      "timestamp": "2026-10-29T12:24:32Z",
+      "size_bytes": 4654182
+    },
+    {
+      "type": "music",
+      "model": "cometapi-music",
+      "path": "assets/audio/bgm_overtime_finale.mp3",
+      "prompt": "Relentless high-adrenaline dark synth-orchestral horror boss theme with pounding industrial percussion, gothic pipe organ, and frantic clockwork chimes, instrumental",
+      "task_id": "e0627b2b-b872-4351-bec1-2bdd87759457",
+      "bytes": 4040406,
+      "timestamp": "2026-10-30T03:31:39Z",
+      "size_bytes": 4040406
+    },
+    {
+      "type": "music",
+      "model": "cometapi-music",
+      "path": "assets/audio/bgm_salvage_workshop.mp3",
+      "prompt": "Tense minimalist sub-basement industrial horror ambience with slow detuned cello drones, distant dripping water, and faint metallic clockwork ticking, instrumental",
+      "task_id": "2b3f0433-dbd2-41b3-9768-a569b8ddaa91",
+      "bytes": 4268310,
+      "timestamp": "2026-10-30T03:31:33Z",
+      "size_bytes": 4268310
+    },
+    {
+      "type": "music",
+      "model": "cometapi-music",
+      "path": "assets/audio/bgm_vhs_1987.mp3",
+      "prompt": "Haunting 1980s found-footage VHS investigation dark ambient soundtrack, warped magnetic tape flutter, distant detuned calliope organ, low sub-bass dread, instrumental",
+      "task_id": "d0901246-e72f-44ab-b07c-02c7b9e1490f",
+      "bytes": 4422486,
+      "timestamp": "2026-10-30T04:00:33Z",
+      "size_bytes": 4422486
+    },
+    {
+      "type": "music",
+      "model": "cometapi-music",
+      "path": "assets/audio/bgm_victory.mp3",
+      "prompt": "Warm nostalgic 1980s analog synth sunrise relief theme mixed with gentle antique music box chime, surviving the Halloween night shift at 6 AM, instrumental",
+      "task_id": "45108eb9-20cf-44ac-8fd2-8f4e87577bd0",
+      "bytes": 4399398,
+      "timestamp": "2026-10-29T12:07:31Z",
+      "size_bytes": 4399398
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/burlap_scrape.mp3",
+      "prompt": "Creepy rustling burlap cloth and sharp metal harvesting claws scraping along a concrete wall",
+      "task_id": "aad5654f-8741-41bb-9bd3-0b9f61bb67aa",
+      "bytes": 48944,
+      "timestamp": "2026-10-29T10:52:22Z",
+      "size_bytes": 48944
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/cam_blip.mp3",
+      "prompt": "Short crisp CCTV security camera channel switch electronic blip and static burst",
+      "task_id": "975ed343-6c7a-4180-80a8-8513fcdb47bc",
+      "bytes": 10492,
+      "timestamp": "2026-10-29T10:52:14Z",
+      "size_bytes": 10492
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/cam_reboot.mp3",
+      "prompt": "CRT monitor degaussing thump, electronic servo reboot whir, and crisp static clear beep",
+      "task_id": "f2b3dc2a-e677-4ab3-a0e4-345ef72616a2",
+      "bytes": 33061,
+      "timestamp": "2026-10-29T12:07:45Z",
+      "size_bytes": 33061
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/cam_toggle.mp3",
+      "prompt": "Vintage CRT security monitor flipping up with electronic beep and mechanical plastic click",
+      "task_id": "515ce0c2-eab0-4fc8-a91b-0e2a9870d512",
+      "bytes": 17179,
+      "timestamp": "2026-10-29T10:52:12Z",
+      "size_bytes": 17179
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/chime_6am.mp3",
+      "prompt": "Grandfather clock chiming six AM followed by warm vintage children cheering hooray in relief",
+      "task_id": "ca108eae-4fb8-42a7-bcb0-8ff1654153d5",
+      "bytes": 88650,
+      "timestamp": "2026-10-29T10:52:34Z",
+      "size_bytes": 88650
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/clockwork_tick.mp3",
+      "prompt": "Creepy heavy antique grandfather clock escapement ticking and brass gears grinding slowly in a dark haunted room",
+      "task_id": "6bfb19a5-9136-4de9-8616-7d820c915a8e",
+      "bytes": 65244,
+      "timestamp": "2026-10-30T03:31:15Z",
+      "size_bytes": 65244
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/door_bang.mp3",
+      "prompt": "Violent metallic pounding and scratching against a heavy locked steel security door from outside",
+      "task_id": "1a61c988-5f72-4b57-ad70-564021af1d44",
+      "bytes": 40585,
+      "timestamp": "2026-10-29T10:52:26Z",
+      "size_bytes": 40585
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/door_open.mp3",
+      "prompt": "Pneumatic steel security blast door sliding upward into ceiling with mechanical chain rattle",
+      "task_id": "7be3ec67-11c1-4e79-8c6d-028b9a217904",
+      "bytes": 29300,
+      "timestamp": "2026-10-29T10:52:09Z",
+      "size_bytes": 29300
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/door_slam.mp3",
+      "prompt": "Heavy industrial steel security blast door slamming shut with a loud pneumatic hiss and metallic thud",
+      "task_id": "76692062-4ef1-41e3-a1df-452b485bf8f9",
+      "bytes": 33061,
+      "timestamp": "2026-10-29T10:52:07Z",
+      "size_bytes": 33061
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/epilogue_voice_1.mp3",
+      "prompt": "Chapter One: Six A.M., November First, Nineteen Ninety-Three. As the autumn sun finally broke through the boarded windows of Pumpkin Pete's Pizzeria, the heavy iron blast doors hissed open, and the demolition crews arrived at the front gates.",
+      "task_id": "478e2f47-35ee-41fe-a9e8-b9debe135bd9",
+      "bytes": 281329,
+      "timestamp": "2026-10-29T12:24:31Z",
+      "size_bytes": 281329
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/epilogue_voice_2.mp3",
+      "prompt": "Chapter Two: Behind the false wall in the Marionette Alcove, inspectors discovered a padlocked steel workshop door stamped with the initials of founder Silas Vane—sealed from the inside since Halloween Eve, Nineteen Eighty-Seven.",
+      "task_id": "481373d6-2e9c-4b44-b54c-1c34f29dc398",
+      "bytes": 286345,
+      "timestamp": "2026-10-29T12:24:34Z",
+      "size_bytes": 286345
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/epilogue_voice_3.mp3",
+      "prompt": "Chapter Three: On the workbench lay Vane's final leather-bound ledger and four brass music-box cylinders. His notes revealed that the four autumn mascots were engineered to patrol the building forever, guarding the workshop from intruders.",
+      "task_id": "76dea689-854a-4d8a-8fdb-6d1da56a8868",
+      "bytes": 278821,
+      "timestamp": "2026-10-29T12:24:36Z",
+      "size_bytes": 278821
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/epilogue_voice_4.mp3",
+      "prompt": "Chapter Four: With your final paycheck in hand, you stepped out into the crisp November morning as the bulldozers rolled in. Yet deep beneath the rubble, the faint chime of an antique Carillon could still be heard.",
+      "task_id": "3582f88b-441e-44e9-9062-6eedc18696d0",
+      "bytes": 246638,
+      "timestamp": "2026-10-29T12:24:38Z",
+      "size_bytes": 246638
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/fan_toggle.mp3",
+      "prompt": "Heavy vintage rotary metal switch click and electric desk fan blades slowing down",
+      "task_id": "8a4828df-792e-46d7-ad19-747882b2a938",
+      "bytes": 20105,
+      "timestamp": "2026-10-29T12:07:49Z",
+      "size_bytes": 20105
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/flash_beacon.mp3",
+      "prompt": "High-voltage camera strobe flash capacitor discharge pop followed by a rising electronic recharge whine in a dark room",
+      "task_id": "81d17d2b-c8ed-45c7-beff-be2090fb2b3c",
+      "bytes": 40585,
+      "timestamp": "2026-10-30T03:31:10Z",
+      "size_bytes": 40585
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/footsteps_heavy.mp3",
+      "prompt": "Heavy clunky metallic animatronic footsteps echoing slowly in a tiled pizzeria hallway",
+      "task_id": "737771f7-42a0-49b1-9b92-a575934f98cb",
+      "bytes": 56885,
+      "timestamp": "2026-10-29T10:52:20Z",
+      "size_bytes": 56885
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/ghost_call_1.mp3",
+      "prompt": "Hello? Can you hear me through the static? Don't let the clockwork stop ticking... Silas is inside the ceiling duct above your desk! Seal the vent!",
+      "task_id": "00d370a7-830f-4781-b9b4-47cbc45384e0",
+      "bytes": 209858,
+      "timestamp": "2026-10-30T04:00:28Z",
+      "size_bytes": 209858
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/ghost_call_2.mp3",
+      "prompt": "Why did you come back for the night shift? The doors won't hold forever... Look at the wire-mesh window. We are right outside.",
+      "task_id": "8b794f46-7800-440d-956f-61e2b60a0164",
+      "bytes": 167644,
+      "timestamp": "2026-10-30T04:00:30Z",
+      "size_bytes": 167644
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/grimshaw_caw.mp3",
+      "prompt": "Creepy mechanical metallic raven screech and brass beak snapping in an abandoned arcade hall",
+      "task_id": "817766ee-8c5b-45b2-9c2a-6b7e1bfd20db",
+      "bytes": 48944,
+      "timestamp": "2026-10-29T12:07:35Z",
+      "size_bytes": 48944
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/grimshaw_sprint.mp3",
+      "prompt": "Frantic heavy metallic wing flaps and iron talons sprinting rapidly down a tiled hallway",
+      "task_id": "d81c76aa-1a48-4cb0-a518-48b74ba7691c",
+      "bytes": 56885,
+      "timestamp": "2026-10-29T12:07:39Z",
+      "size_bytes": 56885
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/hall_light.mp3",
+      "prompt": "Broken flickering halogen hallway floodlight buzzing with electrical static hum",
+      "task_id": "adac4233-b548-421e-81cf-452f958dbd28",
+      "bytes": 42674,
+      "timestamp": "2026-10-29T10:52:11Z",
+      "size_bytes": 42674
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/heartbeat_panic.mp3",
+      "prompt": "Deep rapid claustrophobic human heartbeat pounding in ears with shaky terrified breathing in a dark room, seamless loop",
+      "task_id": "588f0cf4-3d63-4774-9536-5abe54eba87d",
+      "bytes": 97009,
+      "timestamp": "2026-10-30T03:31:13Z",
+      "size_bytes": 97009
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/hexa_sprint.mp3",
+      "prompt": "Frantic fast porcelain doll mechanical footsteps scurrying rapidly down a corridor with an eerie bell chime",
+      "task_id": "3db479b8-30f7-4043-b639-ba2a93e3ebf1",
+      "bytes": 48944,
+      "timestamp": "2026-10-29T10:52:24Z",
+      "size_bytes": 48944
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/jumpscare_scream.mp3",
+      "prompt": "Terrifying distorted mechanical animatronic shriek roar mixed with hydraulic screech and horror sting",
+      "task_id": "509f3fcb-cba6-4c47-9c5b-18e850cafcc8",
+      "bytes": 40585,
+      "timestamp": "2026-10-29T10:52:33Z",
+      "size_bytes": 40585
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/jumpscare_silas_scream.mp3",
+      "prompt": "Ear-splitting metallic clockwork shriek mixed with a roaring furnace blast, shattering glass chimes, and terrifying sub-bass impact",
+      "task_id": "0443ef31-be5f-44a1-8b85-e17910b6f92f",
+      "bytes": 40585,
+      "timestamp": "2026-10-30T03:31:20Z",
+      "size_bytes": 40585
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/music_box_melody.mp3",
+      "prompt": "Haunting slow detuned antique music box playing a creepy minor key Halloween lullaby in a dark room",
+      "task_id": "9f96f28a-40c1-4113-966d-23685e0b14b5",
+      "bytes": 193140,
+      "timestamp": "2026-10-29T10:52:19Z",
+      "size_bytes": 193140
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/music_box_wind.mp3",
+      "prompt": "Winding up an antique brass mechanical music box gear ratchet click",
+      "task_id": "8cddf10e-5096-4647-a01d-401d49d5121b",
+      "bytes": 20105,
+      "timestamp": "2026-10-29T10:52:17Z",
+      "size_bytes": 20105
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/pete_laugh.mp3",
+      "prompt": "Deep hollow robotic animatronic jack-o-lantern laugh, slow distorted mechanical chuckle echoing in darkness",
+      "task_id": "36031d94-140d-4f00-b15c-5dc3610f3d03",
+      "bytes": 48944,
+      "timestamp": "2026-10-29T10:52:28Z",
+      "size_bytes": 48944
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/phone_guy_night1.mp3",
+      "prompt": "Uh, hello? Hello, hello? Welcome to your night shift at Pumpkin Pete's Autumn Jamboree! Listen closely, because the wiring in this old place drains battery fast. The three vintage Halloween mascots tend to wander after midnight. Pumpkin Pete takes the east side through the Arcade toward your right door. Watching him on camera slows him down, but once he reaches the East Corridor, check your right hallway light and shut the right door if he's standing there! Barnaby Stitch, the scarecrow, creeps down the West Hall to your left door. Cameras don't slow him down at all, so check your left light often! And whatever you do, don't forget Camera Three—keep Madame Hexa's carillon music box wound up, or she'll sprint straight for your left door! Stay sharp, watch your power meter, and see you at six A.M.",
+      "task_id": "485b3eb8-e3f0-4d9c-b463-ae229ce5588f",
+      "bytes": 776611,
+      "timestamp": "2026-10-29T10:52:37Z",
+      "size_bytes": 776611
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/phone_guy_night2.mp3",
+      "prompt": "Uh, hello? Hey, you made it to Night Two! Great job! Listen, a quick heads-up: Grimshaw the Plague Crow back in Camera Five, the Arcade Alley, has started waking up. Keep an eye on his curtain in Cam Five—if he steps out and bolts down the East Hallway, slam your Right Door immediately! Also, we wired an Audio Decoy to your camera tablet and a switch on your desk fan, just watch the office temperature if you shut the fan off!",
+      "task_id": "180a868c-8eeb-40c3-826b-2253dc3e0bda",
+      "bytes": 442661,
+      "timestamp": "2026-10-29T12:07:18Z",
+      "size_bytes": 442661
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/phone_guy_night3.mp3",
+      "prompt": "Hey, Night Three already! You're tougher than the last guard. Look, things are getting serious tonight. All four mascots are active now, and when they get close to a camera lens, their servos emit electromagnetic surges that can jam your video feed. Hit the Reboot Camera button on your monitor if a feed goes haywire. Don't forget Madame Hexa's music box on Cam Three!",
+      "task_id": "31e716dc-a6fd-4d33-8627-884bc70e2201",
+      "bytes": 373698,
+      "timestamp": "2026-10-29T12:07:23Z",
+      "size_bytes": 373698
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/phone_guy_night4.mp3",
+      "prompt": "Hello? Hello?! Listen to me, if you're hearing this on Night Four, don't let your battery drop! They're coordinating now—Stitch jammed my left door while Grimshaw sprinted down the East Hall, and the Carillon is running out! Wait—someone's outside the window—the door button isn't responding—no, stay back!",
+      "task_id": "e3cb4e28-9037-4b3f-8988-2cc62254e7b8",
+      "bytes": 296794,
+      "timestamp": "2026-10-29T12:07:27Z",
+      "size_bytes": 296794
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/phone_guy_night5.mp3",
+      "prompt": "Welcome to Halloween Night, little watchman. No more recordings to help you now. The harvest is ready, the Carillon is unwinding, and all four of us are coming for the office. Let's see if your battery lasts until six A.M.",
+      "task_id": "b7f92e5c-d7d0-4af0-887f-892178f6af27",
+      "bytes": 322289,
+      "timestamp": "2026-10-29T12:07:31Z",
+      "size_bytes": 322289
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/phone_guy_night6.mp3",
+      "prompt": "Wait—how is this line still active?! If you're working the Halloween Overtime shift, listen to me: the boiler room seal in Camera Seven broke! Silas Vane's original clockwork prototype is crawling through the overhead air ducts in Camera Eight! Watch the ceiling vent and use your Vent Shutter!",
+      "task_id": "6292b927-65f4-42ab-a07b-5ea2718eb9bb",
+      "bytes": 255834,
+      "timestamp": "2026-10-30T03:31:30Z",
+      "size_bytes": 255834
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/poster_honk.mp3",
+      "prompt": "Short funny squeaky rubber clown nose honk sound effect",
+      "task_id": "102b025a-7edb-4c41-b0e1-47b93b76afd6",
+      "bytes": 13835,
+      "timestamp": "2026-10-29T12:07:46Z",
+      "size_bytes": 13835
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/power_down.mp3",
+      "prompt": "Electrical generator failing and shutting down, pitch dropping turbine whine into total silence",
+      "task_id": "4942f920-b68a-4a70-957f-e42f5a54a9eb",
+      "bytes": 72767,
+      "timestamp": "2026-10-29T10:52:30Z",
+      "size_bytes": 72767
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/rotary_phone_ring.mp3",
+      "prompt": "Old 1980s mechanical brass bell rotary desk telephone ringing loudly in a quiet dark security office, eerie analog warble",
+      "task_id": "4005d9df-8036-4438-9470-1e55f128664a",
+      "bytes": 65244,
+      "timestamp": "2026-10-30T04:00:10Z",
+      "size_bytes": 65244
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/salvage_briefing.mp3",
+      "prompt": "Sub-basement Salvage Protocol. Complete all three mechanical calibrations on the unit across the table. Watch its posture closely—if it leans into the light, administer a controlled taser shock immediately.",
+      "task_id": "a1d16f6d-b8f0-4feb-af8f-b0d2c0a75df4",
+      "bytes": 245385,
+      "timestamp": "2026-10-30T03:31:27Z",
+      "size_bytes": 245385
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/salvage_complete.mp3",
+      "prompt": "Calibration verified. The unit has been returned to dormant standby. Your fifty-dollar hazard bonus and tactical upgrade voucher have been credited.",
+      "task_id": "f725ab6b-1220-4e59-9d85-08a9940c31f0",
+      "bytes": 167644,
+      "timestamp": "2026-10-30T03:31:28Z",
+      "size_bytes": 167644
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/salvage_servo_tune.mp3",
+      "prompt": "Delicate mechanical precision screwdriver ratchet, micro-servo calibration beep, and spring tension click",
+      "task_id": "4e43259d-41ce-41c2-afe5-310e4a0d9a3b",
+      "bytes": 40585,
+      "timestamp": "2026-10-30T03:31:18Z",
+      "size_bytes": 40585
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/taser_shock.mp3",
+      "prompt": "Violent high-voltage electrical taser arc discharge and metallic animatronic convulsion rattle in a concrete basement",
+      "task_id": "e77caa7e-8324-41f2-948a-e16f195c0ec2",
+      "bytes": 40585,
+      "timestamp": "2026-10-30T03:31:11Z",
+      "size_bytes": 40585
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/taunt_grimshaw_1.mp3",
+      "prompt": "Caw, caw... you left the Arcade curtain unwatched, and the plague crow took flight.",
+      "task_id": "7f9b5026-1053-4e04-b472-850ca579847f",
+      "bytes": 93247,
+      "timestamp": "2026-10-29T12:17:08Z",
+      "size_bytes": 93247
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/taunt_grimshaw_2.mp3",
+      "prompt": "No steel blast door is fast enough when my iron wings sprint down the East Hall.",
+      "task_id": "96fc639d-1274-4882-9f36-cbb524aa025f",
+      "bytes": 88232,
+      "timestamp": "2026-10-29T12:17:11Z",
+      "size_bytes": 88232
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/taunt_hexa_1.mp3",
+      "prompt": "When the Carillon stops playing, my marionette strings are free to dance.",
+      "task_id": "0525eae5-1910-42da-b93f-2c0761168b7b",
+      "bytes": 82798,
+      "timestamp": "2026-10-29T12:17:04Z",
+      "size_bytes": 82798
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/taunt_hexa_2.mp3",
+      "prompt": "Such a tragic little watchman... you let the music box unwind to zero.",
+      "task_id": "87c9401d-fee7-4a29-be95-ddff4d29623b",
+      "bytes": 91994,
+      "timestamp": "2026-10-29T12:17:06Z",
+      "size_bytes": 91994
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/taunt_pete_1.mp3",
+      "prompt": "Fresh out of the brick oven... you will make a wonderful Halloween pie, night guard.",
+      "task_id": "9928aa47-fd42-44d5-8625-3689bcf31431",
+      "bytes": 116235,
+      "timestamp": "2026-10-29T12:16:56Z",
+      "size_bytes": 116235
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/taunt_pete_2.mp3",
+      "prompt": "Did you forget to watch the East Hallway? Happy Halloween from Pumpkin Pete!",
+      "task_id": "7845a994-1f19-4e7f-b7d8-162bce8c2291",
+      "bytes": 103278,
+      "timestamp": "2026-10-29T12:16:58Z",
+      "size_bytes": 103278
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/taunt_silas_1.mp3",
+      "prompt": "Nineteen eighty-seven was only the beginning... Now your heart will wind the clockwork for another hundred years.",
+      "task_id": "c9e1c402-4ff9-4a1d-a35c-d00a9f0f5b5c",
+      "bytes": 141731,
+      "timestamp": "2026-10-30T03:31:23Z",
+      "size_bytes": 141731
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/taunt_silas_2.mp3",
+      "prompt": "You watched the doors... you watched the halls... and you never looked up at the ceiling vent.",
+      "task_id": "67678ce8-0e19-4b97-bc6b-bf23202a2f40",
+      "bytes": 122505,
+      "timestamp": "2026-10-30T03:31:25Z",
+      "size_bytes": 122505
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/taunt_stitch_1.mp3",
+      "prompt": "Staring at those little security screens won't save you from the harvest...",
+      "task_id": "6dc60136-90b6-49d6-98fd-5e5ef491f06d",
+      "bytes": 79037,
+      "timestamp": "2026-10-29T12:17:00Z",
+      "size_bytes": 79037
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/taunt_stitch_2.mp3",
+      "prompt": "Stitch by stitch, straw by straw... I jammed your door before you even looked.",
+      "task_id": "f19db2fd-b912-4a85-9c29-b04b19244ed7",
+      "bytes": 112474,
+      "timestamp": "2026-10-29T12:17:02Z",
+      "size_bytes": 112474
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/vent_crawl.mp3",
+      "prompt": "Heavy metallic animatronic claws and knees crawling rapidly through a hollow sheet-metal overhead ventilation duct, terrifying claustrophobic reverb",
+      "task_id": "08c19721-f7ec-4de2-be12-a70b2f96b980",
+      "bytes": 65244,
+      "timestamp": "2026-10-30T03:31:06Z",
+      "size_bytes": 65244
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/vent_slam.mp3",
+      "prompt": "Heavy pneumatic steel ventilation shutter slamming shut with a pressurized hiss and solid metallic lock clank",
+      "task_id": "9d8ec0b2-236b-4291-bf1b-03ad373943a6",
+      "bytes": 33061,
+      "timestamp": "2026-10-30T03:31:08Z",
+      "size_bytes": 33061
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/vhs_1987_log_1.mp3",
+      "prompt": "Evidence Tape One. October thirty-first, nineteen eighty-seven, eight-fifteen P.M. The Main Show Stage. Notice how Pumpkin Pete's jaw servos lock mid-song while founder Silas Vane watches from the shadows.",
+      "task_id": "bdede77c-2114-4dd1-a4d5-3dacd44acc8b",
+      "bytes": 267118,
+      "timestamp": "2026-10-30T04:00:17Z",
+      "size_bytes": 267118
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/vhs_1987_log_2.mp3",
+      "prompt": "Evidence Tape Two. Nine-forty P.M. Backstage Parts and Service. Barnaby Stitch was never stuffed with straw—the agricultural burlap conceals a reinforced spring-lock cage.",
+      "task_id": "26f158f1-802c-4f7c-97c3-75289ecf6408",
+      "bytes": 223651,
+      "timestamp": "2026-10-30T04:00:19Z",
+      "size_bytes": 223651
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/vhs_1987_log_3.mp3",
+      "prompt": "Evidence Tape Three. Ten-twenty P.M. Sub-Basement Boiler Room. Silas Vane welded the master clockwork regulator directly into the coal furnace intake.",
+      "task_id": "0253a38e-6b11-4375-b99c-a8a3bf8ddf05",
+      "bytes": 180183,
+      "timestamp": "2026-10-30T04:00:21Z",
+      "size_bytes": 180183
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/vhs_1987_log_4.mp3",
+      "prompt": "Evidence Tape Four. Eleven-fifteen P.M. The Cursed Marionette Alcove. Whenever the brass Carillon stops winding, Madame Hexa's porcelain mask weeps black machine oil.",
+      "task_id": "dea17ed8-ba22-429f-b4a8-450097f0d8b2",
+      "bytes": 217381,
+      "timestamp": "2026-10-30T04:00:23Z",
+      "size_bytes": 217381
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/vhs_1987_log_5.mp3",
+      "prompt": "Evidence Tape Five. Eleven-fifty-eight P.M. The Midnight Harvest Ritual. All five animatronics converged around the central dining room table just before the power grid failed.",
+      "task_id": "69b8f1f8-3ff2-4343-8469-09109246c18c",
+      "bytes": 194394,
+      "timestamp": "2026-10-30T04:00:24Z",
+      "size_bytes": 194394
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/vhs_1987_log_6.mp3",
+      "prompt": "Evidence Tape Six. Twelve-oh-one A.M. The security cameras captured five figures standing outside the guard office window. The building was condemned the next morning.",
+      "task_id": "24566b97-84f2-407e-9c94-056ac0b5ad51",
+      "bytes": 198155,
+      "timestamp": "2026-10-30T04:00:26Z",
+      "size_bytes": 198155
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/vhs_tape_insert.mp3",
+      "prompt": "Heavy mechanical VCR cassette deck loading a VHS tape, motorized reel clunk and analog static hum",
+      "task_id": "df0687b5-6855-4a32-bd65-7f6e34f21f32",
+      "bytes": 48944,
+      "timestamp": "2026-10-30T04:00:12Z",
+      "size_bytes": 48944
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/voice_grimshaw_whisper.mp3",
+      "prompt": "The curtain rises in the arcade... hear my iron wings in the East Hall... caw, caw...",
+      "task_id": "e98c84bd-acde-4d12-a461-4b9ecfbb10a3",
+      "bytes": 116235,
+      "timestamp": "2026-10-29T12:07:33Z",
+      "size_bytes": 116235
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/voice_hexa_whisper.mp3",
+      "prompt": "The carillon music stopped... why did you let my music stop? Now I am coming down the hall...",
+      "task_id": "5acbb50d-1189-481a-8362-766711459d92",
+      "bytes": 158449,
+      "timestamp": "2026-10-29T11:04:06Z",
+      "size_bytes": 158449
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/voice_pete_whisper.mp3",
+      "prompt": "Happy Halloween... the oven is still warm... let me inside...",
+      "task_id": "c45a6247-24d5-4264-ba66-3de465ee9398",
+      "bytes": 98263,
+      "timestamp": "2026-10-29T10:52:39Z",
+      "size_bytes": 98263
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/voice_silas_whisper.mp3",
+      "prompt": "Tick... tock... watchman... My heart still beats inside the Carillon... and the vent above your head is open...",
+      "task_id": "0a421731-7a0a-4e25-b570-64dae59f4a3c",
+      "bytes": 193140,
+      "timestamp": "2026-10-30T03:31:21Z",
+      "size_bytes": 193140
+    },
+    {
+      "type": "voice",
+      "model": "eleven_v3",
+      "path": "assets/audio/voice_stitch_whisper.mp3",
+      "prompt": "Rusted claws and mouldy straw... I can see you through the left window...",
+      "task_id": "07afa3e6-0c25-4982-a62f-b190dc32964d",
+      "bytes": 108712,
+      "timestamp": "2026-10-29T11:04:08Z",
+      "size_bytes": 108712
+    },
+    {
+      "type": "sfx",
+      "model": "eleven_text_to_sound_v2",
+      "path": "assets/audio/window_glass_scrape.mp3",
+      "prompt": "Creepy metallic claws and burlap scraping against wire-mesh reinforced security glass window, tense horror sound effect",
+      "task_id": "4548af18-38e3-4942-a618-e7af7a42088d",
+      "bytes": 56885,
+      "timestamp": "2026-10-30T04:00:13Z",
+      "size_bytes": 56885
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/blueprint_grimshaw.png",
+      "prompt": "Vintage 1987 technical engineering blueprint schematic on dark navy cyanotype grid paper of 'MODEL 04: GRIMSHAW THE PLAGUE CROW' (based on the reference image). Shows technical line drawings of the wrought-iron avian endoskeleton, articulated brass beak, wing-span servos, and amber monocle optics.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 949499,
+      "timestamp": "2026-10-29T12:06:28Z",
+      "size_bytes": 949499
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/blueprint_hexa.png",
+      "prompt": "Vintage 1987 technical engineering blueprint schematic on dark navy cyanotype grid paper of 'MODEL 03: MADAME HEXA & CARILLON MECHANISM' (based on the reference image). Shows technical line drawings of her 6-arm brass marionette rig, porcelain mask assembly, and spring-wound music box trigger.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 988112,
+      "timestamp": "2026-10-29T12:06:51Z",
+      "size_bytes": 988112
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/blueprint_pete.png",
+      "prompt": "Vintage 1987 technical engineering blueprint schematic on dark navy cyanotype grid paper of 'MODEL 01: PUMPKIN PETE' (based on the reference image). Shows front and side orthographic technical line drawings, internal jaw servo diagrams, weight '480 LBS', height '7 FT 2 IN', and stamped 'PUMPKIN PETE ENTERTAINMENT INC. CONFIDENTIAL'.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 934654,
+      "timestamp": "2026-10-29T12:06:07Z",
+      "size_bytes": 934654
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/blueprint_silas.png",
+      "prompt": "Vintage 1987 cyanotype engineering blueprint schematic diagram of 'PROJECT 00: THE CLOCKWORK AMALGAM (SILAS VANE)', white technical line drawing on dark navy-blue blueprint grid paper, showing front and side views of a brass clockwork endoskeleton with a cracked pumpkin mask, heart-spring carillon core, vent-crawling joints, and 'DANGER: SEAL OVERHEAD VENT [V]' stamped in red ink, 16:9 widescreen.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 3829212,
+      "timestamp": "2026-10-30T03:11:30Z",
+      "size_bytes": 3829212
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/blueprint_stitch.png",
+      "prompt": "Vintage 1987 technical engineering blueprint schematic on dark navy cyanotype grid paper of 'MODEL 02: BARNABY STITCH' (based on the reference image). Shows front and side technical line drawings of the scarecrow endoskeleton, harvesting claw hydraulics, optical green sensors, and stamped 'CONFIDENTIAL'.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 924238,
+      "timestamp": "2026-10-29T12:06:08Z",
+      "size_bytes": 924238
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam01_anomaly_poster.png",
+      "prompt": "The exact same CAM 01 show stage from the reference image, but in a terrifying paranormal VHS glitch state: the neon sign on the back wall glows blood-red reading 'IT IS HARVEST TIME', black oil drips down the curtains, and eerie white pinprick eyes glow from the shadows.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam01_empty.png"
+      ],
+      "bytes": 3316944,
+      "timestamp": "2026-10-29T12:24:02Z",
+      "size_bytes": 3316944
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam01_both.png",
+      "prompt": "The exact same Harvest Show Stage room from the first reference image, now with the Pumpkin Pete animatronic (second reference) standing center-right on the stage AND the Scarecrow Stitch animatronic (third reference) standing center-left on the stage, both posed under dim stage spotlights.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam01_empty.png",
+        "assets/images/ref_pete_raw.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 835239,
+      "timestamp": "2026-10-29T10:48:44Z",
+      "size_bytes": 835239
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam01_empty.png",
+      "prompt": "1990s pre-rendered survival horror video game graphic, gritty dark photorealistic CGI style, abandoned 1980s Halloween family pizzeria interior, dramatic pools of warm amber and cold eerie shadows, high detail, ominous mood, no text overlays, no watermarks. High-angle security camera view of the 'Harvest Show Stage' inside Pumpkin Pete's Pizzeria. A raised wooden stage with red and purple velvet curtains, hay bales, decorative plastic jack-o'-lanterns, and a flickering vintage neon sign reading 'PUMPKIN PETE'S' on the back wall. The stage is completely empty with no animatronics.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 863531,
+      "timestamp": "2026-10-29T10:46:07Z",
+      "size_bytes": 863531
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam01_pete.png",
+      "prompt": "The exact same Harvest Show Stage room from the first reference image, now with only the Pumpkin Pete animatronic (second reference) standing alone on the stage, turning his glowing jack-o'-lantern head to stare directly up at the security camera lens.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam01_empty.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 802821,
+      "timestamp": "2026-10-29T10:49:36Z",
+      "size_bytes": 802821
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam01_pete_stare.png",
+      "prompt": "The exact same CAM 01 show stage from the first reference image, but Pumpkin Pete (from the second reference image) has stepped to the very front edge of the stage and twisted his jack-o'-lantern head upward to stare directly into the high-angle security camera lens with eerie glowing orange eyes.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam01_empty.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 813754,
+      "timestamp": "2026-10-29T12:06:18Z",
+      "size_bytes": 813754
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam01_stitch.png",
+      "prompt": "The exact same Harvest Show Stage room from the first reference image, now with only the Scarecrow Stitch animatronic (second reference) standing alone on the stage, head tilted unnaturally with glowing green eyes staring at the security camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam01_empty.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 802812,
+      "timestamp": "2026-10-29T10:49:40Z",
+      "size_bytes": 802812
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam01_stitch_stare.png",
+      "prompt": "The exact same CAM 01 show stage from the first reference image, but Barnaby Stitch (from the second reference image) stands alone at the very front edge of the stage, leaning his burlap scarecrow head upward to glare directly into the CCTV camera lens with glowing green eyes.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam01_empty.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 806834,
+      "timestamp": "2026-10-29T12:14:02Z",
+      "size_bytes": 806834
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam02_anomaly_jackolanterns.png",
+      "prompt": "The exact same CAM 02 dining hall from the reference image, but in a terrifying paranormal VHS anomaly state: every hanging jack-o'-lantern on the ceiling and tables is blazing with blinding ghostly white fire and staring directly up at the CCTV camera lens.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam02_empty.png"
+      ],
+      "bytes": 3049322,
+      "timestamp": "2026-10-29T12:24:07Z",
+      "size_bytes": 3049322
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam02_both.png",
+      "prompt": "The exact same Lantern Dining Hall from the first reference image, with Pumpkin Pete (second reference) standing in the back aisle and Scarecrow Stitch (third reference) standing near the front left table, both staring up at the camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam02_empty.png",
+        "assets/images/ref_pete_raw.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 819193,
+      "timestamp": "2026-10-29T10:49:30Z",
+      "size_bytes": 819193
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam02_empty.png",
+      "prompt": "1990s pre-rendered survival horror video game graphic, gritty dark photorealistic CGI style, abandoned 1980s Halloween family pizzeria interior, dramatic pools of warm amber and cold eerie shadows, high detail, ominous mood, no text overlays, no watermarks. High-angle security camera view of the 'Lantern Dining Hall' in an abandoned Halloween pizzeria. Long rows of tables with torn orange-and-black checkered tablecloths, party hats, hanging plastic jack-o'-lantern ceiling lamps casting dim pools of amber light over black-and-white tiled floors. Empty room, no characters.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 839492,
+      "timestamp": "2026-10-29T10:46:48Z",
+      "size_bytes": 839492
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam02_pete.png",
+      "prompt": "The exact same Lantern Dining Hall from the first reference image, now with the Pumpkin Pete animatronic (second reference) standing between the checkered dining tables in the middle ground, glowing orange eyes staring up into the security camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam02_empty.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 791302,
+      "timestamp": "2026-10-29T10:49:06Z",
+      "size_bytes": 791302
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam02_pete_close.png",
+      "prompt": "The exact same CAM 02 dining hall from the first reference image, but Pumpkin Pete (from the second reference image) is standing directly underneath the high-mounted CCTV camera, his huge carved pumpkin face looking straight up into the lens just inches away.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam02_empty.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 790347,
+      "timestamp": "2026-10-29T12:06:46Z",
+      "size_bytes": 790347
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam02_stitch.png",
+      "prompt": "The exact same Lantern Dining Hall from the first reference image, now with the Scarecrow Stitch animatronic (second reference) crouching menacingly beside the dining tables in the foreground shadow, glowing green eyes fixed on the camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam02_empty.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 784230,
+      "timestamp": "2026-10-29T10:51:54Z",
+      "size_bytes": 784230
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam02_stitch_close.png",
+      "prompt": "The exact same CAM 02 dining hall from the first reference image, but Barnaby Stitch (from the second reference image) is reaching one long rusted harvesting claw up toward the CCTV camera lens while his burlap face glares straight into the camera with glowing green eyes.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam02_empty.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 803159,
+      "timestamp": "2026-10-29T12:05:09Z",
+      "size_bytes": 803159
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam03_anomaly_masks.png",
+      "prompt": "The exact same CAM 03 Marionette Alcove from the reference image, but in a terrifying paranormal VHS anomaly state: every single spare animatronic mask on the metal shelves on the right has turned its head to stare directly into the CCTV camera lens with glowing violet and green eyes.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam03_empty.png"
+      ],
+      "bytes": 3097879,
+      "timestamp": "2026-10-29T12:24:29Z",
+      "size_bytes": 3097879
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam03_both_hexa_stitch.png",
+      "prompt": "The exact same CAM 03 Marionette Alcove from the first reference image with Madame Hexa emerging from her stage box, AND Barnaby Stitch (from the second reference image) standing among the spare masks on the right with his glowing green eyes staring at the camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam03_hexa_1.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 790707,
+      "timestamp": "2026-10-29T12:13:26Z",
+      "size_bytes": 790707
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam03_empty.png",
+      "prompt": "1990s pre-rendered survival horror video game graphic, gritty dark photorealistic CGI style, abandoned 1980s Halloween family pizzeria interior, dramatic pools of warm amber and cold eerie shadows, high detail, ominous mood, no text overlays, no watermarks. High-angle security camera view of the 'Cursed Marionette Alcove / Backstage'. A dark storage room with metal shelves holding empty spare animatronic masks, a small wooden stage booth with drawn dark purple velvet curtains, and an ornate antique brass mechanical Music Box sitting on a table in the foreground. Empty room.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 809277,
+      "timestamp": "2026-10-29T10:47:27Z",
+      "size_bytes": 809277
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam03_hexa_1.png",
+      "prompt": "The exact same Cursed Marionette Alcove room from the first reference image, now with Madame Hexa the porcelain witch-doll animatronic (second reference) peeking halfway out from behind the purple velvet curtains in the background, her violet eyes glowing.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam03_empty.png",
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 768242,
+      "timestamp": "2026-10-29T10:49:52Z",
+      "size_bytes": 768242
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam03_hexa_2.png",
+      "prompt": "The exact same Cursed Marionette Alcove room from the first reference image, now with Madame Hexa the porcelain witch-doll animatronic (second reference) crouched right on top of the front table beside the brass music box, leaning inches from the security camera lens with glowing violet eyes and spider-like brass arms spread wide!",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam03_empty.png",
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 795918,
+      "timestamp": "2026-10-29T10:49:54Z",
+      "size_bytes": 795918
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam03_hexa_stare.png",
+      "prompt": "The exact same CAM 03 Marionette Alcove from the first reference image, but Madame Hexa (from the second reference image) has crawled right up to the CCTV camera lens, her cracked porcelain face and glowing violet eyes filling the monitor inches away.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam03_hexa_2.png",
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 804956,
+      "timestamp": "2026-10-29T12:14:38Z",
+      "size_bytes": 804956
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam03_stitch.png",
+      "prompt": "The exact same Cursed Marionette Alcove storage room from the first reference image, now with Barnaby Stitch the scarecrow animatronic (second reference) standing beside the metal shelves of spare masks on the right side, glowing green eyes staring directly into the security camera lens.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam03_empty.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 770399,
+      "timestamp": "2026-10-29T11:00:30Z",
+      "size_bytes": 770399
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam04_anomaly_shadow.png",
+      "prompt": "The exact same CAM 04 West Service Corridor from the reference image, but a tall pitch-black shadow figure of a clockmaker with glowing white pinhole eyes stands in the middle of the hallway while glowing orange clock-face symbols float on the peeling wallpaper.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam04_empty.png"
+      ],
+      "bytes": 3121237,
+      "timestamp": "2026-10-30T03:32:23Z",
+      "size_bytes": 3121237
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam04_both_stitch_hexa.png",
+      "prompt": "The exact same CAM 04 West corridor from the first reference image with Barnaby Stitch standing in the foreground AND Madame Hexa (from the second reference image) lunging down the hallway behind him with her six brass arms spread.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam04_stitch.png",
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 816993,
+      "timestamp": "2026-10-29T12:13:55Z",
+      "size_bytes": 816993
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam04_empty.png",
+      "prompt": "1990s pre-rendered survival horror video game graphic, gritty dark photorealistic CGI style, abandoned 1980s Halloween family pizzeria interior, dramatic pools of warm amber and cold eerie shadows, high detail, ominous mood, no text overlays, no watermarks. High-angle security camera view looking down the narrow 'West Corridor' hallway of an abandoned pizzeria. Checkered floor tiles, peeling wallpaper covered with children's creepy crayon drawings of pumpkins, dangling ceiling wires, single flickering overhead bulb. Empty hallway.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 827690,
+      "timestamp": "2026-10-29T10:46:32Z",
+      "size_bytes": 827690
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam04_hexa_sprint.png",
+      "prompt": "The exact same narrow West Corridor hallway from the first reference image, now with Madame Hexa the porcelain witch-doll animatronic (second reference) lunging and sprinting at high speed down the center of the hallway directly toward the camera with motion blur and glowing violet eyes!",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam04_empty.png",
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 785116,
+      "timestamp": "2026-10-29T10:51:13Z",
+      "size_bytes": 785116
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam04_stitch.png",
+      "prompt": "The exact same narrow West Corridor hallway from the first reference image, now with the Scarecrow Stitch animatronic (second reference) standing close in the hallway under the flickering light, metal claws scraping the wall, glowing green eyes staring straight into the camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam04_empty.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 796280,
+      "timestamp": "2026-10-29T10:50:15Z",
+      "size_bytes": 796280
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam04_stitch_close.png",
+      "prompt": "The exact same CAM 04 West corridor from the first reference image, but Barnaby Stitch (from the second reference image) is pressed right up against the CCTV camera lens, his stitched burlap grin and glowing green eyes filling two-thirds of the hallway view.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam04_empty.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 848627,
+      "timestamp": "2026-10-29T12:05:39Z",
+      "size_bytes": 848627
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam05_anomaly_arcade.png",
+      "prompt": "The exact same CAM 05 Haunted Arcade Alley from the reference image, but every single arcade cabinet screen in the dark room has turned on simultaneously, glowing bright blood-orange with pixelated jack-o'-lantern faces staring at the camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam05_empty.png"
+      ],
+      "bytes": 2966818,
+      "timestamp": "2026-10-30T03:16:57Z",
+      "size_bytes": 2966818
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam05_both.png",
+      "prompt": "The exact same CAM 05 arcade alley from the first reference image with Pumpkin Pete standing in the foreground aisle, and Grimshaw the Plague Crow (from the second reference image) lurking right behind him with glowing amber eyes and brass beak.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam05_pete.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 799164,
+      "timestamp": "2026-10-29T12:04:08Z",
+      "size_bytes": 799164
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam05_empty.png",
+      "prompt": "1990s pre-rendered survival horror video game graphic, gritty dark photorealistic CGI style, abandoned 1980s Halloween family pizzeria interior, dramatic pools of warm amber and cold eerie shadows, high detail, ominous mood, no text overlays, no watermarks. High-angle security camera view of 'Haunted Arcade Alley' in an abandoned 1980s pizzeria. Rows of dusty vintage retro arcade cabinets with flickering orange and purple CRT screens, neon carpet pattern, out-of-order prize counter in the back. Empty room.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 816324,
+      "timestamp": "2026-10-29T10:47:05Z",
+      "size_bytes": 816324
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam05_grimshaw_1.png",
+      "prompt": "The exact same CAM 05 arcade alley from the first reference image, but at the far back of the arcade aisle, Grimshaw the Plague Crow (from the second reference image) is peeking his riveted brass beak and glowing amber monocle eyes out from behind a tattered dark curtain.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam05_empty.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 763696,
+      "timestamp": "2026-10-29T12:04:13Z",
+      "size_bytes": 763696
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam05_grimshaw_2.png",
+      "prompt": "The exact same CAM 05 arcade alley from the first reference image, but Grimshaw the Plague Crow (from the second reference image) has stepped out into the center aisle between the arcade cabinets with his mechanical black-feathered wings half-spread, glowing amber eyes staring at the security camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam05_empty.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 771790,
+      "timestamp": "2026-10-29T12:04:08Z",
+      "size_bytes": 771790
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam05_grimshaw_stare.png",
+      "prompt": "The exact same CAM 05 arcade alley from the first reference image, but Grimshaw the Plague Crow (from the second reference image) is standing directly underneath the CCTV camera, his long riveted brass beak and glowing amber monocle eyes staring straight into the lens.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam05_grimshaw_2.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 788044,
+      "timestamp": "2026-10-29T12:16:54Z",
+      "size_bytes": 788044
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam05_pete.png",
+      "prompt": "The exact same Haunted Arcade Alley room from the first reference image, now with the Pumpkin Pete animatronic (second reference) standing among the glowing retro arcade machines, his cracked pumpkin face lit by neon arcade light as he stares at the camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam05_empty.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 772514,
+      "timestamp": "2026-10-29T10:50:41Z",
+      "size_bytes": 772514
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam06_anomaly_hooks.png",
+      "prompt": "The exact same CAM 06 East Storage Corridor from the reference image, but four empty cracked jack-o'-lantern mascot shells are suspended from ceiling chains down the hallway, all weeping black machine oil and staring into the camera lens.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam06_empty.png"
+      ],
+      "bytes": 3151790,
+      "timestamp": "2026-10-30T03:17:41Z",
+      "size_bytes": 3151790
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam06_both_pete_grimshaw.png",
+      "prompt": "The exact same CAM 06 East corridor from the first reference image with Pumpkin Pete looming in the foreground AND Grimshaw the Plague Crow (from the second reference image) sprinting down the corridor behind him with mechanical black wings flared.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam06_pete.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 861457,
+      "timestamp": "2026-10-29T12:19:24Z",
+      "size_bytes": 861457
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam06_empty.png",
+      "prompt": "1990s pre-rendered survival horror video game graphic, gritty dark photorealistic CGI style, abandoned 1980s Halloween family pizzeria interior, dramatic pools of warm amber and cold eerie shadows, high detail, ominous mood, no text overlays, no watermarks. High-angle security camera view looking down the industrial 'East Corridor' hallway leading to the security office. Rusted steam pipes along brick walls, wet checkerboard floor tiles, yellow caution sign, dim red emergency light. Empty hallway.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 884467,
+      "timestamp": "2026-10-29T10:47:37Z",
+      "size_bytes": 884467
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam06_grimshaw_sprint.png",
+      "prompt": "The exact same CAM 06 East storage corridor from the first reference image, but Grimshaw the Plague Crow (from the second reference image) is sprinting and lunging at high speed down the hallway toward the camera with mechanical black wings flared wide, brass beak open, and motion blur.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam06_empty.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 794792,
+      "timestamp": "2026-10-29T12:03:59Z",
+      "size_bytes": 794792
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam06_pete.png",
+      "prompt": "The exact same industrial East Corridor from the first reference image, now with the Pumpkin Pete animatronic (second reference) standing terrifyingly close in the foreground of the hallway, his massive glowing Jack-O'-Lantern head filling half the camera frame!",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam06_empty.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 860313,
+      "timestamp": "2026-10-29T10:50:37Z",
+      "size_bytes": 860313
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam06_pete_close.png",
+      "prompt": "The exact same CAM 06 East corridor from the first reference image, but Pumpkin Pete (from the second reference image) is pressed right up against the security camera lens, his glowing orange eye sockets and rusted endoskeleton teeth filling the monitor.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/cam06_empty.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 854107,
+      "timestamp": "2026-10-29T12:05:45Z",
+      "size_bytes": 854107
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam07_anomaly_furnace.png",
+      "prompt": "Security camera CCTV feed of CAM 07 Sub-Basement Boiler Room. Keep the room layout identical to the reference, but the giant cast-iron coal furnace door has swung wide open with roaring spectral green-and-orange hellfire, and ghostly clockwork silhouettes are projected across the brick walls! Eerie VHS scanlines",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam07_empty.png"
+      ],
+      "bytes": 3309144,
+      "timestamp": "2026-10-30T03:54:55Z",
+      "size_bytes": 3309144
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam07_empty.png",
+      "prompt": "Security camera CCTV view of CAM 07 Sub-Basement Boiler and Incinerator Room in an abandoned 1993 Halloween pizzeria. A massive rusted cast-iron coal furnace glowing with dying orange embers, hissing steam pipes, dark brick walls, a steel maintenance ladder on the right leading up into a ceiling ventilation shaft, dim grimy night-vision lighting, 16:9 widescreen.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 3438913,
+      "timestamp": "2026-10-30T03:11:25Z",
+      "size_bytes": 3438913
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam07_silas_1.png",
+      "prompt": "The exact same CAM 07 Boiler Room from the reference image, now Withered Silas (the corroded brass clockwork endoskeleton wearing a cracked golden pumpkin mask with glowing cyan-amber eyes) is standing beside the glowing cast-iron furnace, staring up toward the security camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam07_empty.png",
+        "assets/images/sprite_silas.png"
+      ],
+      "bytes": 3033737,
+      "timestamp": "2026-10-30T03:13:25Z",
+      "size_bytes": 3033737
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam07_silas_2.png",
+      "prompt": "The exact same CAM 07 Boiler Room from the reference image, now Withered Silas is climbing the steel ladder right underneath the ceiling camera lens, his cracked golden pumpkin mask inches from the camera with spinning brass gears visible inside his open jaw and heavy analog video distortion.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam07_empty.png",
+        "assets/images/sprite_silas.png"
+      ],
+      "bytes": 3233931,
+      "timestamp": "2026-10-30T03:14:20Z",
+      "size_bytes": 3233931
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam08_anomaly_teeth.png",
+      "prompt": "Security camera CCTV feed inside CAM 08 Overhead Ventilation Duct. Keep the galvanized steel duct identical to the reference, but dozens of glowing brass clockwork eyes and skeletal mechanical hands are reaching out from the dark seams of the sheet-metal walls! Haunted VHS static",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam08_empty.png"
+      ],
+      "bytes": 3393471,
+      "timestamp": "2026-10-30T03:55:43Z",
+      "size_bytes": 3393471
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam08_empty.png",
+      "prompt": "Security camera CCTV perspective inside CAM 08 Overhead Galvanized Ventilation Duct. Claustrophobic square sheet-metal air duct tunnel stretching into darkness, lit by a single dim red service indicator LED and gritty green night-vision camera light, dust cobwebs and rivets along the metal walls, 16:9 widescreen.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 3868767,
+      "timestamp": "2026-10-30T03:11:28Z",
+      "size_bytes": 3868767
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam08_silas_crawl_1.png",
+      "prompt": "The exact same CAM 08 Overhead Galvanized Ventilation Duct from the reference image, now Withered Silas (the brass clockwork endoskeleton in a cracked golden pumpkin mask) is crawling on all fours halfway down the narrow metal air duct toward the camera, his glowing eyes and brass claws reflecting off the sheet metal.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam08_empty.png",
+        "assets/images/sprite_silas.png"
+      ],
+      "bytes": 3321385,
+      "timestamp": "2026-10-30T03:14:24Z",
+      "size_bytes": 3321385
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam08_silas_crawl_2.png",
+      "prompt": "The exact same CAM 08 Overhead Ventilation Duct from the reference image, extreme terrifying close-up of Withered Silas lunging right at the camera lens inside the narrow metal shaft, his cracked golden pumpkin face and razor clock-hand claws filling the frame!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam08_empty.png",
+        "assets/images/sprite_silas.png"
+      ],
+      "bytes": 3433957,
+      "timestamp": "2026-10-30T03:14:21Z",
+      "size_bytes": 3433957
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/cam08_stitch_crawl.png",
+      "prompt": "The exact same CAM 08 Overhead Ventilation Duct from the reference image, now Barnaby Stitch (the burlap scarecrow animatronic with glowing toxic-green eyes and metal harvesting claws) is crawling through the narrow metal air duct toward the camera.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam08_empty.png",
+        "assets/images/sprite_stitch.png"
+      ],
+      "bytes": 3296422,
+      "timestamp": "2026-10-30T03:14:33Z",
+      "size_bytes": 3296422
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/epilogue_1_demolition.png",
+      "prompt": "Cinematic 1993 autumn sunrise outside the rundown 'PUMPKIN PETE'S FAMILY PIZZERIA' building: yellow demolition bulldozers and police tape surround the parking lot as golden morning light hits the faded neon pumpkin sign, photorealistic 35mm film grain.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 4290802,
+      "timestamp": "2026-10-29T12:23:25Z",
+      "size_bytes": 4290802
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/epilogue_2_workshop_door.png",
+      "prompt": "Dark atmospheric interior photograph inside the abandoned pizzeria backstage: a hidden rusted iron workshop door behind torn purple velvet curtains, with a brass nameplate reading 'SILAS VANE — MASTER CLOCKMAKER (1987)' illuminated by a flashlight beam.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam03_empty.png"
+      ],
+      "bytes": 2979795,
+      "timestamp": "2026-10-29T12:23:31Z",
+      "size_bytes": 2979795
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/epilogue_3_silas_journal.png",
+      "prompt": "Close-up cinematic photograph of a dusty 1987 clockmaker's workbench covered in brass gears, four glowing amber music-box cylinders, cyanotype animatronic blueprints, and an open leather journal with handwritten schematics.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/office_base.png"
+      ],
+      "bytes": 3202486,
+      "timestamp": "2026-10-29T12:23:56Z",
+      "size_bytes": 3202486
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/epilogue_4_sunrise_escape.png",
+      "prompt": "Cinematic first-person view looking back at the pizzeria through a car windshield at 6:15 AM in crisp autumn morning fog: a $120.00 paycheck and a small Golden Pumpkin Pete plushie sit on the dashboard while the pizzeria looms in the distance.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 3247633,
+      "timestamp": "2026-10-29T12:24:03Z",
+      "size_bytes": 3247633
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/hallucination_golden_pete.png",
+      "prompt": "Creepy 1980s VHS psychological horror hallucination screen inside the dark security office: a slumped, hollow-eyed GOLDEN metallic version of Pumpkin Pete (missing its endoskeleton eyes, with eerie pinpricks of white light in the dark sockets) sits motionless in front of the security desk, surrounded by faint VHS static.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 3216134,
+      "timestamp": "2026-10-29T12:15:08Z",
+      "size_bytes": 3216134
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/hallucination_grimshaw_4k.png",
+      "prompt": "4K Ultra-HD nightmare hallucination frame: extreme macro close-up of Grimshaw the Plague Crow's riveted wrought-iron beak split open like mechanical shears, blazing twin amber monocle lenses reflecting a skull, tattered oilskin feathers and dark static",
+      "aspectRatio": "16:9",
+      "imageSize": "4K",
+      "references": [
+        "assets/images/sprite_grimshaw.png"
+      ],
+      "bytes": 8101986,
+      "timestamp": "2026-10-30T03:59:15Z",
+      "size_bytes": 8101986
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/hallucination_hexa_4k.png",
+      "prompt": "4K Ultra-HD nightmare hallucination frame: extreme macro close-up of Madame Hexa's shattered white porcelain witch face filling the entire screen, six glowing violet eyes inside the cracks of her mask, brass spider mandibles dripping black oil, VHS signal tear",
+      "aspectRatio": "16:9",
+      "imageSize": "4K",
+      "references": [
+        "assets/images/sprite_hexa.png"
+      ],
+      "bytes": 8341511,
+      "timestamp": "2026-10-30T03:58:07Z",
+      "size_bytes": 8341511
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/hallucination_silas_4k.png",
+      "prompt": "Terrifying 4K psychological horror hallucination screen: extreme macro close-up of Withered Silas's cracked golden pumpkin mask split open to reveal whirling brass clockwork gears and glowing cyan-amber eyes, surrounded by analog VHS static and blood-red etched text 'YOU CANNOT WIND BACK THE CLOCK', 16:9 widescreen.",
+      "aspectRatio": "16:9",
+      "imageSize": "4K",
+      "references": [],
+      "bytes": 9156440,
+      "timestamp": "2026-10-30T03:12:27Z",
+      "size_bytes": 9156440
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/hallucination_stitch_4k.png",
+      "prompt": "4K Ultra-HD nightmare hallucination frame: extreme macro close-up of Barnaby Stitch's rotting burlap scarecrow head filling the screen, coarse hemp stitches ripping apart to reveal a screaming rusted iron endoskeleton skull with blazing amber button eyes, VHS glitch lines",
+      "aspectRatio": "16:9",
+      "imageSize": "4K",
+      "references": [
+        "assets/images/sprite_stitch.png"
+      ],
+      "bytes": 8850464,
+      "timestamp": "2026-10-30T03:58:51Z",
+      "size_bytes": 8850464
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_grimshaw.png",
+      "prompt": "First-person POV inside the security office from the first reference image as Grimshaw the Plague Crow (from the second reference image) lunges into the player's face with his riveted brass beak wide open, mechanical teeth bared, iron talons reaching forward, and glowing amber eyes blazing.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 773195,
+      "timestamp": "2026-10-29T12:04:47Z",
+      "size_bytes": 773195
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_grimshaw_2.png",
+      "prompt": "Extreme macro close-up jumpscare frame 2 inside the security office: Grimshaw the Plague Crow's brass beak and internal spinning clockwork jaws are inches from the camera lens, glowing amber monocle eyes blindingly bright, black feathers and iron claws filling the frame.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 771564,
+      "timestamp": "2026-10-29T12:04:48Z",
+      "size_bytes": 771564
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_grimshaw_3.png",
+      "prompt": "Dutch-angle violent lunge close-up jumpscare frame 3 inside the security office: Grimshaw the Plague Crow's head tilted sideways snapping its brass beak directly at the viewer with motion blur and glowing amber eyes.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 766869,
+      "timestamp": "2026-10-29T12:04:34Z",
+      "size_bytes": 766869
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_grimshaw_4.png",
+      "prompt": "Extreme macro final impact frame of Grimshaw the Plague Crow's jumpscare inside the security office: his riveted brass beak snapping shut directly over the camera lens with glowing amber monocle eyes and black iron feathers.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 771656,
+      "timestamp": "2026-10-29T12:13:38Z",
+      "size_bytes": 771656
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_hexa.png",
+      "prompt": "Extreme close-up first-person horror jumpscare inside the security office (first reference): Madame Hexa the porcelain witch-doll animatronic (second reference) leaping inches from the camera lens, cracked porcelain face split open with glowing violet eyes and four brass spider arms lunging at the screen, intense horror motion blur.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 771752,
+      "timestamp": "2026-10-29T10:51:57Z",
+      "size_bytes": 771752
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_hexa_2.png",
+      "prompt": "Second animation frame of the Madame Hexa porcelain witch-doll jumpscare from the first reference image: Madame Hexa's cracked white porcelain face lunging right against the camera glass with jaws unhinged, glowing violet eyes blazing, brass spider limbs thrashing forward, extreme horror motion blur.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/jumpscare_hexa.png",
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 792181,
+      "timestamp": "2026-10-29T11:01:15Z",
+      "size_bytes": 792181
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_hexa_3.png",
+      "prompt": "Dutch-angle violent lunge close-up jumpscare frame 3 inside the security office: Madame Hexa's cracked white porcelain witch face screaming inches from the camera lens, six brass spider-like arms wrapping around the screen, blinding violet eyes.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 752377,
+      "timestamp": "2026-10-29T12:05:15Z",
+      "size_bytes": 752377
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_hexa_4.png",
+      "prompt": "Extreme macro final impact frame of Madame Hexa's jumpscare inside the security office: her cracked white porcelain jaw unhinged to reveal a brass clockwork throat and glowing violet eyes inches from the viewer.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 785997,
+      "timestamp": "2026-10-29T12:13:39Z",
+      "size_bytes": 785997
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_pete.png",
+      "prompt": "Extreme close-up first-person horror jumpscare inside the security office (first reference): Pumpkin Pete (second reference) lunging violently straight into the camera lens, hinged Jack-O'-Lantern jaw wide open showing rusted metal endoskeleton teeth and blinding orange glowing eyes, dynamic motion blur, terrifying survival horror scream frame.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 747021,
+      "timestamp": "2026-10-29T10:51:45Z",
+      "size_bytes": 747021
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_pete_2.png",
+      "prompt": "Second animation frame of the Pumpkin Pete jumpscare from the first reference image: Pumpkin Pete's massive cracked Jack-O'-Lantern jaws snapping even closer into the camera lens, head tilted violently to the left, blinding amber-orange eye glow and metallic endoskeleton teeth filling the screen, extreme horror motion blur.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/jumpscare_pete.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 763625,
+      "timestamp": "2026-10-29T11:01:36Z",
+      "size_bytes": 763625
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_pete_3.png",
+      "prompt": "Dutch-angle violent lunge close-up jumpscare frame 3 inside the security office: Pumpkin Pete's carved jack-o'-lantern head tilted at a terrifying angle with hinged jaw unhinged, internal rusted gears spinning, and blinding orange light pouring from his eyes.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 790389,
+      "timestamp": "2026-10-29T12:04:47Z",
+      "size_bytes": 790389
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_pete_4.png",
+      "prompt": "Extreme macro final impact frame of Pumpkin Pete's jumpscare inside the security office: looking directly inside his unhinged jack-o'-lantern maw with spinning rusted iron gears, sharp steel endoskeleton teeth, and blinding orange furnace fire filling the lens.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 835125,
+      "timestamp": "2026-10-29T12:13:22Z",
+      "size_bytes": 835125
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_silas.png",
+      "prompt": "Terrifying first-person horror jumpscare in the dark security office: Withered Silas (the corroded brass clockwork endoskeleton wearing a cracked golden pumpkin mask) drops down from the ceiling right into the camera lens, jaws wide open revealing whirling brass gears and blazing cyan-orange eyes, dramatic motion blur, 16:9 widescreen.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/sprite_silas.png"
+      ],
+      "bytes": 3061662,
+      "timestamp": "2026-10-30T03:33:40Z",
+      "size_bytes": 3061662
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_silas_2.png",
+      "prompt": "Next frame of the exact same Withered Silas jumpscare: Silas lunges even closer into the camera lens, his cracked golden pumpkin mask splitting open wider as blinding cyan-orange clockwork sparks erupt from his jaw and his brass claws slash forward!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 3454920,
+      "timestamp": "2026-10-30T03:25:25Z",
+      "size_bytes": 3454920
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_silas_3.png",
+      "prompt": "Climax frame of the exact same Withered Silas jumpscare: extreme macro close-up of Withered Silas's split golden pumpkin mask and whirling brass clockwork teeth filling 90% of the screen, inches from biting the viewer!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/jumpscare_silas.png"
+      ],
+      "bytes": 2948231,
+      "timestamp": "2026-10-30T03:35:53Z",
+      "size_bytes": 2948231
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_silas_4.png",
+      "prompt": "Final lethal impact frame of Withered Silas jumpscare: chaotic motion-blurred close-up of Silas's glowing clockwork eyes and snapping brass jaws with heavy VHS glitching and blood-red vignette.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 3987697,
+      "timestamp": "2026-10-30T03:25:29Z",
+      "size_bytes": 3987697
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_stitch.png",
+      "prompt": "Extreme close-up first-person horror jumpscare inside the security office (first reference): Barnaby Stitch the scarecrow animatronic (second reference) lunging right into the player's face with ripped burlap mouth torn wide open revealing rusted steel jaws, blazing green eyes, and slashing metal harvesting claws, intense motion blur.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 834916,
+      "timestamp": "2026-10-29T10:52:03Z",
+      "size_bytes": 834916
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_stitch_2.png",
+      "prompt": "Second animation frame of the Barnaby Stitch scarecrow jumpscare from the first reference image: Barnaby Stitch lunging inches from the lens with rusted metal harvesting claws slashing across the foreground, torn burlap jaw wide open showing rusted steel teeth and blazing green optical eyes, intense motion blur.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/jumpscare_stitch.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 1855588,
+      "timestamp": "2026-10-29T11:04:02Z",
+      "size_bytes": 1855588
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_stitch_3.png",
+      "prompt": "Dutch-angle violent lunge close-up jumpscare frame 3 inside the security office: Barnaby Stitch's torn burlap scarecrow head lunging from the left with stitched jaw ripped wide open, rusty harvesting blades slashing across the lens, and toxic green eyes.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 797255,
+      "timestamp": "2026-10-29T12:05:43Z",
+      "size_bytes": 797255
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/jumpscare_stitch_4.png",
+      "prompt": "Extreme macro final impact frame of Barnaby Stitch's jumpscare inside the security office: his rusted steel harvesting claws slashing directly across the camera lens while his torn burlap mouth and glowing green eyes fill the entire screen.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 849656,
+      "timestamp": "2026-10-29T12:13:29Z",
+      "size_bytes": 849656
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/lore_newspaper_1987.png",
+      "prompt": "Close-up of a weathered, yellowed 1987 newspaper clipping pinned to a corkboard with red string in a dark detective room. Headline reads 'THE AUTUMN GAZETTE — NOV 1, 1987: FOUNDER SILAS VANE VANISHES IN WORKSHOP; FOUR HALLOWEEN MASCOTS SEIZED FOR INSPECTION', accompanied by a grainy black-and-white photo of the pizzeria stage.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 816533,
+      "timestamp": "2026-10-29T12:07:13Z",
+      "size_bytes": 816533
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_base.png",
+      "prompt": "1990s pre-rendered survival horror video game graphic, gritty dark photorealistic CGI style, abandoned 1980s Halloween family pizzeria interior, dramatic pools of warm amber and cold eerie shadows, high detail, ominous mood, no text overlays, no watermarks. First-person wide view from inside a cramped night guard security office. In the center is a battered metal desk with an oscillating desk fan, small CRT monitors, spilled coffee cup, and a vintage 'PUMPKIN PETE'S PIZZA' poster on the peeling wall above the desk. On the far LEFT side of the image is an open dark doorway frame with a reinforced glass observation window beside it and a red DOOR / yellow LIGHT wall button box. On the far RIGHT side of the image is a matching open dark doorway frame with a reinforced glass observation window beside it and a wall button box. Both left and right doorways look out into pitch-black hallways.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 808980,
+      "timestamp": "2026-10-29T10:45:27Z",
+      "size_bytes": 808980
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_left_door_closed.png",
+      "prompt": "The exact same security office from the reference image, except the LEFT doorway opening is completely sealed shut by a heavy industrial corrugated steel blast door that has slid down from the ceiling, with yellow-and-black hazard caution stripes along the bottom edge of the steel door. Keep the left wall DOOR/LIGHT buttons, the center desk, and the right side identical.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png"
+      ],
+      "bytes": 780094,
+      "timestamp": "2026-10-29T10:58:31Z",
+      "size_bytes": 780094
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_left_light_empty.png",
+      "prompt": "The exact same security office from the reference image, except the LEFT doorway hallway floodlight is turned ON, illuminating the empty tiled hallway outside the left doorway with warm halogen light. No animatronics in the doorway. Keep the center desk and right side identical.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png"
+      ],
+      "bytes": 807492,
+      "timestamp": "2026-10-29T11:00:08Z",
+      "size_bytes": 807492
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_left_light_hexa.png",
+      "prompt": "The exact same security office from the first reference image, but the left hallway light is turned ON, illuminating Madame Hexa (from the second reference image) hovering just outside the left doorway with her cracked porcelain face and glowing violet eyes.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_hexa_raw.png"
+      ],
+      "bytes": 837655,
+      "timestamp": "2026-10-29T12:04:21Z",
+      "size_bytes": 837655
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_left_light_stitch.png",
+      "prompt": "The exact same security office from the first reference image, except the LEFT doorway hallway floodlight is turned ON, illuminating the scarecrow animatronic (from the second reference image) standing menacingly right in the LEFT doorway and pressing his glowing green eyes against the left window! Keep the rest of the office desk and right side identical.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_stitch_raw.png"
+      ],
+      "bytes": 827663,
+      "timestamp": "2026-10-29T10:48:39Z",
+      "size_bytes": 827663
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_left_window_hexa_close.png",
+      "prompt": "Wide 16:9 panoramic security office at Pumpkin Pete's Pizzeria. Keep the desk, monitors, and right side identical to the reference office, but at the LEFT wire-mesh window, Madame Hexa (porcelain witch marionette) is pressing her cracked white porcelain face and glowing violet eyes directly against the wire-mesh glass, her six brass spider-limbs splayed across the window frame!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/office_left_light_hexa.png",
+        "assets/images/sprite_hexa.png"
+      ],
+      "bytes": 3301800,
+      "timestamp": "2026-10-30T03:51:38Z",
+      "size_bytes": 3301800
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_left_window_stitch_close.png",
+      "prompt": "Wide 16:9 panoramic security office at Pumpkin Pete's Pizzeria. Keep the entire desk, monitors, fan, and right doorway identical to the reference office, but at the LEFT wire-mesh window next to the left doorway, Barnaby Stitch is pressing his terrifying torn burlap face and glowing amber button eyes right up against the reinforced wire-mesh glass, his rusted hay-hook claw scraping the glass! High-tension survival horror lighting",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/office_left_light_stitch.png",
+        "assets/images/sprite_stitch.png"
+      ],
+      "bytes": 3193367,
+      "timestamp": "2026-10-30T03:53:44Z",
+      "size_bytes": 3193367
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_power_out.png",
+      "prompt": "The exact same security office from the first reference image after a total power outage: the room is pitch black, all monitors and lights are dead, and in the dark LEFT doorway the glowing amber jack-o'-lantern eyes and grinning teeth of Pumpkin Pete are faintly illuminated in the darkness.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 665667,
+      "timestamp": "2026-10-29T10:48:51Z",
+      "size_bytes": 665667
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_power_out_2.png",
+      "prompt": "Wide 16:9 panoramic security office in total pitch-black power outage. The desk CRTs are dead. In the left doorway glow Pumpkin Pete's orange eyes and Barnaby Stitch's button eyes; in the right doorway glow Grimshaw's amber monocle and Madame Hexa's violet eyes; and in the ceiling vent above the desk glow Withered Silas's cyan gear-eyes! Pure dread",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/office_power_out.png",
+        "assets/images/sprite_silas.png"
+      ],
+      "bytes": 2797115,
+      "timestamp": "2026-10-30T03:54:21Z",
+      "size_bytes": 2797115
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_right_door_closed.png",
+      "prompt": "The exact same security office from the reference image, except the RIGHT doorway opening is completely sealed shut by a heavy industrial corrugated steel blast door that has slid down from the ceiling, with yellow-and-black hazard caution stripes along the bottom edge of the steel door. Keep the right wall DOOR/LIGHT buttons, the center desk, and the left side identical.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png"
+      ],
+      "bytes": 776318,
+      "timestamp": "2026-10-29T11:01:21Z",
+      "size_bytes": 776318
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_right_light_empty.png",
+      "prompt": "The exact same security office from the reference image, except the RIGHT doorway hallway floodlight is turned ON, illuminating the empty hallway outside the right doorway with warm halogen light. No animatronics in the doorway. Keep the center desk and left side identical.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png"
+      ],
+      "bytes": 806487,
+      "timestamp": "2026-10-29T10:58:24Z",
+      "size_bytes": 806487
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_right_light_grimshaw.png",
+      "prompt": "The exact same security office from the first reference image, but the right hallway light is turned ON, illuminating Grimshaw the Plague Crow (from the second reference image) standing menacingly in the right doorway with his brass plague beak and glowing amber monocle eyes staring into the office.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_grimshaw_raw.png"
+      ],
+      "bytes": 842268,
+      "timestamp": "2026-10-29T12:04:04Z",
+      "size_bytes": 842268
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_right_light_pete.png",
+      "prompt": "The exact same security office from the first reference image, except the RIGHT doorway hallway floodlight is turned ON, illuminating the Pumpkin Pete jack-o'-lantern animatronic (from the second reference image) looming right outside the RIGHT doorway and staring through the right window with glowing orange eyes! Keep the rest of the office desk and left side identical.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/ref_pete_raw.png"
+      ],
+      "bytes": 819278,
+      "timestamp": "2026-10-29T10:48:45Z",
+      "size_bytes": 819278
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_right_window_grimshaw_close.png",
+      "prompt": "Wide 16:9 panoramic security office at Pumpkin Pete's Pizzeria. Keep the desk, monitors, and left side identical to the reference office, but at the RIGHT wire-mesh window, Grimshaw the Plague Crow is pressing his long riveted wrought-iron beak and blazing amber monocle lenses directly against the reinforced wire-mesh glass, iron talons scraping the frame!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/office_right_light_grimshaw.png",
+        "assets/images/sprite_grimshaw.png"
+      ],
+      "bytes": 3156580,
+      "timestamp": "2026-10-30T03:54:35Z",
+      "size_bytes": 3156580
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_right_window_pete_close.png",
+      "prompt": "Wide 16:9 panoramic security office at Pumpkin Pete's Pizzeria. Keep the desk, monitors, and left side identical to the reference office, but at the RIGHT wire-mesh window next to the right doorway, Pumpkin Pete is pressing his massive rotting jack-o'-lantern head and glowing orange eyes right against the wire-mesh glass, iron endoskeleton jaw grinning inches from the guard!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/office_right_light_pete.png",
+        "assets/images/sprite_pete.png"
+      ],
+      "bytes": 3033778,
+      "timestamp": "2026-10-30T03:53:42Z",
+      "size_bytes": 3033778
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/office_vent_peek_silas.png",
+      "prompt": "The exact same security office from the reference image, keep the desk, monitors, fan, poster, and doorways in the exact same position, but at the top center ceiling above the desk, a rectangular metal ventilation grate is hanging open and Withered Silas's cracked golden pumpkin head and brass clock-hand claws are emerging downward from the ceiling shadow.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/office_base.png",
+        "assets/images/sprite_silas.png"
+      ],
+      "bytes": 3151229,
+      "timestamp": "2026-10-30T03:16:34Z",
+      "size_bytes": 3151229
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/plush_pete_raw.png",
+      "prompt": "A small vintage 1980s golden velveteen collector plush toy of Pumpkin Pete (cute creepy stitched golden jack-o'-lantern mascot doll wearing miniature overalls and a tiny chef hat), sitting upright, centered, isolated on a flat solid pure #00FF00 bright green background.",
+      "aspectRatio": "1:1",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 704070,
+      "timestamp": "2026-10-29T12:03:28Z",
+      "size_bytes": 704070
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/raw_sprite_silas.png",
+      "prompt": "Full-body standing character cutout of Withered Silas ('The Clockmaker'), a terrifying 1987 corroded brass clockwork animatronic endoskeleton wearing a cracked golden jack-o'-lantern mask, glowing cyan-amber clockwork eyes, exposed spinning brass gears inside his ribcage, and long rusted clock-hand claws. Isolated on a completely flat solid pure #00FF00 bright green chroma-key background, no floor shadow, crisp edges.",
+      "aspectRatio": "1:1",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 2282690,
+      "timestamp": "2026-10-30T03:10:46Z",
+      "size_bytes": 2282690
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/ref_grimshaw_raw.png",
+      "prompt": "Full-body character concept art of 'Grimshaw the Plague Crow', a terrifying vintage 1980s pizzeria animatronic raven and plague-doctor mascot. Rusted black wrought-iron endoskeleton covered in moulting black feathers, long riveted brass plague-doctor beak with mechanical teeth inside, glowing amber lantern-glass monocle eyes, tattered Victorian undertaker cloak, sharp iron talon hands. Standing centered, isolated on a flat solid pure #00FF00 bright green background, no shadows on background.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 531947,
+      "timestamp": "2026-10-29T12:03:36Z",
+      "size_bytes": 531947
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/ref_hexa_raw.png",
+      "prompt": "Full body front view of 'Madame Hexa', a creepy vintage porcelain witch-doll marionette animatronic. Cracked white porcelain face with hollow glowing violet-purple eyes, sinister painted smile, tattered black velvet pointed witch hat and gothic Victorian cape, four articulated brass spider-like mechanical arms and skeletal metal legs. Isolated on a flat solid pure #00FF00 bright green background, no floor shadow, full figure centered.",
+      "aspectRatio": "1:1",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 635360,
+      "timestamp": "2026-10-29T10:45:39Z",
+      "size_bytes": 635360
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/ref_pete_raw.png",
+      "prompt": "Full body front view of 'Pumpkin Pete', an eerie 7-foot vintage 1980s pizzeria animatronic mascot. He has a large cracked orange fiberglass Jack-O'-Lantern pumpkin head with glowing hollow amber-orange eyes, a hinged mechanical jaw with square brass teeth, exposed hydraulic neck wires, wearing tattered red plaid flannel vest and stained denim overalls with metal endoskeleton joints visible at elbows and knees. Isolated on a flat solid pure #00FF00 bright green background, studio lighting, no floor shadow, full figure centered.",
+      "aspectRatio": "1:1",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 583784,
+      "timestamp": "2026-10-29T10:45:24Z",
+      "size_bytes": 583784
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/ref_stitch_raw.png",
+      "prompt": "Full body front view of 'Barnaby Stitch', a terrifying crooked scarecrow animatronic mascot from an abandoned Halloween pizzeria. Built over a rusted skeletal steel endoskeleton covered in stitched mouldy brown burlap sackcloth, dry straw bursting from shoulder joints, glowing sickly green circular optical lenses inside dark eye sockets, wide stitched burlap grin, long rusted metallic harvesting claws for fingers, tattered straw hat. Isolated on a flat solid pure #00FF00 bright green background, no floor shadow, full figure centered.",
+      "aspectRatio": "1:1",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 653561,
+      "timestamp": "2026-10-29T10:48:09Z",
+      "size_bytes": 653561
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_grimshaw_1.png",
+      "prompt": "The exact same sub-basement steel inspection table from the reference image, now Grimshaw the Plague Crow (the animatronic crow in a tattered leather coat with a long riveted iron beak) is sitting dormant in the chair across the table, beak resting down against his chest, monocle dark.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_table_empty.png",
+        "assets/images/sprite_grimshaw.png"
+      ],
+      "bytes": 2804369,
+      "timestamp": "2026-10-30T03:19:08Z",
+      "size_bytes": 2804369
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_grimshaw_2.png",
+      "prompt": "The exact same sub-basement inspection table scene from the reference image, but Grimshaw the Plague Crow has snapped his head up, his amber glass monocle glowing brightly in the shadow as his iron talons grip the edge of the steel table.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_grimshaw_1.png"
+      ],
+      "bytes": 2797341,
+      "timestamp": "2026-10-30T03:27:27Z",
+      "size_bytes": 2797341
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_grimshaw_3.png",
+      "prompt": "The exact same sub-basement inspection table scene from the reference image, TERRIFYING DANGER STATE: Grimshaw the Plague Crow is lunging halfway across the steel inspection table with ragged black wings spread wide and his serrated iron beak wide open inches from the camera!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_grimshaw_1.png"
+      ],
+      "bytes": 2861078,
+      "timestamp": "2026-10-30T03:27:27Z",
+      "size_bytes": 2861078
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_hexa_1.png",
+      "prompt": "The exact same sub-basement steel inspection table from the reference image, now Madame Hexa (the cracked porcelain witch marionette in a tattered velvet hat) is slumped motionless in the chair across the table, head bowed, all six porcelain hands resting flat on the table, eyes dark.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_table_empty.png",
+        "assets/images/sprite_hexa.png"
+      ],
+      "bytes": 2870656,
+      "timestamp": "2026-10-30T03:35:19Z",
+      "size_bytes": 2870656
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_hexa_2.png",
+      "prompt": "The exact same sub-basement inspection table scene from the reference image, but Madame Hexa has tilted her cracked porcelain head at an unnatural angle and her glowing violet eyes are now wide open, staring directly at the viewer while two of her six hands rise off the table.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 3233357,
+      "timestamp": "2026-10-30T03:26:01Z",
+      "size_bytes": 3233357
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_hexa_3.png",
+      "prompt": "The exact same sub-basement inspection table scene from the reference image, TERRIFYING DANGER STATE: Madame Hexa is leaning far across the steel inspection table right into the light, all six porcelain hands splayed out like a spider reaching for the viewer, her violet eyes blazing!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 3399508,
+      "timestamp": "2026-10-30T03:29:22Z",
+      "size_bytes": 3399508
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_pete_1.png",
+      "prompt": "The exact same sub-basement steel inspection table from the reference image, now Pumpkin Pete (the rusted animatronic with a carved jack-o'-lantern head and stained coveralls) is sitting slumped and dormant in the chair across the table, head bowed forward, eye sockets completely dark and powered off.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_table_empty.png",
+        "assets/images/sprite_pete.png"
+      ],
+      "bytes": 2895797,
+      "timestamp": "2026-10-30T03:18:17Z",
+      "size_bytes": 2895797
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_pete_2.png",
+      "prompt": "The exact same sub-basement inspection table scene from the reference image, but Pumpkin Pete has raised his head slightly and one of his carved jack-o'-lantern eye sockets is now glowing with a dim sinister orange light as he watches you across the table.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_pete_1.png"
+      ],
+      "bytes": 2859085,
+      "timestamp": "2026-10-30T03:24:12Z",
+      "size_bytes": 2859085
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_pete_3.png",
+      "prompt": "The exact same sub-basement inspection table scene from the reference image, TERRIFYING DANGER STATE: Pumpkin Pete is now leaning halfway across the steel table right under the hanging light bulb, both jack-o'-lantern eyes blazing bright fiery orange, rusted iron claws gripping the near edge of the table inches from the viewer!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_pete_1.png"
+      ],
+      "bytes": 2911922,
+      "timestamp": "2026-10-30T03:26:22Z",
+      "size_bytes": 2911922
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_silas_1.png",
+      "prompt": "The exact same sub-basement steel inspection table from the reference image, now Withered Silas (the corroded brass clockwork endoskeleton wearing a cracked golden pumpkin mask) is slumped motionless in the chair across the table, head slumped, eyes dark.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_table_empty.png",
+        "assets/images/sprite_silas.png"
+      ],
+      "bytes": 2841133,
+      "timestamp": "2026-10-30T03:22:37Z",
+      "size_bytes": 2841133
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_silas_2.png",
+      "prompt": "The exact same sub-basement inspection table scene from the reference image, but Withered Silas has raised his cracked golden pumpkin mask, his cyan-amber clockwork eyes glowing ominously in the dark as brass gears spin inside his ribcage.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_silas_1.png"
+      ],
+      "bytes": 2736151,
+      "timestamp": "2026-10-30T03:29:51Z",
+      "size_bytes": 2736151
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_silas_3.png",
+      "prompt": "The exact same sub-basement inspection table scene from the reference image, TERRIFYING DANGER STATE: Withered Silas has risen up and is leaning right across the steel inspection table under the hanging lamp, his split golden mask wide open and long brass clock-hand claws reaching straight for the camera!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_silas_1.png"
+      ],
+      "bytes": 2841902,
+      "timestamp": "2026-10-30T03:31:05Z",
+      "size_bytes": 2841902
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_stitch_1.png",
+      "prompt": "First-person view across the dimly lit Sub-Basement Salvage workbench. Sitting slumped across the metal table under the hanging caged bulb is Barnaby Stitch (7-foot ragged scarecrow animatronic in torn patched burlap with mismatched glowing button eyes and rusted hay-hook claws). His head is bowed dormant in Stage 1. Cassette recorder, clipboard, and yellow High-Voltage Taser button on the table in foreground, 16:9 widescreen",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_table_empty.png",
+        "assets/images/sprite_stitch.png"
+      ],
+      "bytes": 2932370,
+      "timestamp": "2026-10-30T03:50:49Z",
+      "size_bytes": 2932370
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_stitch_2.png",
+      "prompt": "First-person view across the Sub-Basement Salvage workbench. Barnaby Stitch is in Stage 2 agitation: his burlap head has snapped upright, his glowing amber button eyes are locked directly onto the camera, and his rusted hay-hook claw is raised onto the edge of the metal table. Cassette recorder, clipboard, and yellow High-Voltage Taser button in foreground, 16:9 widescreen",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_table_empty.png",
+        "assets/images/sprite_stitch.png"
+      ],
+      "bytes": 2870083,
+      "timestamp": "2026-10-30T03:50:23Z",
+      "size_bytes": 2870083
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_stitch_3.png",
+      "prompt": "First-person view across the Sub-Basement Salvage workbench. Barnaby Stitch is in Stage 3 critical lunge posture: leaning violently across the metal workbench inches from the camera lens, stitched burlap jaw ripped wide open revealing rusted iron endoskeleton teeth, hay-hook claws reaching over the clipboard and taser box, 16:9 widescreen",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/salvage_table_empty.png",
+        "assets/images/sprite_stitch.png"
+      ],
+      "bytes": 2858922,
+      "timestamp": "2026-10-30T03:50:51Z",
+      "size_bytes": 2858922
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/salvage_table_empty.png",
+      "prompt": "First-person horror game perspective sitting at a scarred steel inspection table inside a dark concrete sub-basement workshop. A single bare industrial light bulb hangs from a cord above the center of the table, casting deep shadows behind an empty metal chair on the opposite side of the table. On the near edge of the table sit a vintage cassette tape player, a clipboard, and a yellow high-voltage taser button. Photorealistic 1993 horror atmosphere, 16:9 widescreen.",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [],
+      "bytes": 3069012,
+      "timestamp": "2026-10-30T03:11:54Z",
+      "size_bytes": 3069012
+    },
+    {
+      "path": "assets/images/sprite_grimshaw.png",
+      "type": "image_sprite_cutout",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Full-body character concept art of 'Grimshaw the Plague Crow', a terrifying vintage 1980s pizzeria animatronic raven and plague-doctor mascot. Rusted black wrought-iron endoskeleton covered in moulting black feathers, long riveted brass plague-doctor beak with mechanical teeth inside, glowing amber lantern-glass monocle eyes, tattered Victorian undertaker cloak, sharp iron talon hands. Standing centered, isolated on a flat solid pure #00FF00 bright green background, no shadows on background.",
+      "parameters": {
+        "derived_from": "assets/images/ref_grimshaw_raw.png",
+        "post_processing": "Grimshaw the Plague Crow transparent cutout sprite (HSV chroma-keyed from ref_grimshaw_raw.png)"
+      },
+      "size_bytes": 1125682
+    },
+    {
+      "path": "assets/images/sprite_hexa.png",
+      "type": "image_sprite_cutout",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Full body front view of 'Madame Hexa', a creepy vintage porcelain witch-doll marionette animatronic. Cracked white porcelain face with hollow glowing violet-purple eyes, sinister painted smile, tattered black velvet pointed witch hat and gothic Victorian cape, four articulated brass spider-like mechanical arms and skeletal metal legs. Isolated on a flat solid pure #00FF00 bright green background, no floor shadow, full figure centered.",
+      "parameters": {
+        "derived_from": "assets/images/ref_hexa_raw.png",
+        "post_processing": "Madame Hexa transparent cutout sprite (HSV chroma-keyed from ref_hexa_raw.png)"
+      },
+      "size_bytes": 1273938
+    },
+    {
+      "path": "assets/images/sprite_pete.png",
+      "type": "image_sprite_cutout",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Full body front view of 'Pumpkin Pete', an eerie 7-foot vintage 1980s pizzeria animatronic mascot. He has a large cracked orange fiberglass Jack-O'-Lantern pumpkin head with glowing hollow amber-orange eyes, a hinged mechanical jaw with square brass teeth, exposed hydraulic neck wires, wearing tattered red plaid flannel vest and stained denim overalls with metal endoskeleton joints visible at elbows and knees. Isolated on a flat solid pure #00FF00 bright green background, studio lighting, no floor shadow, full figure centered.",
+      "parameters": {
+        "derived_from": "assets/images/ref_pete_raw.png",
+        "post_processing": "Pumpkin Pete transparent cutout sprite (HSV chroma-keyed from ref_pete_raw.png)"
+      },
+      "size_bytes": 1239079
+    },
+    {
+      "path": "assets/images/sprite_plush_pete.png",
+      "type": "image_sprite_cutout",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "A small vintage 1980s golden velveteen collector plush toy of Pumpkin Pete (cute creepy stitched golden jack-o'-lantern mascot doll wearing miniature overalls and a tiny chef hat), sitting upright, centered, isolated on a flat solid pure #00FF00 bright green background.",
+      "parameters": {
+        "derived_from": "assets/images/plush_pete_raw.png",
+        "post_processing": "Golden Pumpkin Pete collector desk plushie sprite (HSV chroma-keyed from plush_pete_raw.png)"
+      },
+      "size_bytes": 1497843
+    },
+    {
+      "path": "assets/images/sprite_silas.png",
+      "type": "image_sprite_cutout",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Full-body standing character cutout of Withered Silas ('The Clockmaker'), a terrifying 1987 corroded brass clockwork animatronic endoskeleton wearing a cracked golden jack-o'-lantern mask, glowing cyan-amber clockwork eyes, exposed spinning brass gears inside his ribcage, and long rusted clock-hand claws. Isolated on a completely flat solid pure #00FF00 bright green chroma-key background, no floor shadow, crisp edges.",
+      "parameters": {
+        "derived_from": "assets/images/raw_sprite_silas.png",
+        "post_processing": "Withered Silas (The Clockmaker) transparent cutout sprite (HSV chroma-keyed from raw_sprite_silas.png)"
+      },
+      "size_bytes": 5214418
+    },
+    {
+      "path": "assets/images/sprite_stitch.png",
+      "type": "image_sprite_cutout",
+      "model": "gemini-nano-banana-2.1",
+      "prompt": "Full body front view of 'Barnaby Stitch', a terrifying crooked scarecrow animatronic mascot from an abandoned Halloween pizzeria. Built over a rusted skeletal steel endoskeleton covered in stitched mouldy brown burlap sackcloth, dry straw bursting from shoulder joints, glowing sickly green circular optical lenses inside dark eye sockets, wide stitched burlap grin, long rusted metallic harvesting claws for fingers, tattered straw hat. Isolated on a flat solid pure #00FF00 bright green background, no floor shadow, full figure centered.",
+      "parameters": {
+        "derived_from": "assets/images/ref_stitch_raw.png",
+        "post_processing": "Barnaby Stitch transparent cutout sprite (HSV chroma-keyed from ref_stitch_raw.png)"
+      },
+      "size_bytes": 1345874
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/title_bg.png",
+      "prompt": "1990s pre-rendered survival horror video game graphic, gritty dark photorealistic CGI style, abandoned 1980s Halloween family pizzeria interior, dramatic pools of warm amber and cold eerie shadows, high detail, ominous mood, no text overlays, no watermarks. Cinematic dark horror title screen background: close-up of Pumpkin Pete animatronic's cracked fiberglass Jack-O'-Lantern face half-submerged in deep shadow on the right side of the frame, one hollow eye glowing bright amber-orange with exposed brass jaw teeth and wires, dark abandoned pizzeria stage softly visible in the background on the left.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 756926,
+      "timestamp": "2026-10-29T10:47:24Z",
+      "size_bytes": 756926
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/title_bg_4k.png",
+      "prompt": "Masterpiece 4K dark atmospheric horror title screen key art for 'Night Shift at Pumpkin Pete's'. In the right foreground, Pumpkin Pete (a towering rusted animatronic with a cracked glowing jack-o'-lantern head and metal teeth) stares menacingly into the camera, while Barnaby Stitch (scarecrow), Madame Hexa (porcelain witch), Grimshaw (plague crow), and Withered Silas (golden clockwork endoskeleton) lurk in the dark corridor shadows behind him. Left side is dark shadowy space for UI menu text. 16:9 widescreen.",
+      "aspectRatio": "16:9",
+      "imageSize": "4K",
+      "references": [],
+      "bytes": 8040972,
+      "timestamp": "2026-10-30T03:12:25Z",
+      "size_bytes": 8040972
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/vhs_1987_1_stage.png",
+      "prompt": "Authentic degraded 1987 VHS camcorder recording (stamped 'OCT 31 1987 08:15 PM - CAM 01'). Pumpkin Pete and Barnaby Stitch performing on the Harvest Show Stage during a Halloween party, but Pumpkin Pete's jaw is unnaturally unhinged leaking black oil while a shadowy clockmaker in a Victorian coat watches from the left curtain. Heavy VHS tracking lines, chromatic aberration",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam01_both.png",
+        "assets/images/sprite_pete.png"
+      ],
+      "bytes": 3378916,
+      "timestamp": "2026-10-30T03:55:48Z",
+      "size_bytes": 3378916
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/vhs_1987_2_backstage.png",
+      "prompt": "Authentic degraded 1987 VHS camcorder recording (stamped 'OCT 31 1987 09:40 PM - BACKSTAGE'). Close-up on a metal surgical workbench where Barnaby Stitch's burlap chest is open revealing a terrifying brass spring-lock ribcage and a beating mechanical heart-gear inside. VHS color bleed and scanlines",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/blueprint_stitch.png",
+        "assets/images/sprite_stitch.png"
+      ],
+      "bytes": 3521966,
+      "timestamp": "2026-10-30T03:56:14Z",
+      "size_bytes": 3521966
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/vhs_1987_3_boiler.png",
+      "prompt": "Authentic degraded 1987 VHS camcorder recording (stamped 'OCT 31 1987 10:20 PM - BOILER ROOM'). Withered Silas (brass clockwork skeleton mascot with cracked golden pumpkin head) standing in front of the roaring sub-basement furnace holding a glowing brass master key and a leather ledger. Heavy 1980s VHS tape grain",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam07_silas_1.png",
+        "assets/images/sprite_silas.png"
+      ],
+      "bytes": 2957113,
+      "timestamp": "2026-10-30T03:56:29Z",
+      "size_bytes": 2957113
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/vhs_1987_4_carillon.png",
+      "prompt": "Authentic degraded 1987 VHS camcorder recording (stamped 'OCT 31 1987 11:15 PM - CAM 03'). Close-up of Madame Hexa emerging from the antique wooden Carillon Music Box, black machine oil streaming like tears down her cracked white porcelain cheeks while violet lightning arcs across her brass spider-legs. VHS tracking distortion",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam03_hexa_stare.png",
+        "assets/images/sprite_hexa.png"
+      ],
+      "bytes": 3053007,
+      "timestamp": "2026-10-30T03:57:20Z",
+      "size_bytes": 3053007
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/vhs_1987_5_ritual.png",
+      "prompt": "Authentic degraded 1987 VHS camcorder recording (stamped 'OCT 31 1987 11:58 PM - DINING HALL'). All five animatronics (Pumpkin Pete, Barnaby Stitch, Madame Hexa, Grimshaw the Plague Crow, and Withered Silas) standing in a silent circle around the central dining table in the dark pizzeria, all five heads turned to stare directly up at the security camera lens!",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/cam02_both.png",
+        "assets/images/sprite_grimshaw.png",
+        "assets/images/sprite_silas.png"
+      ],
+      "bytes": 2885525,
+      "timestamp": "2026-10-30T03:57:02Z",
+      "size_bytes": 2885525
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/vhs_1987_6_masked_children.png",
+      "prompt": "Authentic degraded 1987 VHS camcorder recording (stamped 'NOV 01 1987 12:01 AM - OFFICE WINDOW'). View from inside the dark security office looking out through the reinforced wire-mesh glass window: five eerie vintage Halloween jack-o'-lantern masks are lined up on the floor outside the glass under a flickering red emergency light. Chilling found-footage horror",
+      "aspectRatio": "16:9",
+      "imageSize": "2K",
+      "references": [
+        "assets/images/office_base.png"
+      ],
+      "bytes": 3283798,
+      "timestamp": "2026-10-30T03:57:34Z",
+      "size_bytes": 3283798
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/win_collector_poster_4k.png",
+      "prompt": "4K Ultra-HD vintage 1987 movie poster & 100% Completion Collector's Trophy artwork for 'NIGHT SHIFT AT PUMPKIN PETE'S — DIRECTOR'S CUT'. All five animatronics (Pumpkin Pete, Barnaby Stitch, Madame Hexa, Grimshaw the Plague Crow, and Withered Silas) posed dramatically above the illuminated security office desk with golden '100% MASTER SECURITY WATCHMAN' brass emblem, rich painted horror illustration",
+      "aspectRatio": "16:9",
+      "imageSize": "4K",
+      "references": [
+        "assets/images/title_bg_4k.png",
+        "assets/images/sprite_silas.png",
+        "assets/images/sprite_grimshaw.png"
+      ],
+      "bytes": 9236626,
+      "timestamp": "2026-10-30T04:00:09Z",
+      "size_bytes": 9236626
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/win_night5_paycheck.png",
+      "prompt": "Cinematic 1990s first-person view of warm golden 6:00 AM autumn sunrise streaming through the dusty front glass doors of Pumpkin Pete's Pizzeria, illuminating a security guard's brass keys, a walkie-talkie, and a paper paycheck on the wooden counter. Relief, atmospheric volumetric morning sunbeams.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 778969,
+      "timestamp": "2026-10-29T12:07:13Z",
+      "size_bytes": 778969
+    },
+    {
+      "type": "image",
+      "model": "gemini-nano-banana-2.1",
+      "path": "assets/images/win_overtime_trophy.png",
+      "prompt": "Cinematic close-up on the weathered metal security desk inside Pumpkin Pete's Pizzeria at 6:00 AM dawn: a gleaming Golden Pumpkin Pete collector plush trophy sits next to a glowing '6:00 AM' flip clock, a golden star badge, and a stamped 'HALLOWEEN OVERTIME SURVIVOR' certificate.",
+      "aspectRatio": "16:9",
+      "imageSize": "1K",
+      "references": [],
+      "bytes": 778952,
+      "timestamp": "2026-10-29T12:07:11Z",
+      "size_bytes": 778952
+    }
+  ]
+}
